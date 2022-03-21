@@ -1,0 +1,38 @@
+{
+	"replace": true,
+	"slots": [ "sword/blade" ],
+	"type": "tetra:basic_major_module",
+	"improvements": [
+		"tetra:sword/shifting_blade/",
+		"tetra:sword/shared_blade/",
+		"tetra:sword/shared/",
+		"tetra:shared/"
+	],
+	"variants": [
+		{
+			"key": "shifting_blade/shifting_blade",
+			"attributes": {
+				"generic.attack_speed": -1.9,
+				"generic.attack_damage": 8.9
+			},
+			"aspects": {
+				"edgedWeapon": 2,
+				"breakable": 2
+			},
+			"durability": 90,
+			"effects": {
+				"truesweep": 1,
+				"armorPenetration": 15,
+				"intuit": 1,
+				"earthbind": 5,
+				"shieldbreaker": 2
+			},
+			"magicCapacity": 1000,
+			"glyph": {
+				"textureLocation": "tetra:textures/gui/aof_glyph.png",
+				"textureX": 160
+			},
+			"models": [{ "location": "tetra:items/module/sword/blade/shifting_blade/shifting_blade" }]
+		}
+	]
+}

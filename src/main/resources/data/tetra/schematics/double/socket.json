@@ -1,0 +1,28 @@
+{
+	"replace": false,
+	"slots": [ "double/binding" ],
+	"materialSlotCount": 1,
+	"displayType": "minor",
+	"glyph": {
+		"textureX": 80,
+		"textureY": 16
+	},
+	"outcomes": [
+		{
+			"material": {
+				"items": [ "minecraft:nether_star" ]
+			},
+			"experienceCost": 3,
+			"moduleKey": "double/socket",
+			"moduleVariant": "double_socket/nether_star"
+		},
+		{
+			"material": {
+				"items": [ "alexsmobs:void_worm_eye" ]
+			},
+			"experienceCost": 15,
+			"moduleKey": "double/socket",
+			"moduleVariant": "double_socket/void_worm_eye"
+		}
+	]
+}

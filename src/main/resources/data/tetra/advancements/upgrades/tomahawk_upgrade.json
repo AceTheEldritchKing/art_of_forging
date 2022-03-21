@@ -1,0 +1,45 @@
+{
+	"display": {
+		"icon": {
+			"item": "tetra:modular_double",
+			"nbt": "{\"id\": \"upgrades/tomahawk_upgrade\", \"double/head_left\": \"double/tomahawk_left\",\"double/tomahawk_left_material\": \"tomahawk/iron\",\"double/head_right\": \"double/butt_right\",\"double/butt_right_material\": \"butt/iron\",\"double/handle\": \"double/basic_handle\",\"double/basic_handle_material\": \"basic_handle/oak\"}"
+		},
+		"title": {
+            "translate": "tetra.advancements.upgrades.tomahawk_upgrade.title"
+        },
+        "description": {
+            "translate": "tetra.advancements.upgrades.tomahawk_upgrade.description"
+        }
+    },
+	"parent": "tetra:upgrades/double_headed",
+	"criteria": {
+        "module": {
+            "trigger": "tetra:craft_module",
+            "conditions": {
+				"module": "double/tomahawk",
+                "after": {
+                    "items": [
+                        "tetra:modular_double"
+                    ]
+                }
+            }
+        },
+        "improvement": {
+            "trigger": "tetra:craft_improvement",
+            "conditions": {
+				"module": "double/tomahawk",
+                "after": {
+                    "items": [
+                        "tetra:modular_double"
+                    ]
+                }
+            }
+        }
+    },
+	"requirements": [
+        [
+            "module",
+            "improvement"
+        ]
+    ]
+}

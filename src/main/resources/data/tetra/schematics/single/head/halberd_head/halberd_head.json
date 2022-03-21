@@ -1,0 +1,42 @@
+{
+	"replace": true,
+	"locked": true,
+	"slots": [ "single/head" ],
+	"materialSlotCount": 1,
+	"materialRevealSlot": 0,
+	"rarity": "temporary",
+	"displayType": "major",
+	"glyph": {
+		"textureLocation": "tetra:textures/gui/aof_glyph.png",
+		"textureX": 32
+	},
+	"translation": {
+		"primaryAttributes": {
+			"generic.attack_speed": 1
+		},
+		"secondaryAttributes": {
+			"generic.attack_damage": 1,
+			"generic.attack_speed": -1
+		},
+		"primaryEffects": {
+			"armorPenetration": 1
+		},
+		"secondaryEffects": {
+			"stun": 2
+		},
+		"tetriaryEffects": {
+			"sweeping": 1
+		},
+		"durability": 3,
+		"integrity": -3,
+		"magicCapacity": 2
+	},
+	"outcomes": [
+		{
+			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
+			"countFactor": 2,
+			"moduleKey": "single/halberd_head",
+			"moduleVariant": "halberd_head/"
+		}
+	]
+}

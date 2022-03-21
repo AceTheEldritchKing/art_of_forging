@@ -1,0 +1,67 @@
+{
+	"replace": true,
+	"slots": [ "sword/blade" ],
+	"type": "tetra:basic_major_module",
+	"improvements": [
+		"tetra:sword/crucible_blade/",
+		"tetra:sword/shared_blade/",
+		"tetra:sword/shared/",
+		"tetra:shared/"
+	],
+	"variants": [{
+		"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
+		"key": "crucible_blade/",
+		"attributes": {
+			"generic.attack_speed": -1.4,
+			"generic.attack_damage": 0.99
+		},
+		"effects": {
+			"armorPenetration": 12,
+			"crushing": [ 1, 5 ],
+			"truesweep": [ 5, 10 ],
+			"sweeping": 1,
+			"execute": [ 6, 9 ]
+		},
+		"tools": {
+			"cut": [ 2, 3 ]
+		},
+		"aspects": {
+			"edgedWeapon": 2,
+			"breakable": 2
+		},
+		"durability": -20,
+		"extract": {
+			"primaryAttributes": {
+				"generic.attack_damage": 1.9
+			},
+			"primaryEffects": {
+				"armorPenetration": 8,
+				"severing": [ 7, 2 ]
+			},
+			"secondaryEffects": {
+				"crushing": 4,
+				"execute": 5,
+				"truesweep": -0.3,
+				"sweeping": -0.3
+			},
+			"tertiaryEffects": {
+				"truesweep": 3,
+				"sweeping": 3,
+				"crushing": -1,
+				"armorPenetration": -0.5
+			},
+			"durability": 1,
+			"integrity": -1,
+			"magicCapacity": 2.5,
+			"glyph": {
+				"tint": "f71f02",
+				"textureLocation": "tetra:textures/gui/aof_glyph.png",
+				"textureX": 0
+			},
+			"availableTextures": [ "metal", "shiny", "grainy", "crude" ],
+			"models": [{
+				"location": "tetra:items/module/sword/blade/crucible_blade/"
+			}]
+		}
+	}]
+}
