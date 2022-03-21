@@ -28,7 +28,7 @@ public class ArtOfForging
     public ArtOfForging() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-
+        //Test comment for first commit+push
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
