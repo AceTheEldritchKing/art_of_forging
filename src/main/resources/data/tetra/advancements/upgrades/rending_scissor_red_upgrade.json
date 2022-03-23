@@ -4,6 +4,7 @@
             "item": "tetra:modular_sword",
             "nbt": "{\"id\": \"upgrades/rending_scissor_red_upgrade\", \"sword/blade\": \"sword/rending_scissor_red\"}"
         },
+        "frame": "goal",
         "title": {
             "translate": "tetra.advancements.upgrades.rending_scissor_red_upgrade.title"
         },
@@ -16,8 +17,30 @@
         "sword": {
             "trigger": "tetra:craft_module",
             "conditions": {
-                "module": "rending_scissor_red/rending_scissor_red"
+                "module": "rending_scissor_red/rending_scissor_red",
+                "after": {
+                    "items": [
+                        "tetra:modular_sword"
+                    ]
+                }
+            }
+        },
+        "improvements": {
+            "trigger": "tetra:craft_improvement",
+            "conditions": {
+                "improvement": "rending_scissor_red/rending_scissor_red",
+                "after": {
+                    "items": [
+                        "tetra:modular_sword"
+                    ]
+                }
             }
         }
-    }
+    },
+    "requirements": [
+        [
+            "module",
+            "improvement"
+        ]
+    ]
 }
