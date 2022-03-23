@@ -1,0 +1,26 @@
+{
+    "replace": true,
+    "locked": false,
+    "slots": [ "sword/blade" ],
+    "materialSlotCount": 1,
+    "materialRevealSlot": 0,
+    "rarity": "temporary",
+    "displayType": "major",
+    "glyph": {
+        "tint": "c40808",
+        "textureLocation": "tetra:textures/gui/aof_glyph.png",
+        "textureX": 208
+    },
+    "outcomes": [
+        {
+            "material": {
+                "items": [ "minecraft:netherite_block"]
+            },
+            "requiredTools": {
+                "hammer_dig": "minecraft:diamond"
+            },
+            "moduleKey": "sword/rending_scissor_red",
+            "moduleVariant": "rending_scissor_red/rending_scissor_red"
+        }
+    ]
+}

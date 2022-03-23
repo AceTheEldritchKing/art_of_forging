@@ -1,0 +1,42 @@
+{
+    "replace": true,
+    "slots": [ "sword/blade" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+      "tetra:sword/rending_scissor_purple/",
+      "tetra:sword/shared_blade/",
+      "tetra:sword/shared/",
+      "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "key": "rending_scissor_purple/rending_scissor_purple",
+            "attributes": {
+                "generic.attack_speed": -1.1,
+                "generic.attack_damage": 10.8
+            },
+            "aspects": {
+                "edgedWeapon": 2,
+                "breakable": 2
+            },
+            "durability": 85,
+            "effects": {
+                "armorPenetration": 35,
+                "sweeping": 2,
+                "truesweep": 2,
+                "crushing": 10,
+                "abilityCombo": 10,
+                "abilityExhilaration": 10,
+                "severing": 2,
+                "abilityDefensive": 1
+            },
+            "magicCapacity": 850,
+            "glyph": {
+                "tint": "f10ac0",
+                "textureLocation": "tetra:textures/gui/aof_glyph.png",
+                "textureX": 208
+            },
+            "models": [{ "location": "tetra:items/module/sword/blade/rending_scissor_purple/rending_scissor_purple" }]
+          }
+  ]
+}

@@ -154,7 +154,7 @@
 
 	"tetra.module.sword/shifting_blade.item_name": "§dShifting Blade§r",
 	"tetra.module.sword/shifting_blade.name": "§dShifting Blade§r",
-	"tetra.module.sword/shifting_blade.description": "A strnage blade made from amethyst blocks. Its properties give it a magical edge.",
+	"tetra.module.sword/shifting_blade.description": "A strange blade made from amethyst blocks. Its properties give it a magical edge.",
 	"tetra.variant.shifting_blade/shifting_blade": "§dShifting Blade§r",
 
 	"tetra.advancements.upgrades.rapier_upgrade.title": "Glorified Needle",
@@ -214,6 +214,30 @@
 	"tetra.advancements.scrolls.craft_scroll_flamberge.description": "Craft a flamberge scroll",
 
 	"tetra.advancements.scrolls.craft_scroll_crucible.title": "A Hellish Endeavor",
-	"tetra.advancements.scrolls.craft_scroll_crucible.description": "Craft the legendary crucible scroll"
+	"tetra.advancements.scrolls.craft_scroll_crucible.description": "Craft the legendary crucible scroll",
+
+	"tetra/schematic/sword/rending_scissor_red.name": "Scissor Blade [Red]",
+	"tetra/schematic/sword/rending_scissor_red.description": "A scissor blade made from hardened Life Fibers",
+	"tetra/schematic/sword/rending_scissor_red.slot1": "Scissor Blade",
+
+	"tetra.module.sword/rending_scissor_red.item_name": "Scissor Blade",
+	"tetra.module.sword/rending_scissor_red.name": "Scissor Blade",
+	"tetra.module.sword/rending_scissor_red.description": "A scissor blade made from hardened Life Fibers.",
+	"tetra.variant.rending_scissor_red/rending_scissor_red": "Scissor Blade [Red]",
+
+	"tetra/schematic/sword/rending_scissor_purple.name": "Scissor Blade [Purple]",
+	"tetra/schematic/sword/rending_scissor_purple.description": "A scissor blade made from hardened Life Fibers",
+	"tetra/schematic/sword/rending_scissor_purple.slot1": "Scissor Blade",
+
+	"tetra.module.sword/rending_scissor_purple.item_name": "Scissor Blade",
+	"tetra.module.sword/rending_scissor_purple.name": "Scissor Blade",
+	"tetra.module.sword/rending_scissor_purple.description": "A scissor blade made from hardened Life Fibers.",
+	"tetra.variant.rending_scissor_purple/rending_scissor_purple": "Scissor Blade [Purple]",
+
+	"tetra.advancements.upgrades.rending_scissor_red_upgrade.title": "Don't Lose Your Way!",
+	"tetra.advancements.upgrades.rending_scissor_red_upgrade.description": "Craft the red rending scissor blade.",
+
+	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.title": "I'm Not Your Cute Woman",
+	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.description": "Craft the purple rending scissor blade"
 
 }

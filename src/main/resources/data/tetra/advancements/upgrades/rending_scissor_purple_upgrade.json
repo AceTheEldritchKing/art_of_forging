@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "tetra:modular_sword",
+            "nbt": "{\"id\": \"upgrades/rending_scissor_purple_upgrade\", \"sword/blade\": \"sword/rending_scissor_purple\"}"
+        },
+        "title": {
+            "translate": "tetra.advancements.upgrades.rending_scissor_purple_upgrade.title"
+        },
+        "description": {
+            "translate": "tetra.advancements.upgrades.rending_scissor_purple_upgrade.description"
+        }
+    },
+    "parent": "tetra:upgrades/flamberge_upgrade",
+    "criteria": {
+        "sword": {
+            "trigger": "tetra:craft_module",
+            "conditions": {
+                "module": "rending_scissor_purple/rending_scissor_purple"
+            }
+        }
+    }
+}
