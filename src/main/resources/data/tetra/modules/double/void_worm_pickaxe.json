@@ -27,7 +27,7 @@
 				"breakable": 2
 			},
 			"tools": {
-				"pickaxe_dig": 7
+				"pickaxe_dig": [ 7, 45 ]
 			},
 			"durability": 45,
 			"effects": {
