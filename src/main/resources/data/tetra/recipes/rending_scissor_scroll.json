@@ -13,7 +13,7 @@
             "item": "minecraft:netherite_ingot"
         },
         "c": {
-            "tag": "fibre:wool"
+            "tag": "minecraft:wool"
         }
     },
     "result": {
