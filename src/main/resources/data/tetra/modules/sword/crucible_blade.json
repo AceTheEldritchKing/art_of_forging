@@ -20,7 +20,11 @@
 			"crushing": [ 1, 5 ],
 			"truesweep": [ 5, 10 ],
 			"sweeping": 1,
-			"execute": [ 6, 9 ]
+			"execute": [ 6, 9 ],
+			"severing": [ 5, 2 ],
+			"abilityCombo": [ 10, 2 ],
+			"abilityExhilarated": [ 10, 2 ],
+			"abilityRevenge": [ 10, 2 ]
 		},
 		"tools": {
 			"cut": [ 2, 3 ]

@@ -14,8 +14,9 @@
     "outcomes": [
         {
             "material": {
-                "items": [ "minecraft:netherite_block"]
+                "items": [ "tetra:dragon_sinew" ]
             },
+            "countFactor": 5,
             "requiredTools": {
                 "hammer_dig": "minecraft:diamond"
             },
