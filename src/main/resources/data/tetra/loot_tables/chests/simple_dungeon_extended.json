@@ -95,7 +95,21 @@
 								"glyphs": [9, 3, 6, 2],
 								"schematics": ["single/head/mace_head/mace_head"]
 							}]
-						}
+						},
+                        {
+                            "type": "minecraft:item",
+                            "name": "tetra:scroll_rolled",
+                            "weight": 4,
+                            "functions": [{
+                                "function": "tetra:scroll",
+                                "key": "bow/dreadnought_stave",
+                                "intricate": false,
+                                "material": 1,
+                                "ribbon": "560060",
+                                "glyphs": [9, 3, 6, 2],
+                                "schematics": ["bow/stave/dreadnought_stave"]
+                            }]
+                        }
                     ]
                 }
             ]

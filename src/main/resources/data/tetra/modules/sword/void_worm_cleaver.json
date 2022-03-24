@@ -29,7 +29,7 @@
 				"abilityCombo": 5,
 				"lunge": 2
 			},
-			"magicCapacity": 1000,
+			"magicCapacity": 900,
 			"glyph": {
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
 				"textureX": 144

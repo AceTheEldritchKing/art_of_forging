@@ -13,7 +13,8 @@
 			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
 			"key": "executioner_blade/",
 			"attributes": {
-				"generic.attack_speed": -1.9
+				"generic.attack_speed": -1.9,
+				"forge:reach_distance": -1
 			},
 			"effects": {
 				"sweeping": 1

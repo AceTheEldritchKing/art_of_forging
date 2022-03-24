@@ -56,7 +56,7 @@
 			},
 			"durability": 1,
 			"integrity": -1,
-			"magicCapacity": 2.5,
+			"magicCapacity": 2,
 			"glyph": {
 				"tint": "f71f02",
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
