@@ -10,7 +10,7 @@
             "item": "tetra:dragon_sinew"
         },
         "b": {
-            "item": "netherite_ingot"
+            "item": "minecraft:netherite_ingot"
         },
         "c": {
             "tag": "fibre:wool"
@@ -22,8 +22,8 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "rending_scissor",
-                    "schematics": [ "tetra:sword/rending_scissor_red/rending_scissor_red" ],
+                    "key": "saber_blade",
+                    "schematics": ["tetra:sword/saber_blade"],
                     "intricate": false,
                     "material": 2,
                     "ribbon": "e32182",

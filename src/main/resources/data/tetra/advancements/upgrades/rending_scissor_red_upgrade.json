@@ -10,7 +10,8 @@
         },
         "description": {
             "translate": "tetra.advancements.upgrades.rending_scissor_red_upgrade.description"
-        }
+        },
+        "hidden": true
     },
     "parent": "tetra:upgrades/flamberge_upgrade",
     "criteria": {
@@ -24,23 +25,6 @@
                     ]
                 }
             }
-        },
-        "improvements": {
-            "trigger": "tetra:craft_improvement",
-            "conditions": {
-                "improvement": "rending_scissor_red/rending_scissor_red",
-                "after": {
-                    "items": [
-                        "tetra:modular_sword"
-                    ]
-                }
-            }
         }
-    },
-    "requirements": [
-        [
-            "module",
-            "improvement"
-        ]
-    ]
+    }
 }
