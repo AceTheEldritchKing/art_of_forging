@@ -1,6 +1,6 @@
 {
     "replace": true,
-    "locked": false,
+    "locked": true,
     "slots": [ "sword/blade" ],
     "materialSlotCount": 1,
     "materialRevealSlot": 0,
@@ -14,9 +14,8 @@
     "outcomes": [
         {
             "material": {
-                "items": [ "tetra:dragon_sinew" ]
+                "items": [ "minecraft:netherite_ingot" ]
             },
-            "countFactor": 5,
             "requiredTools": {
                 "hammer_dig": "minecraft:diamond"
             },
