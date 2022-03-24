@@ -105,8 +105,8 @@
                                 "key": "bow/dreadnought_stave",
                                 "intricate": false,
                                 "material": 1,
-                                "ribbon": "560060",
-                                "glyphs": [9, 3, 6, 2],
+                                "ribbon": "6b2f00",
+                                "glyphs": [8, 1, 9, 5],
                                 "schematics": ["bow/stave/dreadnought_stave"]
                             }]
                         }
