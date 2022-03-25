@@ -166,7 +166,7 @@
 	"tetra.advancements.upgrades.crucible_upgrade.title": "The Only Thing They Fear",
 	"tetra.advancements.upgrades.crucible_upgrade.description": "Craft the legendary crucible blade",
 
-	"tetra.advancements.upgrades.dreadnought_upgrade.title": "Crowd Control",
+	"tetra.advancements.upgrades.dreadnought_upgrade.title": "Let It Rain Hellfire",
 	"tetra.advancements.upgrades.dreadnought_upgrade.description": "Craft a dreadnought stave",
 
 	"tetra.advancements.upgrades.tomahawk_upgrade.title": "Here's Johnny!",
@@ -216,23 +216,23 @@
 	"tetra.advancements.scrolls.craft_scroll_crucible.title": "A Hellish Endeavor",
 	"tetra.advancements.scrolls.craft_scroll_crucible.description": "Craft the legendary crucible scroll",
 
-	"tetra/schematic/sword/rending_scissor_red.name": "Scissor Blade [Red]",
+	"tetra/schematic/sword/rending_scissor_red.name": "§4Scissor Blade [Red]§r",
 	"tetra/schematic/sword/rending_scissor_red.description": "A scissor blade made from hardened Life Fibers",
 	"tetra/schematic/sword/rending_scissor_red.slot1": "Scissor Blade",
 
 	"tetra.module.sword/rending_scissor_red.item_name": "Scissor Blade",
 	"tetra.module.sword/rending_scissor_red.name": "Scissor Blade",
 	"tetra.module.sword/rending_scissor_red.description": "A scissor blade made from hardened Life Fibers.",
-	"tetra.variant.rending_scissor_red/rending_scissor_red": "Scissor Blade [Red]",
+	"tetra.variant.rending_scissor_red/rending_scissor_red": "§4Scissor Blade [Red]§r",
 
-	"tetra/schematic/sword/rending_scissor_purple.name": "Scissor Blade [Purple]",
+	"tetra/schematic/sword/rending_scissor_purple.name": "§5Scissor Blade [Purple]§r",
 	"tetra/schematic/sword/rending_scissor_purple.description": "A scissor blade made from hardened Life Fibers",
 	"tetra/schematic/sword/rending_scissor_purple.slot1": "Scissor Blade",
 
 	"tetra.module.sword/rending_scissor_purple.item_name": "Scissor Blade",
 	"tetra.module.sword/rending_scissor_purple.name": "Scissor Blade",
 	"tetra.module.sword/rending_scissor_purple.description": "A scissor blade made from hardened Life Fibers.",
-	"tetra.variant.rending_scissor_purple/rending_scissor_purple": "Scissor Blade [Purple]",
+	"tetra.variant.rending_scissor_purple/rending_scissor_purple": "§5Scissor Blade [Purple]§r",
 
 	"tetra.advancements.upgrades.rending_scissor_red_upgrade.title": "Don't Lose Your Way!",
 	"tetra.advancements.upgrades.rending_scissor_red_upgrade.description": "Craft the red rending scissor blade.",
@@ -240,9 +240,22 @@
 	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.title": "I'm Not Your Cute Woman",
 	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.description": "Craft the purple rending scissor blade",
 
-	"item.tetra.scroll.rending_scissor.prefix": "Art of Forging, Chapter ?",
-	"item.tetra.scroll.rending_scissor.name": "Rending Scissor Pairs",
-	"item.tetra.scroll.rending_scissor.description": "Contains knowledge from a different world on how to create the Rending Scissors",
-	"item.tetra.scroll.rending_scissor.description_extended": "§7[§8shift + rmb§7]§8 read more"
+	"item.tetra.scroll.rending_scissor_red.prefix": "Art of Forging, Chapter Red",
+	"item.tetra.scroll.rending_scissor_red.name": "Rending Scissor Pair, Red",
+	"item.tetra.scroll.rending_scissor_red.description": "Contains knowledge from a different world on how to create the Rending Scissors",
+	"item.tetra.scroll.rending_scissor_red.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.rending_scissor_purple.prefix": "Art of Forging, Chapter Purple",
+	"item.tetra.scroll.rending_scissor_purple.name": "Rending Scissor Pair, Purple",
+	"item.tetra.scroll.rending_scissor_purple.description": "Contains knowledge from a different world on how to create the Rending Scissors",
+	"item.tetra.scroll.rending_scissor_purple.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.bow/dreadnought_stave.prefix": "Art of Forging, Chapter 5",
+	"item.tetra.scroll.bow/dreadnought_stave.name": "Dreadnought Stave",
+	"item.tetra.scroll.bow/dreadnought_stave.description": "Contains knowledge on how to craft the dreadnought bow stave",
+	"item.tetra.scroll.bow/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.title": "Send The Artillery!",
+	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.description": "Find a dreadnought stave scroll"
 
 }
