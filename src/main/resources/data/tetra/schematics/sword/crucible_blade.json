@@ -31,7 +31,7 @@
 	"outcomes": [
 		{
 			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
-			"countFactor": 6,
+			"countFactor": 5,
 			"moduleKey": "sword/crucible_blade",
 			"moduleVariant": "crucible_blade/"
 		}
