@@ -61,5 +61,11 @@ Adds many new and unique modules, from rapiers to maces and even pop-culture wea
     modId="tetra"
     mandatory=true
     versionRange="[4.8,)"
-    ordering="NONE"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.art_of_forging]]
+    modId="mutil"
+    mandatory=true
+    versionRange="[4.4,)"
+    ordering="AFTER"
     side="BOTH"
