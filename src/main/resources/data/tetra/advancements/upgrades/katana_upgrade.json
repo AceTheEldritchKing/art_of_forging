@@ -2,21 +2,21 @@
     "display": {
         "icon": {
             "item": "tetra:modular_sword",
-            "nbt": "{\"id\": \"upgrades/flamberge_upgrade\", \"sword/blade\": \"sword/flamberge_blade\",\"sword/flamberge_blade_material\": \"flamberge_blade/iron\",\"sword/hilt\": \"sword/basic_hilt\",\"sword/basic_hilt_material\": \"basic_hilt/iron\", \"sword/guard\": \"sword/wide_guard\",\"sword/wide_guard_material\": \"wide_guard/iron\"}"
-		},
+            "nbt": "{\"id\": \"upgrades/katana_upgrade\", \"sword/blade\": \"sword/katana_blade\",\"sword/katana_blade_material\": \"katana_blade/iron\",\"sword/hilt\": \"sword/basic_hilt\",\"sword/basic_hilt_material\": \"basic_hilt/jungle\", \"sword/guard\": \"sword/wide_guard\",\"sword/wide_guard_material\": \"wide_guard/dark_oak\"}"
+        },
         "title": {
-            "translate": "tetra.advancements.upgrades.flamberge_upgrade.title"
+            "translate": "tetra.advancements.upgrades.katana_upgrade.title"
         },
         "description": {
-            "translate": "tetra.advancements.upgrades.flamberge_upgrade.description"
+            "translate": "tetra.advancements.upgrades.katana_upgrade.description"
         }
     },
-    "parent": "tetra:upgrades/katana_upgrade",
+    "parent": "tetra:upgrades/rapier_upgrade",
     "criteria": {
         "module": {
             "trigger": "tetra:craft_module",
             "conditions": {
-                "module": "sword/flamberge_blade",
+                "module": "sword/katana_blade",
                 "after": {
                     "items": [
                         "tetra:modular_sword"
@@ -27,7 +27,7 @@
         "improvement": {
             "trigger": "tetra:craft_improvement",
             "conditions": {
-                "improvement": "sword/flamberge_blade",
+                "improvement": "sword/katana_blade",
                 "after": {
                     "items": [
                         "tetra:modular_sword"

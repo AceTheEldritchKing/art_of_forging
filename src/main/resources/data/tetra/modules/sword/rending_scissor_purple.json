@@ -11,6 +11,7 @@
     "variants": [
         {
             "key": "rending_scissor_purple/rending_scissor_purple",
+            "integrity": -3,
             "attributes": {
                 "generic.attack_speed": -1.1,
                 "generic.attack_damage": 10.8
@@ -27,7 +28,7 @@
                 "crushing": 10,
                 "abilityCombo": 10,
                 "abilityExhilaration": 10,
-                "severing": 2,
+                "severing": [ 3, 25 ],
                 "abilityDefensive": 1
             },
             "magicCapacity": 850,

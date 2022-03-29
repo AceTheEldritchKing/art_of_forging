@@ -18,6 +18,7 @@
 	"variants": [
 		{
 			"key": "void_worm_pickaxe/void_worm_pickaxe",
+			"integrity": -1,
 			"attributes": {
 				"generic.attack_damage": 1.2,
 				"generic.attack_speed": -1.1

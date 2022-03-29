@@ -240,12 +240,12 @@
 	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.title": "I'm Not Your Cute Woman",
 	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.description": "Craft the purple rending scissor blade",
 
-	"item.tetra.scroll.rending_scissor_red.prefix": "Art of Forging, Chapter Red",
+	"item.tetra.scroll.rending_scissor_red.prefix": "Art of Forging, Chapter ?",
 	"item.tetra.scroll.rending_scissor_red.name": "Rending Scissor Pair, Red",
 	"item.tetra.scroll.rending_scissor_red.description": "Contains knowledge from a different world on how to create the Rending Scissors",
 	"item.tetra.scroll.rending_scissor_red.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
-	"item.tetra.scroll.rending_scissor_purple.prefix": "Art of Forging, Chapter Purple",
+	"item.tetra.scroll.rending_scissor_purple.prefix": "Art of Forging, Chapter ?",
 	"item.tetra.scroll.rending_scissor_purple.name": "Rending Scissor Pair, Purple",
 	"item.tetra.scroll.rending_scissor_purple.description": "Contains knowledge from a different world on how to create the Rending Scissors",
 	"item.tetra.scroll.rending_scissor_purple.description_extended": "§7[§8shift + rmb§7]§8 read more",
@@ -256,6 +256,24 @@
 	"item.tetra.scroll.bow/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.title": "Send The Artillery!",
-	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.description": "Find a dreadnought stave scroll"
+	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.description": "Find a dreadnought stave scroll",
+
+	"tetra/schematic/sword/katana_blade.name": "Katana blade",
+	"tetra/schematic/sword/katana_blade.description": "Replace the current sword blade with a katana blade, an honorable sword.\n \nMaterial §fhardness§r increases §fdamage§r.",
+	"tetra/schematic/sword/katana_blade.slot1": "Blade material",
+
+	"tetra.module.sword/katana_blade.item_name": "Katana",
+	"tetra.module.sword/katana_blade.name": "Katana",
+	"tetra.module.sword/katana_blade.description": "An honorable blade.",
+	"tetra.module.sword/katana_blade.material_name": "%s katana",
+	"tetra.module.sword/katana_blade.prefix": "%s",
+
+	"item.tetra.scroll.katana_blade.prefix": "Art of Forging, Chapter 6",
+	"item.tetra.scroll.katana_blade.name": "Katana Blade",
+	"item.tetra.scroll.katana_blade.description": "Contains knowledge on how to forge a katana blade",
+	"item.tetra.scroll.katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"tetra.advancements.upgrades.katana_upgrade.title": "Way Of The Blade",
+	"tetra.advancements.upgrades.katana_upgrade.description": "Craft a katana blade"
 
 }
