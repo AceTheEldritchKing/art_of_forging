@@ -250,7 +250,7 @@
 	"item.tetra.scroll.rending_scissor_purple.description": "Contains knowledge from a different world on how to create the Rending Scissors",
 	"item.tetra.scroll.rending_scissor_purple.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
-	"item.tetra.scroll.bow/dreadnought_stave.prefix": "Art of Forging, Chapter 5",
+	"item.tetra.scroll.bow/dreadnought_stave.prefix": "Art of Forging, Chapter 6",
 	"item.tetra.scroll.bow/dreadnought_stave.name": "Dreadnought Stave",
 	"item.tetra.scroll.bow/dreadnought_stave.description": "Contains knowledge on how to craft the dreadnought bow stave",
 	"item.tetra.scroll.bow/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
@@ -268,7 +268,7 @@
 	"tetra.module.sword/katana_blade.material_name": "%s katana",
 	"tetra.module.sword/katana_blade.prefix": "%s",
 
-	"item.tetra.scroll.katana_blade.prefix": "Art of Forging, Chapter 6",
+	"item.tetra.scroll.katana_blade.prefix": "Art of Forging, Chapter 7",
 	"item.tetra.scroll.katana_blade.name": "Katana Blade",
 	"item.tetra.scroll.katana_blade.description": "Contains knowledge on how to forge a katana blade",
 	"item.tetra.scroll.katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
