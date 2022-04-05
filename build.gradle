@@ -116,6 +116,11 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
+        // JEI Maven, more dev version stuff
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
         url "https://www.cursemaven.com"
         content {
             includeGroup "curse.maven"
@@ -139,8 +144,10 @@ dependencies {
     implementation fg.deobf("se.mickelus.tetra:tetra:${tetra_version}")
 
     // extra goodies for testing
-    implementation fg.deobf("curse.maven:alexsmobs-426558:3709855")
-    implementation fg.deobf("curse.maven:citadel-331936:3642713")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+    runtimeOnly fg.deobf("curse.maven:alexsmobs-426558:3709855")
+    runtimeOnly fg.deobf("curse.maven:citadel-331936:3642713")
+    runtimeOnly fg.deobf("curse.maven:neat-238372:3593906")
 }
 
 compileJava.options.encoding = 'UTF-8' // i actually don't know what this does but TP has it so
