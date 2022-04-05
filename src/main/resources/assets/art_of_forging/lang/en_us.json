@@ -274,6 +274,16 @@
 	"item.tetra.scroll.katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra.advancements.upgrades.katana_upgrade.title": "Way Of The Blade",
-	"tetra.advancements.upgrades.katana_upgrade.description": "Craft a katana blade"
+	"tetra.advancements.upgrades.katana_upgrade.description": "Craft a katana blade",
+
+	"tetra/schematic/shield/plate/kite.name": "Kite plate",
+	"tetra/schematic/shield/plate/kite.description": "Craft a kite shield plate, kite shields can block for an indefinite with no cooldown, and has a lower ability cooldown that a tower shield.",
+	"tetra/schematic/shield/plate/kite.slot1": "Material",
+
+	"tetra.module.shield/kite.item_name": "Kite shield",
+	"tetra.module.shield/kite.name": "Kite shield",
+	"tetra.module.shield/kite.description": "A long, thin shield that can block indefinitely without cooldown.",
+	"tetra.module.shield/kite.material_name": "%s kite shield",
+	"tetra.module.shield/kite.prefix": "%s"
 
 }
