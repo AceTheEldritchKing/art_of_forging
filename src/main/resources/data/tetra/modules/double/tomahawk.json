@@ -21,7 +21,7 @@
 			"aspects": {
 				"blockBreaker": 1,
 				"edgedWeapon": 2,
-				"pointy_weapon": 2,
+				"throwable": 2,
 				"breakable": 2
 			},
 			"effects": {

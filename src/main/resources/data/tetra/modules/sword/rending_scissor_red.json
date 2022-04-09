@@ -14,7 +14,7 @@
             "integrity": -3,
             "attributes": {
                 "generic.attack_speed": -1.1,
-                "generic.attack_damage": 10.8
+                "generic.attack_damage": 10.2
             },
             "aspects": {
                 "edgedWeapon": 2,
@@ -24,7 +24,7 @@
             "effects": {
                 "armorPenetration": 35,
                 "sweeping": 2,
-                "truesweep": 2,
+                "truesweep": 1,
                 "crushing": 10,
                 "abilityCombo": 10,
                 "abilityRevenge": 10,

@@ -21,7 +21,7 @@
 			},
 			"durability": 90,
 			"effects": {
-				"truesweep": 1,
+				"sweeping": 1,
 				"armorPenetration": 15,
 				"intuit": 1,
 				"earthbind": 5,

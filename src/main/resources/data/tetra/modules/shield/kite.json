@@ -18,7 +18,7 @@
             "key": "kite/",
             "attributes": {
                 "tetra:ability_damage": 5,
-                "tetra:ability_cooldown": 3
+                "tetra:ability_cooldown": 3.5
             },
             "aspects": {
                 "bluntWeapon": 1,
@@ -34,10 +34,10 @@
                 },
                 "secondaryAttributes": {
                     "tetra:ability_damage": 0.3,
-                    "tetra:ability_cooldown": 0.3
+                    "tetra:ability_cooldown": 0.36
                 },
                 "tertiaryAttributes": {
-                    "tetra:ability_cooldown": -0.25
+                    "tetra:ability_cooldown": -0.21
                 },
                 "durability": 0.8,
                 "integrity": -1,

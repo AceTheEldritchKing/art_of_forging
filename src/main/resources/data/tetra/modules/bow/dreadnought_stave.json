@@ -20,7 +20,7 @@
 				"breakable": 2
 			},
 			"durability": 255,
-			"integrity": -1,
+			"integrity": -2,
 			"extract": {
 				"primaryAttributes": {
 					"tetra:draw_speed": 0.16,

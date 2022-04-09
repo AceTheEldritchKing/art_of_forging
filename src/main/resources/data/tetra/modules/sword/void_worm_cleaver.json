@@ -13,8 +13,8 @@
 			"key": "void_worm_cleaver/void_worm_cleaver",
 			"integrity": -3,
 			"attributes": {
-				"generic.attack_speed": -1.3,
-				"generic.attack_damage": 12.5
+				"generic.attack_speed": -3.1,
+				"generic.attack_damage": 11
 			},
 			"aspects": {
 				"edgedWeapon": 2,
@@ -22,12 +22,11 @@
 			},
 			"durability": 90,
 			"effects": {
-				"sweeping": 3,
+				"sweeping": 1,
 				"truesweep": 1,
-				"crushing": 10,
-				"bleeding": 4,
-				"shieldbreaker": 2,
-				"abilityCombo": 5,
+				"crushing": 8,
+				"bleeding": [2, 2],
+				"abilityCombo": 1,
 				"lunge": 2
 			},
 			"magicCapacity": 900,

@@ -19,7 +19,7 @@
 			"armorPenetration": 2
 		},
 		"secondaryEffects": {
-			"execute": 1
+			"reap": 1
 		},
 		"tertiaryEffects": {
 			"truesweep": 1
