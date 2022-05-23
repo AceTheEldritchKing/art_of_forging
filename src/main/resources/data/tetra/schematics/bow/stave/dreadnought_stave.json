@@ -1,9 +1,12 @@
 {
 	"replace": true,
-	"locked": true,
 	"slots": [ "bow/stave" ],
 	"materialSlotCount": 1,
 	"materialRevealSlot": 0,
+	"requirement": {
+		"type": "tetra:locked",
+		"key": "tetra:bow/dreadnought_stave"
+	},
 	"rarity": "temporary",
 	"displayType": "major",
 	"glyph": {

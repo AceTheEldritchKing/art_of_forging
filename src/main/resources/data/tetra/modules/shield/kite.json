@@ -3,13 +3,8 @@
     "type": "tetra:basic_major_module",
     "slots": [ "shield/plate" ],
     "improvements": [
-        "tetra:shield/plate/kite/studs",
-        "tetra:shield/plate/kite/trim",
-        "tetra:shield/plate/kite/aerodynamic_trim",
-        "tetra:shield/plate/kite/banner",
-        "tetra:shield/plate/piercing",
-        "tetra:shield/plate/ricochet",
-        "tetra:shield/plate/shared_hone",
+        "tetra:shield/plate/kite/",
+        "tetra:shield/plate/shared/",
         "tetra:shared/"
     ],
     "variants": [

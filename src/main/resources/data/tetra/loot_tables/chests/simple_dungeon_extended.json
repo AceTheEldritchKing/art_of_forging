@@ -37,7 +37,7 @@
                                 "material": 1,
                                 "ribbon": "1affdb",
                                 "glyphs": [8, 2, 1, 4],
-                                "schematics": ["single/head/halberd_head/halberd_head"]
+                                "schematics": ["sword/throwing_knife"]
                             }]
                         },
                         {
@@ -63,7 +63,7 @@
 								"key": "single/halberd_head",
 								"intricate": false,
 								"material": 1,
-								"ribbon": "44edff",
+								"ribbon": "444aff",
 								"glyphs": [8, 1, 4, 5],
 								"schematics": ["single/head/halberd_head/halberd_head"]
 							}]

@@ -1,9 +1,12 @@
 {
     "replace": true,
-    "locked": true,
     "slots": [ "sword/blade" ],
     "materialSlotCount": 1,
     "materialRevealSlot": 0,
+    "requirement": {
+        "type": "tetra:locked",
+        "key": "tetra:sword/rending_scissor_purple"
+    },
     "rarity": "temporary",
     "displayType": "major",
     "glyph": {
