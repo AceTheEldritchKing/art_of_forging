@@ -20,7 +20,6 @@
             "effects": {
                 "skewering": [ 1, 1 ],
                 "sweeping": 1,
-                "truesweep": [ 1, 2 ],
                 "abilityMomentum": [ 10, 0.5 ]
             },
             "tools": {
