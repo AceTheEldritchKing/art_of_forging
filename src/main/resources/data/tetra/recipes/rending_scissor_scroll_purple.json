@@ -22,7 +22,7 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "rending_scissor_purple",
+                    "key": "tetra/rending_scissor_purple",
                     "schematics": ["tetra:sword/rending_scissor_purple" ],
                     "intricate": false,
                     "material": 2,

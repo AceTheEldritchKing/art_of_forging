@@ -22,7 +22,7 @@
 		"nbt": {
 			"BlockEntityTag": {
 				"data": [{
-					"key": "flamberge_blade",
+					"key": "tetra/flamberge_blade",
 					"schematics": ["tetra:sword/flamberge_blade"],
 					"intricate": false,
 					"material": 2,

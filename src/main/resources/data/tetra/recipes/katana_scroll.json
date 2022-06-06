@@ -25,7 +25,7 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "katana_blade",
+                    "key": "tetra/katana_blade",
                     "schematics": [ "tetra:sword/katana_blade" ],
                     "intricate": false,
                     "material": 2,

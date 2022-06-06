@@ -25,7 +25,7 @@
 		"nbt": {
 			"BlockEntityTag": {
 				"data": [{
-					"key": "crucible_blade",
+					"key": "tetra/crucible_blade",
 					"schematics": ["tetra:sword/crucible_blade"],
 					"intricate": false,
 					"material": 2,
