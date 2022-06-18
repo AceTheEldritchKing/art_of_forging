@@ -1,0 +1,6 @@
+[
+    {
+        "modules": [ "double/tomahawk", "double/basic_hammer" ],
+        "name": "double/mjolnir"
+    }
+]

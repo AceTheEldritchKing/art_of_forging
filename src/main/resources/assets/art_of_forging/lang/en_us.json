@@ -59,10 +59,10 @@
 	"tetra.module.single/halberd_head.material_name": "%s halberd",
 	"tetra.module.single/halberd_head.prefix": "%s",
 
-	"item.tetra.scroll.single/halberd_head.prefix": "Art of Forging, Chapter 2",
-	"item.tetra.scroll.single/halberd_head.name": "Halberds",
-	"item.tetra.scroll.single/halberd_head.description": "Contains knowledge on how to forge halberd heads",
-	"item.tetra.scroll.single/halberd_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.prefix": "Art of Forging, Chapter 2",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.name": "Halberds",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.description": "Contains knowledge on how to forge halberd heads",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra/schematic/sword/saber_blade.name": "Saber blade",
 	"tetra/schematic/sword/saber_blade.description": "Replace the current sword blade with a saber, a regal and militant blade.\n \nMaterial §fhardness§r increases §fdamage§r.",
@@ -97,10 +97,10 @@
 	"tetra.module.single/mace_head.material_name": "%s mace",
 	"tetra.module.single/mace_head.prefix": "%s",
 
-	"item.tetra.scroll.single/mace_head.prefix": "Art of Forging, Chapter 4",
-	"item.tetra.scroll.single/mace_head.name": "Maces",
-	"item.tetra.scroll.single/mace_head.description": "Contains knowledge on how to forge mace heads",
-	"item.tetra.scroll.single/mace_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
+	"item.tetra.scroll.single/head/mace_head/mace_head.prefix": "Art of Forging, Chapter 4",
+	"item.tetra.scroll.single/head/mace_head/mace_head.name": "Maces",
+	"item.tetra.scroll.single/head/mace_head/mace_head.description": "Contains knowledge on how to forge mace heads",
+	"item.tetra.scroll.single/head/mace_head/mace_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra.module.bow/dreadnought_stave.item_name": "Dreadnought bow",
 	"tetra.module.bow/dreadnought_stave.name": "Dreadnought stave",
@@ -250,17 +250,17 @@
 	"item.tetra.scroll.tetra/rending_scissor_purple.description": "Contains knowledge from a different world on how to create the Rending Scissors",
 	"item.tetra.scroll.tetra/rending_scissor_purple.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
-	"item.tetra.scroll.bow/dreadnought_stave.prefix": "Art of Forging, Chapter 6",
-	"item.tetra.scroll.bow/dreadnought_stave.name": "Dreadnought Stave",
-	"item.tetra.scroll.bow/dreadnought_stave.description": "Contains knowledge on how to craft the dreadnought bow stave",
-	"item.tetra.scroll.bow/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.prefix": "Art of Forging, Chapter 6",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.name": "Dreadnought Stave",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.description": "Contains knowledge on how to craft the dreadnought bow stave",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.title": "Send The Artillery!",
 	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.description": "Find a dreadnought stave scroll",
 
-	"tetra/schematic/sword/katana_blade.name": "Katana blade",
-	"tetra/schematic/sword/katana_blade.description": "Replace the current sword blade with a katana blade, an honorable sword.\n \nMaterial §fhardness§r increases §fdamage§r.",
-	"tetra/schematic/sword/katana_blade.slot1": "Blade material",
+	"tetra/schematic/sword/katana/katana_blade.name": "Katana blade",
+	"tetra/schematic/sword/katana/katana_blade.description": "Replace the current sword blade with a katana blade, an honorable sword.\n \nMaterial §fhardness§r increases §fdamage§r.",
+	"tetra/schematic/sword/katana/katana_blade.slot1": "Blade material",
 
 	"tetra.module.sword/katana_blade.item_name": "Katana",
 	"tetra.module.sword/katana_blade.name": "Katana",
@@ -284,6 +284,20 @@
 	"tetra.module.shield/kite.name": "Kite shield",
 	"tetra.module.shield/kite.description": "A long, thin shield that can block indefinitely without cooldown.",
 	"tetra.module.shield/kite.material_name": "%s kite shield",
-	"tetra.module.shield/kite.prefix": "%s"
+	"tetra.module.shield/kite.prefix": "%s",
+
+	"tetra.synergy.sword/murasama": "Murasama",
+
+	"item.tetra.scroll.katana/murasama_blade.name": "Art of Forging, Chapter ?: Murasama",
+	"item.tetra.scroll.katana/murasama_blade.description": "Contains knowledge from a different world on how create the Murasama",
+
+	"tetra/schematic/sword/katana/murasama_blade.name": "Murasama",
+	"tetra/schematic/sword/katana/murasama_blade.description": "Improve your katana into the legendary Murasama blade.",
+	"tetra/schematic/sword/katana/murasama_blade.slot1": "Murasama Blade",
+
+	"tetra.improvement.sword/murasama_imprv.name": "Murasama-ified",
+	"tetra.improvement.sword/murasama_imprv.description": "Allow your katana to take on the mantle of Murasama",
+
+	"tetra:synergy.double/mjolnir": "Mjolnir"
 
 }

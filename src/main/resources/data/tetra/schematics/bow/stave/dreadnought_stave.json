@@ -8,6 +8,10 @@
 		"textureLocation": "tetra:textures/gui/aof_glyph.png",
 		"textureX": 112
 	},
+	"requirement": {
+		"type": "tetra:locked",
+		"key": "tetra:bow/stave/dreadnought_stave"
+	},
 	"outcomes": [
 		{
 			"material": {

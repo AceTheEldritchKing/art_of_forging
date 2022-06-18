@@ -9,8 +9,8 @@
             "abilityMomentum": [ 10, 1.5 ]
         },
         "attributes": {
-            "generic.attack_speed": -1.2,
-            "generic.attack_damage": 9
+            "generic.attack_speed": 0.1,
+            "generic.attack_damage": 2
         },
         "models": [
             {

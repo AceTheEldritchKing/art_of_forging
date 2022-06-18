@@ -8,6 +8,10 @@
 		"textureLocation": "tetra:textures/gui/aof_glyph.png",
 		"textureX": 96
 	},
+	"requirement": {
+		"type": "tetra:locked",
+		"key": "tetra:single/head/mace_head/mace_head"
+	},
 	"translation": {
 		"primaryAttributes": {
 			"generic.attack_speed": 1
