@@ -47,7 +47,6 @@
                 },
                 "tertiaryEffects": {
                     "sweeping": 0.3,
-                    "truesweep": 0.5,
                     "abilityMomentum": 0.5
                 },
                 "durability": 0.9,

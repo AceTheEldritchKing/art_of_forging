@@ -268,10 +268,10 @@
 	"tetra.module.sword/katana_blade.material_name": "%s katana",
 	"tetra.module.sword/katana_blade.prefix": "%s",
 
-	"item.tetra.scroll.tetra/katana_blade.prefix": "Art of Forging, Chapter 7",
-	"item.tetra.scroll.tetra/katana_blade.name": "Katana Blade",
-	"item.tetra.scroll.tetra/katana_blade.description": "Contains knowledge on how to forge a katana blade",
-	"item.tetra.scroll.tetra/katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+	"item.tetra.scroll.sword/katana/katana_blade.prefix": "Art of Forging, Chapter 7",
+	"item.tetra.scroll.sword/katana/katana_blade.name": "Katana Blade",
+	"item.tetra.scroll.sword/katana/katana_blade.description": "Contains knowledge on how to forge a katana blade",
+	"item.tetra.scroll.sword/katana/katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra.advancements.upgrades.katana_upgrade.title": "Way Of The Blade",
 	"tetra.advancements.upgrades.katana_upgrade.description": "Craft a katana blade",
@@ -286,14 +286,14 @@
 	"tetra.module.shield/kite.material_name": "%s kite shield",
 	"tetra.module.shield/kite.prefix": "%s",
 
-	"item.tetra.scroll.katana/murasama_blade.prefix": "Art of Forging, Chapter ?",
-	"item.tetra.scroll.katana/murasama_blade.name": "Murasama",
-	"item.tetra.scroll.katana/murasama_blade.description": "Contains knowledge from a different world on how create the Murasama",
-	"item.tetra.scroll.katana/murasama_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+	"item.tetra.scroll.sword/katana/murasama_blade.prefix": "Art of Forging, Chapter ?",
+	"item.tetra.scroll.sword/katana/murasama_blade.name": "Murasama",
+	"item.tetra.scroll.sword/katana/murasama_blade.description": "Contains knowledge from a different world on how create the Murasama",
+	"item.tetra.scroll.sword/katana/murasama_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
-	"tetra/schematic/sword/katana/murasama_blade.name": "Murasama",
-	"tetra/schematic/sword/katana/murasama_blade.description": "Improve your katana into the legendary Murasama blade.",
-	"tetra/schematic/sword/katana/murasama_blade.slot1": "Murasama Blade",
+	"tetra/schematic/katana/murasama_blade.name": "Murasama",
+	"tetra/schematic/katana/murasama_blade.description": "Improve your katana into the legendary Murasama blade.",
+	"tetra/schematic/katana/murasama_blade.slot1": "Murasama Blade",
 
 	"tetra.improvement.sword/murasama_imprv.name": "Murasama-ified",
 	"tetra.improvement.sword/murasama_imprv.description": "Allow your katana to take on the mantle of Murasama",

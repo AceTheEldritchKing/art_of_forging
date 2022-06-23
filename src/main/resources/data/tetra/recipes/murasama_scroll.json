@@ -22,8 +22,8 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "katana/murasama_blade",
-                    "schematics": [ "tetra:katana/murasama_blade" ],
+                    "key": "sword/katana/murasama_blade",
+                    "schematics": [ "tetra:sword/katana/murasama_blade" ],
                     "details": "katana",
                     "intricate": false,
                     "material": 2,

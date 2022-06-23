@@ -5,7 +5,7 @@
     "materialRevealSlot": 0,
     "requirement": {
         "type": "tetra:locked",
-        "key": "tetra:sword/katana_blade"
+        "key": "tetra:sword/katana/katana_blade"
     },
     "rarity": "temporary",
     "displayType": "major",

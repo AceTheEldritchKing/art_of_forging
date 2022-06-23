@@ -15,7 +15,7 @@
         "requirements": [
             {
                 "type": "tetra:locked",
-                "key": "tetra:katana/murasama_blade"
+                "key": "tetra:sword/katana/murasama_blade"
             },
             {
                 "type": "tetra:module",
