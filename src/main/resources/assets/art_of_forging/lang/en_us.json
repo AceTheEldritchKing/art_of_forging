@@ -286,10 +286,10 @@
 	"tetra.module.shield/kite.material_name": "%s kite shield",
 	"tetra.module.shield/kite.prefix": "%s",
 
-	"tetra.synergy.sword/murasama": "Murasama",
-
-	"item.tetra.scroll.katana/murasama_blade.name": "Art of Forging, Chapter ?: Murasama",
+	"item.tetra.scroll.katana/murasama_blade.prefix": "Art of Forging, Chapter ?",
+	"item.tetra.scroll.katana/murasama_blade.name": "Murasama",
 	"item.tetra.scroll.katana/murasama_blade.description": "Contains knowledge from a different world on how create the Murasama",
+	"item.tetra.scroll.katana/murasama_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
 
 	"tetra/schematic/sword/katana/murasama_blade.name": "Murasama",
 	"tetra/schematic/sword/katana/murasama_blade.description": "Improve your katana into the legendary Murasama blade.",

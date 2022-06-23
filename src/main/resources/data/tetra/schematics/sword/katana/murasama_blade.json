@@ -1,5 +1,6 @@
 {
     "replace": true,
+    "localizationKey": "katana/murasama_blade",
     "slots": [ "sword/blade" ],
     "materialSlotCount": 0,
     "rarity": "temporary",

@@ -24,10 +24,11 @@
                 "data": [{
                     "key": "katana/murasama_blade",
                     "schematics": [ "tetra:katana/murasama_blade" ],
+                    "details": "katana",
                     "intricate": false,
                     "material": 2,
                     "ribbon": "c52323",
-                    "glyphs": [ 2, 2, 13, 25 ]
+                    "glyphs": [ 6, 7, 13, 15 ]
                 }]
             }
         }
