@@ -18,7 +18,7 @@
 			},
 			"effects": {
 				"stun": [ 20, 2 ],
-				"crushing": 15,
+				"crushing": 9,
 				"shieldbreaker": 1
 			},
 			"aspects": {
@@ -35,7 +35,7 @@
 					"generic.attack_damage": 0.15
 				},
 				"primaryEffects": {
-					"crushing": 0.3
+					"crushing": 0.2
 				},
 				"secondaryEffects": {
 					"crushing": 0.2,
