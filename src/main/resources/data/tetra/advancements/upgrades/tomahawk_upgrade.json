@@ -23,17 +23,6 @@
                     ]
                 }
             }
-        },
-        "improvement": {
-            "trigger": "tetra:craft_improvement",
-            "conditions": {
-				"module": "double/tomahawk",
-                "after": {
-                    "items": [
-                        "tetra:modular_double"
-                    ]
-                }
-            }
         }
     },
 	"requirements": [

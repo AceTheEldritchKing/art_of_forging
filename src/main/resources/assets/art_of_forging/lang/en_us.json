@@ -296,8 +296,6 @@
 	"tetra/schematic/katana/murasama_blade.slot1": "Murasama Blade",
 
 	"tetra.improvement.sword/murasama_imprv.name": "Murasama-ified",
-	"tetra.improvement.sword/murasama_imprv.description": "Allow your katana to take on the mantle of Murasama",
-
-	"tetra:synergy.double/mjolnir": "Mjolnir"
+	"tetra.improvement.sword/murasama_imprv.description": "Allow your katana to take on the mantle of Murasama"
 
 }
