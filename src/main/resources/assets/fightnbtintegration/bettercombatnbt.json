@@ -1,0 +1,63 @@
+{
+  "double/head_left": {
+    "double/basic_hammer_left": {
+      "parent": "bettercombat:hammer"
+    },
+    "double/basic_axe_left": {
+      "parent": "bettercombat:heavy_axe"
+    },
+    "double/basic_pickaxe_left": {
+      "parent": "bettercombat:pickaxe"
+    },
+    "double/hoe_left": {
+      "parent": "bettercombat:pickaxe"
+    },
+    "double/claw_left": {
+      "parent": "bettercombat:claw"
+    },
+    "double/adze_left": {
+      "parent": "bettercombat:pickaxe"
+    },
+    "double/sickle_left": {
+      "parent": "bettercombat:sickle"
+    }
+  },
+  "sword/blade": {
+    "sword/basic_blade": {
+      "parent": "bettercombat:claymore"
+    },
+    "sword/heavy_blade": {
+      "parent": "minecraft:wooden_sword"
+    },
+    "sword/machete": {
+      "parent": "bettercombat:cutlass"
+    },
+    "sword/short_blade": {
+      "parent": "bettercombat:dagger"
+    }
+  },
+  "single/head": {
+    "single/spearhead": {
+      "parent": "bettercombat:spear"
+    },
+    "single/basic_shovel": {
+      "parent": "bettercombat:staff"
+    }
+  },
+  "crossbow/stock": {
+    "crossbow/basic_stock": {
+      "armor_ignorance": 20,
+      "hit_at_once": 0,
+      "impact": 3,
+      "weapon_type": "ranged"
+    }
+  },
+  "shield/plate": {
+    "shield/tower": {
+      "armor_ignorance": 0,
+      "hit_at_once": 0,
+      "impact": 0,
+      "weapon_type": "shield"
+    }
+  }
+}
