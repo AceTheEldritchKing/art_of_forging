@@ -16,7 +16,7 @@ import java.util.Map;
 public interface WeaponRegistryInterface {
 
     @Accessor("containers")
-    static Map<ResourceLocation, AttributesContainer> getContainers() {
+    static Map<ResourceLocation, AttributesContainer> containers() {
         throw new AssertionError();
     }
 

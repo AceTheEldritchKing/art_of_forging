@@ -13,7 +13,7 @@
       "parent": "bettercombat:pickaxe"
     },
     "double/claw_left": {
-      "parent": "bettercombat:claw"
+      "parent": "bettercombat:pickaxe"
     },
     "double/adze_left": {
       "parent": "bettercombat:pickaxe"
@@ -21,7 +21,7 @@
     "double/sickle_left": {
       "parent": "bettercombat:sickle"
     },
-    "double/tomohawk": {
+    "double/tomahawk": {
       "parent": "bettercombat:axe"
     },
     "double/void_worm_pickaxe": {

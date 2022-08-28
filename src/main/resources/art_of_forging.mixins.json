@@ -1,5 +1,5 @@
 {
-  "required": false,
+  "required": true,
   "package": "net.acetheeldritchking.art_of_forging.bettercombatcompat.mixins",
   "minVersion": "0.8",
   "compatibilityLevel": "JAVA_17",

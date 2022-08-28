@@ -36,8 +36,9 @@ public abstract class WeaponRegistryMixin {
             remap = false
     )
     private static void loadAttributes(ResourceManager resourceManager, CallbackInfo ci){
-        Map<ResourceLocation, AttributesContainer> containers = WeaponRegistryInterface.getContainers();
+        ci.cancel();
         WeaponRegistryInterface.loadContainers(resourceManager);
+        Map<ResourceLocation, AttributesContainer> containers = WeaponRegistryInterface.containers();
         containers.forEach((itemId, container) -> {
             WeaponRegistryInterface.resolveAndRegisterAttributes(itemId, container);
         });
@@ -56,6 +57,9 @@ public abstract class WeaponRegistryMixin {
             if(attributes!=null){
                 cir.setReturnValue(attributes);
                 return;
+            }
+            else{
+                //System.out.println("No WeaponAttributes Found for "+weaponParent);
             }
         }
     }
