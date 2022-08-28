@@ -13,7 +13,7 @@
             "item": "minecraft:netherite_ingot"
         },
         "c": {
-            "item": "minecraft:red_wool"
+            "tag": "minecraft:wool"
         }
     },
     "result": {
@@ -22,8 +22,8 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "tetra/rending_scissor_red",
-                    "schematics": ["tetra:sword/rending_scissor_red" ],
+                    "key": "tetra/rending_scissor_purple",
+                    "schematics": [ "tetra:sword/rending_scissor_red", "tetra:sword/rending_scissor_purple" ],
                     "intricate": false,
                     "material": 2,
                     "ribbon": "e32182",

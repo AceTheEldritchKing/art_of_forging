@@ -1,0 +1,35 @@
+{
+    "replace": false,
+    "type": "tetra:basic_module",
+    "slots": [ "shield/boss" ],
+    "variants":[
+        {
+            "key": "spike/",
+            "integrity": -1,
+            "attributes": {
+                "tetra:ability_cooldown": 0.3
+            },
+            "effects": {
+                "blockingReflect": [ 38, 0.9 ],
+                "bleeding": 1.5
+            },
+            "durability": 20,
+            "extract": {
+                "durability": 0.1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 104,
+                    "textureY": 16
+                },
+                "availableTextures": [ "spike" ],
+                "models": [
+                    {
+                        "type": "tetra:boss/flat",
+                        "location": "tetra:items/module/shield/boss/",
+                        "tint": "f1f1d8"
+                    }
+                ]
+            }
+        }
+    ]
+}

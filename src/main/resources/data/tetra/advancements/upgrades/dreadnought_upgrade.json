@@ -25,17 +25,6 @@
                     ]
                 }
             }
-        },
-        "improvement": {
-            "trigger": "tetra:craft_improvement",
-            "conditions": {
-				"module": "bow/dreadnought_stave",
-                "after": {
-                    "items": [
-                        "tetra:modular_bow"
-                    ]
-                }
-            }
         }
     },
     "requirements": [

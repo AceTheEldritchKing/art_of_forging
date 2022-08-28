@@ -115,7 +115,22 @@
                   "material": 1,
                   "ribbon": "f3b31f",
                   "glyphs": [ 8, 1, 9, 5 ],
-                  "schematics": [ "tetra:bow/stave/dreadnought_stave" ]
+                  "schematics": [ "tetra:bow/stave/dreadnought_stave", "tetra:bow/stave/dreadnought_cross_stave" ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "tetra:scroll_rolled",
+              "functions": [
+                {
+                  "function": "tetra:scroll",
+                  "key": "bow/string/compound_string",
+                  "intricate": false,
+                  "material": 1,
+                  "ribbon": "19e588",
+                  "glyphs": [ 15, 13, 12, 14 ],
+                  "schematics": [ "tetra:bow/string/compound_string", "tetra:crossbow/string/compound_cross_string" ]
                 }
               ]
             }

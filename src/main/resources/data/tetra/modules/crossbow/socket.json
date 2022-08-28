@@ -1,0 +1,231 @@
+{
+    "replace": true,
+    "type": "tetra:basic_module",
+    "slots": [ "crossbow/attachment_1" ],
+    "renderLayer": "higher",
+    "variants": [
+        {
+            "key": "crossbow_socket/diamond",
+            "category": "gem",
+            "durability": 512,
+            "durabilityMultiplier": 0.8,
+            "integrity": -1,
+            "attributes": {
+                "**tetra:draw_strength": 0.1
+            },
+            "glyph": {
+                "tint": "diamond",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/default",
+                    "type": "static",
+                    "tint": "diamond"
+                }
+            ]
+        },
+        {
+            "key": "crossbow_socket/emerald",
+            "category": "gem",
+            "durability": 48,
+            "integrity": -1,
+
+            "glyph": {
+                "tint": "emerald",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/default",
+                    "type": "static",
+                    "tint": "emerald"
+                }
+            ],
+            "effects": {
+                "criticalStrike": [ 15, 2 ]
+            }
+        },
+        {
+            "key": "crossbow_socket/lapis",
+            "category": "gem",
+            "durability": 22,
+            "integrity": -1,
+
+            "glyph": {
+                "tint": "lapis",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/default",
+                    "type": "static",
+                    "tint": "lapis"
+                }
+            ],
+            "effects": {
+                "intuit": 1
+            }
+        },
+        {
+            "key": "crossbow_socket/amber",
+            "category": "gem",
+            "durability": 30,
+            "integrity": -1,
+
+            "glyph": {
+                "tint": "f29000",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/default",
+                    "type": "static",
+                    "tint": "f29000"
+                }
+            ],
+            "effects": {
+                "earthbind": 4
+            }
+        },
+        {
+            "key": "crossbow_socket/pristine_diamond",
+            "category": "gem",
+            "durability": 741,
+            "durabilityMultiplier": 0.8,
+            "integrity": -1,
+            "attributes": {
+                "**tetra:draw_strength": 0.2
+            },
+            "glyph": {
+                "tint": "diamond",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/pristine",
+                    "type": "static",
+                    "tint": "diamond"
+                }
+            ]
+        },
+        {
+            "key": "crossbow_socket/pristine_emerald",
+            "category": "gem",
+            "durability": 25,
+            "integrity": -1,
+            "glyph": {
+                "tint": "emerald",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/pristine",
+                    "type": "static",
+                    "tint": "emerald"
+                }
+            ],
+            "effects": {
+                "criticalStrike": [ 30, 2 ]
+            }
+        },
+        {
+            "key": "crossbow_socket/pristine_lapis",
+            "category": "gem",
+            "durability": 18,
+            "integrity": -1,
+            "glyph": {
+                "tint": "lapis",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/pristine",
+                    "type": "static",
+                    "tint": "lapis"
+                }
+            ],
+            "effects": {
+                "intuit": 2
+            }
+        },
+        {
+            "key": "crossbow_socket/mana_rune",
+            "integrity": -1,
+            "glyph": {
+                "tint": "c16bc8",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/pristine",
+                    "type": "static",
+                    "tint": "c16bc8"
+                }
+            ],
+            "effects": {
+                "manaRepair": [ 1, 0.0025 ]
+            }
+        },
+        {
+            "key": "crossbow_socket/nether_star",
+            "category": "misc",
+            "durability": 650,
+            "durabilityMultiplier": 0.5,
+            "integrity": -1,
+            "attributes": {
+                "**tetra:draw_strength": 0.15
+            },
+            "glyph": {
+                "tint": "fffed0",
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/nether_star",
+                    "type": "static",
+                    "tint": "fffed0"
+                }
+            ],
+            "effects": {
+                "criticalStrike": [ 15, 2 ],
+                "intuit": 1,
+                "stabilizing": 15
+            }
+        },
+        {
+            "key": "crossbow_socket/void_worm_eye",
+            "category": "misc",
+            "durability": 880,
+            "durabilityMultiplier": 0.9,
+            "integrity": -1,
+            "attributes": {
+                "**tetra:draw_strength": 0.3
+            },
+            "glyph": {
+                "textureX": 80,
+                "textureY": 16
+            },
+            "models": [
+                {
+                    "location": "tetra:items/module/crossbow/attachment/socket/void_worm_eye",
+                    "type": "static"
+                }
+            ],
+            "effects": {
+                "criticalStrike": [ 32, 2 ],
+                "intuit": 4,
+                "stabilizing": 25
+            }
+        }
+    ]
+}

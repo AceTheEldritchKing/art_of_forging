@@ -1,0 +1,111 @@
+{
+    "replace": true,
+    "slots": [ "crossbow/attachment_1" ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "textureX": 80,
+        "textureY": 16
+    },
+    "outcomes": [
+        {
+            "material": {
+                "items": [ "tetra:pristine_diamond" ]
+            },
+            "experienceCost": 3,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/pristine_diamond"
+        },
+        {
+            "material": {
+                "items": [ "tetra:pristine_emerald" ]
+            },
+            "experienceCost": 3,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/pristine_emerald"
+        },
+        {
+            "material": {
+                "items": [ "tetra:pristine_lapis" ]
+            },
+            "experienceCost": 3,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/pristine_lapis"
+        },
+        {
+            "material": {
+                "tag": "forge:gems/amber"
+            },
+            "experienceCost": 2,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/amber"
+        },
+        {
+            "material": {
+                "tag": "forge:gems/diamond"
+            },
+            "experienceCost": 2,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/diamond"
+        },
+        {
+            "material": {
+                "tag": "forge:gems/emerald"
+            },
+            "experienceCost": 2,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/emerald"
+        },
+        {
+            "material": {
+                "tag": "forge:gems/lapis"
+            },
+            "experienceCost": 2,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/lapis"
+        },
+        {
+            "material": {
+                "tag": "forge:gems/lapis"
+            },
+            "experienceCost": 2,
+            "count": 5,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/lapis"
+        },
+        {
+            "material": {
+                "items": [ "minecraft:nether_star" ]
+            },
+            "experienceCost": 3,
+            "count": 2,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/nether_star"
+        },
+        {
+            "material": {
+                "items": [ "minecraft:nether_star" ]
+            },
+            "experienceCost": 3,
+            "count": 2,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/nether_star"
+        },
+        {
+            "material": {
+                "items": [ "alexsmobs:void_worm_eye" ]
+            },
+            "experienceCost": 15,
+            "count": 3,
+            "moduleKey": "crossbow/socket",
+            "moduleVariant": "crossbow_socket/void_worm_eye"
+        }
+    ]
+}
