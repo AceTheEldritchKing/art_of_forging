@@ -20,6 +20,12 @@
     },
     "double/sickle_left": {
       "parent": "bettercombat:sickle"
+    },
+    "double/tomohawk": {
+      "parent": "bettercombat:axe"
+    },
+    "double/void_worm_pickaxe": {
+      "parent": "bettercombat:pickaxe"
     }
   },
   "sword/blade": {
