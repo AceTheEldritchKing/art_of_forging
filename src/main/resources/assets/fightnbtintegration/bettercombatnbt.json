@@ -24,10 +24,34 @@
   },
   "sword/blade": {
     "sword/basic_blade": {
-      "parent": "bettercombat:claymore"
+      "parent": "bettercombat:sword"
+    },
+    "sword/bastard_blade": {
+      "parent": "bettercombat:sword"
+    },
+    "sword/crucible_blade": {
+      "parent": "bettercombat:sword"
+    },
+    "sword/executioner_blade": {
+      "parent": "bettercombat:sword"
+    },
+    "sword/flamberge_blade": {
+      "parent": "bettercombat:sword"
+    },
+    "sword/katana_blade": {
+      "parent": "bettercombat:katana"
+    },
+    "sword/rapier_blade": {
+      "parent": "bettercombat:rapier"
+    },
+    "sword/shifting_blade": {
+      "parent": "bettercombat:sword"
+    },
+    "sword/void_worm_cleaver": {
+      "parent": "bettercombat:sword"
     },
     "sword/heavy_blade": {
-      "parent": "minecraft:wooden_sword"
+      "parent": "bettercombat:claymore"
     },
     "sword/machete": {
       "parent": "bettercombat:cutlass"
@@ -42,22 +66,12 @@
     },
     "single/basic_shovel": {
       "parent": "bettercombat:staff"
-    }
-  },
-  "crossbow/stock": {
-    "crossbow/basic_stock": {
-      "armor_ignorance": 20,
-      "hit_at_once": 0,
-      "impact": 3,
-      "weapon_type": "ranged"
-    }
-  },
-  "shield/plate": {
-    "shield/tower": {
-      "armor_ignorance": 0,
-      "hit_at_once": 0,
-      "impact": 0,
-      "weapon_type": "shield"
+    },
+    "single/halberd": {
+      "parent": "bettercombat:halberd"
+    },
+    "single/mace_head": {
+      "parent": "bettercombat:mace"
     }
   }
 }
