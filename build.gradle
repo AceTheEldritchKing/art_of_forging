@@ -181,15 +181,13 @@ dependencies {
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
-    implementation fg.deobf("curse.maven:tetra-289712:3813582")
+    implementation fg.deobf("curse.maven:tetra-289712:3844400")
     implementation fg.deobf("curse.maven:mutil-351914:3788376")
 
     runtimeOnly(fg.deobf("curse.maven:nbttool-451553:3748971"))
     runtimeOnly(fg.deobf("curse.maven:Jei-238222:3940240"))
 
-    // For more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
