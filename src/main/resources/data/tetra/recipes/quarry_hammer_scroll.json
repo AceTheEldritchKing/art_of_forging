@@ -25,6 +25,7 @@
                     "key": "utilize/hammer",
                     "schematics": [ "tetra:utilize/hammer" ],
                     "intricate": false,
+                    "details": "art_of_forging",
                     "material": 2,
                     "ribbon": "fa97e9",
                     "glyphs": [ 1, 15, 12, 8 ]

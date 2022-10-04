@@ -28,6 +28,7 @@
                     "key": "sword/katana/katana_blade",
                     "schematics": [ "tetra:sword/katana/katana_blade" ],
                     "intricate": false,
+                    "details": "art_of_forging",
                     "material": 2,
                     "ribbon": "dbff10",
                     "glyphs": [ 5, 10, 13, 2 ]

@@ -20,7 +20,8 @@
 			"effects": {
 				"armorPenetration": 6,
 				"sweeping": [ 2, 5 ],
-				"puncture": [ 3, 8 ]
+				"puncture": [ 3, 8 ],
+				"bleeding": [ 1, 1 ]
 			},
 			"tools": {
 				"cut": [ 1, 0.5 ]

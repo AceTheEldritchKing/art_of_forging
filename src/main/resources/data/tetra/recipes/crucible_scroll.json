@@ -28,6 +28,7 @@
 					"key": "tetra/crucible_blade",
 					"schematics": ["tetra:sword/crucible_blade"],
 					"intricate": false,
+					"details": "art_of_forging",
 					"material": 2,
 					"ribbon": "ff1e00",
 					"glyphs": [8, 7, 9, 2]

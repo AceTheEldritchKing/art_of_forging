@@ -25,6 +25,7 @@
 					"key": "tetra/flamberge_blade",
 					"schematics": ["tetra:sword/flamberge_blade"],
 					"intricate": false,
+					"details": "art_of_forging",
 					"material": 2,
 					"ribbon": "ff9612",
 					"glyphs": [6, 15, 4, 7]

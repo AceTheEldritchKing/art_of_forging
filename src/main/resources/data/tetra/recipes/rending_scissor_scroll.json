@@ -25,6 +25,7 @@
                     "key": "tetra/rending_scissor_purple",
                     "schematics": [ "tetra:sword/rending_scissor_red", "tetra:sword/rending_scissor_purple" ],
                     "intricate": false,
+                    "details": "otherworldly",
                     "material": 2,
                     "ribbon": "e32182",
                     "glyphs": [ 1, 15, 2, 13 ]

@@ -24,7 +24,7 @@
                 "data": [{
                     "key": "sword/katana/murasama_blade",
                     "schematics": [ "tetra:sword/katana/murasama_blade" ],
-                    "details": "katana",
+                    "details": "otherworldly",
                     "intricate": false,
                     "material": 2,
                     "ribbon": "c52323",
