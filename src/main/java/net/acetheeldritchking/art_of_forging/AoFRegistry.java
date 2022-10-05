@@ -1,6 +1,7 @@
 package net.acetheeldritchking.art_of_forging;
 
 
+import net.acetheeldritchking.art_of_forging.item.DummyItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
