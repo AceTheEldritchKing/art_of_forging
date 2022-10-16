@@ -3,14 +3,14 @@
         "key": "double/utilized",
         "integrity": -1,
         "effects": {
-            "extractor": 2
+            "extract": 4
         },
         "aspects": {
             "bluntWeapon": 1,
             "blockBreaker": 2
         },
         "tools": {
-            "pickaxe_dig": 1
+            "pickaxe_dig": [ 1, 15 ]
         },
         "models": [
             {

@@ -6,10 +6,10 @@
             "honed": 1
         },
         "tools": {
-            "pickaxe_dig": 2
+            "pickaxe_dig": [ 2, 15 ]
         },
         "effects": {
-            "extractor": 2
+            "extract": 2
         }
     },
     {
@@ -20,10 +20,10 @@
             "honed": 2
         },
         "tools": {
-            "pickaxe_dig": 2
+            "pickaxe_dig": [ 2, 15 ]
         },
         "effects": {
-            "extractor": 4
+            "extract": 4
         }
     },
     {
@@ -34,10 +34,10 @@
             "honed": 3
         },
         "tools": {
-            "pickaxe_dig": 3
+            "pickaxe_dig": [ 3, 15 ]
         },
         "effects": {
-            "extractor": 6
+            "extract": 6
         }
     },
     {
@@ -48,10 +48,10 @@
             "honed": 4
         },
         "tools": {
-            "pickaxe_dig": 3
+            "pickaxe_dig": [ 3, 15 ]
         },
         "effects": {
-            "extractor": 8
+            "extract": 8
         }
     },
     {
@@ -62,10 +62,10 @@
             "honed": 5
         },
         "tools": {
-            "pickaxe_dig": 4
+            "pickaxe_dig": [ 4, 15 ]
         },
         "effects": {
-            "extractor": 10
+            "extract": 10
         }
     }
 ]
