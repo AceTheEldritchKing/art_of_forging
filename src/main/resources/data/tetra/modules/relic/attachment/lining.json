@@ -16,7 +16,7 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/relic/attachment/"
+                        "location": "tetra:items/module/relic/attachment/lining/"
                     }
                 ]
             }

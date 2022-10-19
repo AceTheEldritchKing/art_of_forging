@@ -16,7 +16,7 @@
                 "availableTextures": [ "metal", "shiny" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/casing/lantern"
+                        "location": "tetra:items/module/relic/casing/lantern/"
                     }
                 ]
             }

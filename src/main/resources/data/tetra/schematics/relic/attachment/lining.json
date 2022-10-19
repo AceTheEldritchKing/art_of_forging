@@ -12,7 +12,7 @@
         {
             "materials": [ "tetra:metal/" ],
             "countFactor": 1,
-            "moduleKey": "relic/lining",
+            "moduleKey": "relic/attachment/lining",
             "moduleVariant": "lining/"
         }
     ]

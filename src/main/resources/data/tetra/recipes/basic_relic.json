@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " O ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "O": {
+            "item": "minecraft:glass"
+        }
+    },
+    "result": {
+        "item": "art_of_forging:basic_relic"
+    }
+}

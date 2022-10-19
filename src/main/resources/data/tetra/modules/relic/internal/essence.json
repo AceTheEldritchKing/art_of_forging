@@ -2,7 +2,8 @@
     "replace": true,
     "type": "tetra:basic_major_module",
     "slots": [ "relic/internal" ],
-    "imporvements": [],
+    "renderLayer": "lower",
+    "improvements": [],
     "variants": [
         {
             "materials": [ "tetra:dust/" ],

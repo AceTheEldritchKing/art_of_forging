@@ -1,6 +1,6 @@
 {
     "replace": true,
-    "slots": [ "sword/blade" ],
+    "slots": [ "relic/casing" ],
     "materialSlotCount": 1,
     "displayType": "major",
     "glyph": {
@@ -11,7 +11,7 @@
         {
             "materials": [ "tetra:metal/", "tetra:bone/" ],
             "countFactor": 2,
-            "moduleKey": "sword/lantern",
+            "moduleKey": "relic/casing/lantern",
             "moduleVariant": "lantern/"
         }
     ]

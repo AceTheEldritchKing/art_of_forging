@@ -1,0 +1,14 @@
+[
+    {
+        "predicate": {
+            "items": [ "art_of_forging:basic_relic" ]
+        },
+        "item": "art_of_forging:modular_relic",
+        "modules": {
+            "relic/casing": [ "relic/casing/lantern", "lantern/iron"],
+            "relic/internal": [ "relic/internal/essence", "lantern/glass" ],
+            "relic/attachment": []
+        },
+        "improvements": {}
+    }
+]

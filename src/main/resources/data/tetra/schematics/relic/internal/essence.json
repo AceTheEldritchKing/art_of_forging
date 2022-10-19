@@ -11,7 +11,7 @@
         {
             "materials": [ "tetra:dust/" ],
             "countFactor": 1,
-            "moduleKey": "relic/essence",
+            "moduleKey": "relic/internal/essence",
             "moduleVariant": "essence/"
         }
     ]
