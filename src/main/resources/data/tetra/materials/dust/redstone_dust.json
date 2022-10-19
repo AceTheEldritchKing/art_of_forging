@@ -1,0 +1,26 @@
+{
+    "key": "redstone_dust",
+    "category": "dust",
+    "primary": 1,
+    "secondary": 1.5,
+    "tertiary": 2,
+    "durability": 10,
+    "integrityCost": 1,
+    "integrityGain": 2,
+    "magicCapacity": 450,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 2,
+    "tints": {
+        "glyph": "ffe543",
+        "texture": "ffe543"
+    },
+    "textures": [
+        "default"
+    ],
+    "material": {
+        "items": [ "minecraft:redstone" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:stone"
+    }
+}

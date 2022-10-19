@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "loader": "tetra:modular_loader",
+  "textures": {
+    "layer0": "art_of_forging:item/modular_relic"
+  }
+}

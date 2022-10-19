@@ -1,0 +1,25 @@
+{
+    "replace": true,
+    "type": "tetra:basic_module",
+    "slots": [ "relic/attachment" ],
+    "renderLayer": "higher",
+    "variants": [
+        {
+            "materials": [ "tetra:metal/" ],
+            "key": "lining/",
+            "integrity": -1,
+            "extract": {
+                "glyph": {
+                    "textureX": 80,
+                    "textureY": 16
+                },
+                "availableTextures": [ "default" ],
+                "models": [
+                    {
+                        "location": "tetra:items/module/relic/attachment/"
+                    }
+                ]
+            }
+        }
+    ]
+}

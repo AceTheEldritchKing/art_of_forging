@@ -1,0 +1,26 @@
+{
+    "key": "glowstone_dust",
+    "category": "dust",
+    "primary": 1,
+    "secondary": 1,
+    "tertiary": 2,
+    "durability": 10,
+    "integrityCost": 1,
+    "integrityGain": 2,
+    "magicCapacity": 100,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 2,
+    "tints": {
+        "glyph": "e70818",
+        "texture": "e70818"
+    },
+    "textures": [
+        "default"
+    ],
+    "material": {
+        "items": [ "minecraft:glowstone_dust" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:stone"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "replace": true,
+    "type": "tetra:basic_major_module",
+    "slots": [ "relic/casing" ],
+    "improvements": [],
+    "variants": [
+        {
+            "materials": [ "tetra:metal/", "tetra:bone/" ],
+            "key": "lantern/",
+            "integrity": 2,
+            "extract": {
+                "glyph": {
+                    "textureLocation": "tetra:textures/gui/aof_glyph.png",
+                    "textureX": 32
+                },
+                "availableTextures": [ "metal", "shiny" ],
+                "models": [
+                    {
+                        "location": "tetra:items/module/casing/lantern"
+                    }
+                ]
+            }
+        }
+    ]
+}

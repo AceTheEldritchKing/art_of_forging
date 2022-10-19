@@ -1,0 +1,19 @@
+{
+    "replace": true,
+    "type": "tetra:basic_module",
+    "slots": [ "relic/attachment" ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "textureX": 80,
+        "textureY": 16
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:metal/" ],
+            "countFactor": 1,
+            "moduleKey": "relic/lining",
+            "moduleVariant": "lining/"
+        }
+    ]
+}

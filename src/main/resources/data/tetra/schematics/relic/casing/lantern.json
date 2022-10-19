@@ -1,0 +1,18 @@
+{
+    "replace": true,
+    "slots": [ "sword/blade" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureLocation": "tetra:textures/gui/aof_glyph.png",
+        "textureX": 32
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:metal/", "tetra:bone/" ],
+            "countFactor": 2,
+            "moduleKey": "sword/lantern",
+            "moduleVariant": "lantern/"
+        }
+    ]
+}

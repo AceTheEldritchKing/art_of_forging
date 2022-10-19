@@ -10,16 +10,14 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.5.4-1.18.2'
+version = '1.5.4-CURIOS-1.18.2'
 group = 'net.acetheeldritchking.art_of_forging' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'art_of_forging'
 
-// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -174,15 +172,10 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
-    // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
-    // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
-
-    // Examples using mod jars from ./libs
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
     implementation fg.deobf("curse.maven:tetra-289712:3844400")
     implementation fg.deobf("curse.maven:mutil-351914:3788376")
+
+    implementation fg.deobf("curse.maven:curios-309927:3841948")
 
     runtimeOnly(fg.deobf("curse.maven:nbttool-451553:3748971"))
     runtimeOnly(fg.deobf("curse.maven:Jei-238222:3940240"))
@@ -195,11 +188,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "art_of_forging",
-                "Specification-Vendor"    : "art_of_forgingsareus",
+                "Specification-Vendor"    : "Ace",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "art_of_forgingsareus",
+                "Implementation-Vendor"   : "Ace",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
                 "MixinConfigs"            : "art_of_forging.mixins.json"
         ])
