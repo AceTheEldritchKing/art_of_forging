@@ -7,7 +7,7 @@
     "variants": [
         {
             "materials": [ "tetra:dust/" ],
-            "key": "essence/",
+            "key": "incense/",
             "integrity": 1,
             "extract": {
                 "glyph": {
@@ -17,13 +17,13 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/relic/internal/essence/"
+                        "location": "tetra:items/module/relic/internal/incense/"
                     }
                 ]
             }
         },
         {
-            "key": "essence/magma_cream",
+            "key": "incense/magma_cream",
             "integrity": 1,
             "extract": {
                 "glyph": {
@@ -33,13 +33,13 @@
                 "availableTextures": [ "magma_cream" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/relic/internal/essence/"
+                        "location": "tetra:items/module/relic/internal/incense/"
                     }
                 ]
             }
         },
         {
-            "key": "essence/glass",
+            "key": "incense/glass",
             "integrity": 1,
             "extract": {
                 "glyph": {
@@ -49,7 +49,7 @@
                 "availableTextures": [ "glass" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/relic/internal/essence/glass"
+                        "location": "tetra:items/module/relic/internal/incense/"
                     }
                 ]
             }

@@ -11,24 +11,24 @@
         {
             "materials": [ "tetra:dust/" ],
             "countFactor": 1,
-            "moduleKey": "relic/internal/essence",
-            "moduleVariant": "essence/"
+            "moduleKey": "relic/internal/incense",
+            "moduleVariant": "incense/"
         },
         {
             "material": {
                 "items": [ "minecraft:magma_cream" ]
             },
             "countFactor": 1,
-            "moduleKey": "relic/internal/essence",
-            "moduleVariant": "essence/magma_cream"
+            "moduleKey": "relic/internal/incense",
+            "moduleVariant": "incense/magma_cream"
         },
         {
             "material": {
                 "items": [ "minecraft:glass" ]
             },
             "countFactor": 1,
-            "moduleKey": "relic/internal/essence",
-            "moduleVariant": "essence/glass"
+            "moduleKey": "relic/internal/incense",
+            "moduleVariant": "incense/glass"
         }
     ]
 }

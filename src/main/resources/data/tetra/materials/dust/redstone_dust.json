@@ -11,8 +11,8 @@
     "toolLevel": "minecraft:stone",
     "toolEfficiency": 2,
     "tints": {
-        "glyph": "ffe543",
-        "texture": "ffe543"
+        "glyph": "e70818",
+        "texture": "e70818"
     },
     "textures": [
         "default"
@@ -21,6 +21,6 @@
         "items": [ "minecraft:redstone" ]
     },
     "requiredTools": {
-        "hammer_dig": "minecraft:stone"
+        "hammer_dig": "minecraft:wood"
     }
 }

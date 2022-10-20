@@ -6,8 +6,7 @@
         "item": "art_of_forging:modular_relic",
         "modules": {
             "relic/casing": [ "relic/casing/lantern", "lantern/iron"],
-            "relic/internal": [ "relic/internal/essence", "lantern/glass" ],
-            "relic/attachment": []
+            "relic/internal": [ "relic/internal/essence", "essence/glass" ]
         },
         "improvements": {}
     }

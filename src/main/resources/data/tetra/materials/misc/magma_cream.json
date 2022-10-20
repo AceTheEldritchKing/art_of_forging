@@ -1,24 +1,24 @@
 {
-    "key": "glowstone_dust",
-    "category": "dust",
+    "key": "magma_cream",
+    "category": "misc",
     "primary": 1,
-    "secondary": 1,
-    "tertiary": 2,
+    "secondary": 2,
+    "tertiary": 5,
     "durability": 10,
     "integrityCost": 1,
     "integrityGain": 2,
-    "magicCapacity": 100,
+    "magicCapacity": 120,
     "toolLevel": "minecraft:stone",
     "toolEfficiency": 2,
     "tints": {
-        "glyph": "ffe543",
-        "texture": "ffe543"
+        "glyph": "ff7f2e",
+        "texture": "ff7f2e"
     },
     "textures": [
         "default"
     ],
     "material": {
-        "items": [ "minecraft:glowstone_dust" ]
+        "items": [ "minecraft:magma_cream" ]
     },
     "requiredTools": {
         "hammer_dig": "minecraft:wood"
