@@ -12,19 +12,19 @@
 		"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
 		"key": "crucible_blade/",
 		"attributes": {
-			"generic.attack_speed": -1.65,
-			"generic.attack_damage": 0.99
+			"generic.attack_speed": -2.8,
+			"generic.attack_damage": 0.65
 		},
 		"effects": {
-			"armorPenetration": 12,
-			"crushing": [ 1, 5 ],
-			"truesweep": [ 5, 10 ],
+			"armorPenetration": 10,
+			"crushing": [ 1, 3 ],
+			"truesweep": [ 2, 10 ],
 			"sweeping": 1,
-			"reap": [ 10, 5 ],
-			"severing": [ 5, 2 ],
-			"abilityCombo": [ 10, 2 ],
-			"abilityExhilarated": [ 10, 2 ],
-			"abilityRevenge": [ 10, 2 ]
+			"reap": [ 5, 10 ],
+			"severing": [ 3, 2 ],
+			"abilityCombo": [ 5, 2 ],
+			"abilityExhilarated": [ 8, 2 ],
+			"abilityRevenge": [ 8, 2 ]
 		},
 		"tools": {
 			"cut": [ 2, 3 ]
@@ -36,20 +36,20 @@
 		"durability": -20,
 		"extract": {
 			"primaryAttributes": {
-				"generic.attack_damage": 1.9
+				"generic.attack_damage": 1.4
 			},
 			"primaryEffects": {
-				"armorPenetration": 8,
-				"severing": [ 7, 2 ]
+				"armorPenetration": 6,
+				"severing": [ 2, 1 ]
 			},
 			"secondaryEffects": {
-				"crushing": 4,
-				"execute": 5,
+				"crushing": 1,
+				"execute": 3,
 				"truesweep": -0.3,
 				"sweeping": -0.3
 			},
 			"tertiaryEffects": {
-				"truesweep": 3,
+				"truesweep": 1,
 				"sweeping": 3,
 				"crushing": -1,
 				"armorPenetration": -0.5

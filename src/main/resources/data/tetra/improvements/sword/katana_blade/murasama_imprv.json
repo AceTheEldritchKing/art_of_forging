@@ -3,14 +3,14 @@
         "key": "sword/murasama_imprv",
         "integrity": -2,
         "effects": {
-            "severing": [ 15, 8 ],
+            "severing": [ 10, 3 ],
             "truesweep": [ 1, 2 ],
             "bleeding": [ 2, 2 ],
-            "abilityMomentum": [ 10, 1.5 ]
+            "abilityMomentum": [ 8, 1 ]
         },
         "attributes": {
             "generic.attack_speed": 0.1,
-            "generic.attack_damage": 2
+            "generic.attack_damage": 1.2
         },
         "models": [
             {

@@ -14,7 +14,7 @@
             "key": "cane_head/",
             "attributes": {
                 "generic.attack_speed": -1,
-                "generic.movement_speed": 0.15,
+                "generic.movement_speed": 0.06,
                 "generic.armor": 0.1
             },
             "effects": {
@@ -24,7 +24,7 @@
                 "breakable": 2,
                 "blunt_weapon": 1
             },
-            "extract":{
+            "extract": {
                 "primaryAttributes": {
                     "generic.attack_damage": 0.2,
                     "generic.armor": 0.08
@@ -32,7 +32,7 @@
                 "secondaryAttributes": {
                     "generic.attack_speed": -0.1,
                     "generic.attack_damage": 0.1,
-                    "generic.movement_speed": -0.03
+                    "generic.movement_speed": -0.01
                 },
                 "tertiaryAttributes": {
                     "generic.armor": -0.05

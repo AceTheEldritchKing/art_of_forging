@@ -23,11 +23,11 @@
             "extract": {
                 "primaryAttributes": {
                     "tetra:draw_speed": 0.16,
-                    "tetra:draw_strength": 1.6
+                    "tetra:draw_strength": 1.4
                 },
                 "tertiaryAttributes": {
                     "tetra:draw_speed": -0.12,
-                    "tetra:draw_strength": 0.9
+                    "tetra:draw_strength": 0.7
                 },
                 "durability": 0.9,
                 "integrity": -1,
