@@ -1,11 +1,10 @@
 {
     "replace": true,
-    "localizationKey": "katana/murasama_blade",
     "slots": [ "sword/blade" ],
     "materialSlotCount": 0,
     "rarity": "temporary",
     "displayType": "improvement",
-    "glyph":{
+    "glyph": {
         "textureLocation": "tetra:textures/gui/aof_glyph.png",
         "textureX": 208,
         "tint": "c52323"

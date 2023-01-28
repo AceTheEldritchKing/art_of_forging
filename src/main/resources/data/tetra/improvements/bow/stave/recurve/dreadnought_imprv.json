@@ -1,0 +1,35 @@
+[
+    {
+        "key": "bow/dreadnought_imprv",
+        "integrity": -2,
+        "effects": {
+            "velocity": 1
+        },
+        "attributes": {
+            "tetra:draw_speed": 0.1,
+            "tetra:draw_strength": 1.3
+        },
+        "availableTextures": [ "default" ],
+        "models": [
+            {
+                "location": "tetra:items/module/bow/stave/dreadnought/",
+                "tint": "inherit"
+            },
+            {
+                "type": "draw_0",
+                "location": "tetra:items/module/bow/stave/dreadnought/",
+                "tint": "inherit"
+            },
+            {
+                "type": "draw_1",
+                "location": "tetra:items/module/bow/stave/dreadnought/1_",
+                "tint": "inherit"
+            },
+            {
+                "type": "draw_2",
+                "location": "tetra:items/module/bow/stave/dreadnought/1_",
+                "tint": "inherit"
+            }
+        ]
+    }
+]
