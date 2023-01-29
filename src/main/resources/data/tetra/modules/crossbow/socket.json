@@ -176,33 +176,6 @@
             }
         },
         {
-            "key": "crossbow_socket/nether_star",
-            "category": "misc",
-            "durability": 650,
-            "durabilityMultiplier": 0.5,
-            "integrity": -1,
-            "attributes": {
-                "**tetra:draw_strength": 0.15
-            },
-            "glyph": {
-                "tint": "fffed0",
-                "textureX": 80,
-                "textureY": 16
-            },
-            "models": [
-                {
-                    "location": "tetra:items/module/crossbow/attachment/socket/nether_star",
-                    "type": "static",
-                    "tint": "fffed0"
-                }
-            ],
-            "effects": {
-                "criticalStrike": [ 15, 2 ],
-                "intuit": 1,
-                "stabilizing": 15
-            }
-        },
-        {
             "key": "crossbow_socket/void_worm_eye",
             "category": "misc",
             "durability": 880,

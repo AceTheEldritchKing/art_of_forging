@@ -5,37 +5,6 @@
 	"renderLayer": "higher",
 	"variants": [
 		{
-			"key": "double_socket/nether_star",
-			"category": "misc",
-			"durability": 650,
-			"durabilityMultiplier": 0.5,
-			"integrity": -1,
-			"attributes": {
-				"**generic.attack_damage": 0.15
-			},
-			"tools": {
-				"axe_dig": [ 0, 2 ],
-				"shovel_dig": [ 0, 2 ],
-				"pickaxe_dig": [ 0, 2 ],
-				"hoe_dig": [ 0, 2 ],
-				"cut": [ 0, 2 ]
-			},
-			"glyph": {
-				"tint": "fffed0",
-				"textureX": 80,
-				"textureY": 16
-			},
-			"models": [{
-				"location": "tetra:items/module/double/binding/nether_star_socket/default",
-				"tint": "fffed0"
-			}],
-			"effects": {
-				"criticalStrike": [ 15, 2 ],
-				"intuit": 1,
-				"stabilizing": 15
-			}
-		},
-		{
 			"key": "double_socket/void_worm_eye",
 			"category": "misc",
 			"durability": 800,
