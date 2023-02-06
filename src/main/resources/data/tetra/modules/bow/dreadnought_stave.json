@@ -19,6 +19,9 @@
 				"bow": 2,
 				"breakable": 2
 			},
+			"effects": {
+				"spread": [ 0, 97 ]
+			},
 			"durability": 255,
 			"integrity": -2,
 			"extract": {
