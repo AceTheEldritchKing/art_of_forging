@@ -3,7 +3,7 @@
         "key": "double/utilized",
         "integrity": -1,
         "effects": {
-            "extract": 4
+            "extractor": 4
         },
         "aspects": {
             "bluntWeapon": 1,
