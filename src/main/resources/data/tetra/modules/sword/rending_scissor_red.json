@@ -24,7 +24,6 @@
             "effects": {
                 "armorPenetration": 35,
                 "sweeping": 2,
-                "truesweep": 1,
                 "crushing": 10,
                 "abilityCombo": 10,
                 "abilityRevenge": 10,

@@ -17,10 +17,9 @@
 		},
 		"effects": {
 			"armorPenetration": 10,
-			"crushing": [ 1, 3 ],
-			"truesweep": [ 2, 10 ],
+			"crushing": [ 1, 2 ],
 			"sweeping": 1,
-			"reap": [ 5, 10 ],
+			"reap": [ 5, 8 ],
 			"severing": [ 3, 2 ],
 			"abilityCombo": [ 5, 2 ],
 			"abilityExhilarated": [ 8, 2 ],
@@ -43,15 +42,13 @@
 				"severing": [ 2, 1 ]
 			},
 			"secondaryEffects": {
-				"crushing": 1,
-				"execute": 3,
-				"truesweep": -0.3,
+				"crushing": 0.5,
+				"execute": 2,
 				"sweeping": -0.3
 			},
 			"tertiaryEffects": {
-				"truesweep": 1,
-				"sweeping": 3,
-				"crushing": -1,
+				"sweeping": 1,
+				"crushing": -0.5,
 				"armorPenetration": -0.5
 			},
 			"durability": 1,

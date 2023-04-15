@@ -9,12 +9,10 @@
 	},
 	"outcomes": [
 		{
-			"material": {
-				"items": [ "alexsmobs:void_worm_eye" ]
-			},
-			"experienceCost": 15,
+			"materials": [ "tetra:socket/" ],
 			"moduleKey": "single/socket",
-			"moduleVariant": "single_socket/void_worm_eye"
+			"moduleVariant": "single_socket/",
+			"experienceFactor": 1
 		}
 	]
 }

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "fff"
+    ],
+    "key": {
+        "f": {
+            "item": "art_of_forging:forged_steel_ingot"
+        }
+    },
+    "result": {
+        "item": "tetra:forged_platform_slab",
+        "count": 3
+    }
+}

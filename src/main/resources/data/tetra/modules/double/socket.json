@@ -1,36 +1,30 @@
 {
-	"replace": false,
+	"replace": true,
 	"slots": [ "double/binding" ],
 	"type": "tetra:basic_module",
 	"renderLayer": "higher",
 	"variants": [
 		{
-			"key": "double_socket/void_worm_eye",
-			"category": "misc",
-			"durability": 800,
-			"durabilityMultiplier": 0.9,
-			"integrity": -1,
-			"attributes": {
-				"**generic.attack_damage": 0.3
-			},
-			"tools": {
-				"axe_dig": [ 0, 5 ],
-				"shovel_dig": [ 0, 5 ],
-				"pickaxe_dig": [ 0, 5 ],
-				"hoe_dig": [ 0, 5 ],
-				"cut": [ 0, 5 ]
-			},
-			"glyph": {
-				"textureX": 80,
-				"textureY": 16
-			},
-			"models": [{
-				"location": "tetra:items/module/double/binding/void_worm_eye/default"
-			}],
-			"effects": {
-				"criticalStrike": [ 32, 2 ],
-				"intuit": 4,
-				"stabilizing": 25
+			"materials": [ "tetra:socket/" ],
+			"key": "double_socket/",
+			"extract": {
+				"durability": 1,
+				"integrity": -1,
+				"glyph": {
+					"textureX":80,
+					"textureY":16
+				},
+				"tools": {
+					"axe_dig": [ 0, 1 ],
+					"shovel_dig": [ 0, 1 ],
+					"pickaxe_dig": [ 0, 1 ],
+					"cut": [ 0, 1 ]
+				},
+				"availableTextures": [
+					"pristine",
+					"default",
+					"worm_eye"
+				]
 			}
 		}
 	]

@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "art_of_forging:resonant_alloy"
+    },
+    "result": "art_of_forging:forged_steel_ingot",
+    "experience": 0.1,
+    "cookingtime": 150
+}

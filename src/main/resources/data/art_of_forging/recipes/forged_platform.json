@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "s",
+        "s"
+    ],
+    "key": {
+        "s": {
+            "item": "tetra:forged_platform_slab"
+        }
+    },
+    "result": {
+        "item": "tetra:forged_platform",
+        "count": 2
+    }
+}

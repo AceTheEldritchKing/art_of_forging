@@ -15,7 +15,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.6.2-1.19.2'
+version = '1.6.3-1.19.2'
 group = 'net.acetheeldritchking.art_of_forging' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'art_of_forging'
 
@@ -154,8 +154,11 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation fg.deobf("curse.maven:tetra-289712:4370833")
+    implementation fg.deobf("curse.maven:tetra-289712:4448541")
     implementation fg.deobf("curse.maven:mutil-351914:3941314")
+
+    implementation fg.deobf("curse.maven:alexsmobs-426558:4071154")
+    implementation fg.deobf("curse.maven:citadel-331936:4469008")
 
     // runtimeOnly(fg.deobf("curse.maven:nbttool-451553:3748971"))
     // runtimeOnly(fg.deobf("curse.maven:Jei-238222:3940240"))

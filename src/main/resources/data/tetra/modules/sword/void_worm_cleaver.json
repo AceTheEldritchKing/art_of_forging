@@ -23,7 +23,6 @@
 			"durability": 90,
 			"effects": {
 				"sweeping": 1,
-				"truesweep": 1,
 				"crushing": 8,
 				"bleeding": [2, 2],
 				"abilityCombo": 1,

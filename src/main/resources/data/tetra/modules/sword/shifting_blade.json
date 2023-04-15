@@ -11,6 +11,7 @@
 	"variants": [
 		{
 			"key": "shifting_blade/shifting_blade",
+			"integrity": -3,
 			"attributes": {
 				"generic.attack_speed": -1.9,
 				"generic.attack_damage": 8.9
