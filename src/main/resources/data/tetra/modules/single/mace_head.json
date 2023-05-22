@@ -23,7 +23,7 @@
 			},
 			"aspects": {
 				"breakable": 2,
-				"blunt_weapon": 1
+				"bluntWeapon": 1
 			},
 			"durability": -20,
 			"extract": {
