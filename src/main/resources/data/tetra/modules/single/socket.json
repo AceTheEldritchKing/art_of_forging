@@ -24,6 +24,12 @@
 					"pristine",
 					"default",
 					"worm_eye"
+				],
+				"models":
+				[
+					{
+						"location":"tetra:items/module/single/binding/socket/"
+					}
 				]
 			}
 		}

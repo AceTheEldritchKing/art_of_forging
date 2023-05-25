@@ -10,7 +10,7 @@
             },
             "effects": {
                 "truesweep": 3,
-                "sculkTaint": [ 5, 0.5 ],
+                "sculkTaint": [ 15, 0.5 ],
                 "intuit": 1
             },
             "durability": 25,
