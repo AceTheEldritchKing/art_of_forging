@@ -1,0 +1,444 @@
+{
+	"item.art_of_forging.forged_steel_ingot": "Слиток кованой стали",
+	"item.art_of_forging.resonant_alloy": "Resonant Alloy",
+
+	"tetra.material.forged_steel_ingot": "Кованая сталь",
+	"tetra.material.forged_steel_ingot.prefix": "Кованная сталь",
+
+
+
+	"tetra/schematic/sword/rapier_blade.name": "Клинок рапиры",
+	"tetra/schematic/sword/rapier_blade.description": "Заменит текущий клинок на более элегантный - рапиру.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/rapier_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/rapier_blade.item_name": "Рапира",
+	"tetra.module.sword/rapier_blade.name": "Рапира",
+	"tetra.module.sword/rapier_blade.description": "Легкий, стремительный и элегантный клинок.",
+	"tetra.module.sword/rapier_blade.material_name": "%s рапира",
+	"tetra.module.sword/rapier_blade.prefix": "%s",
+
+	"tetra/schematic/sword/flamberge_blade.name": "Клинок фламберж",
+	"tetra/schematic/sword/flamberge_blade.description": "Заменит текущий клинок на фламберж.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/flamberge_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/flamberge_blade.item_name": "Фламберж",
+	"tetra.module.sword/flamberge_blade.name": "Flamberge",
+	"tetra.module.sword/flamberge_blade.description": "Волнистый, но довольно мощный клинок.",
+	"tetra.module.sword/flamberge_blade.material_name": "%s фламберж",
+	"tetra.module.sword/flamberge_blade.prefix": "%s",
+
+	"tetra/schematic/sword/crucible_blade.name": "§cКлинок Тигля§r",
+	"tetra/schematic/sword/crucible_blade.description": "Заменит текущий клинок на легендарный Клинок Тигля.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/crucible_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/crucible_blade.item_name": "Тигель",
+	"tetra.module.sword/crucible_blade.name": "Тигель",
+	"tetra.module.sword/crucible_blade.description": "РВАТЬ И ТЕРЗАТЬ.",
+	"tetra.module.sword/crucible_blade.material_name": "%s тигель",
+	"tetra.module.sword/crucible_blade.prefix": "%s",
+
+	"tetra/schematic/double/tomahawk/tomahawk.name": "Голова томагавка",
+	"tetra/schematic/double/tomahawk/tomahawk.description": "Голова топора под названием томогавк. Используется, чтобы швыряться в других.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/double/tomahawk/tomahawk.slot1": "Материал головы",
+
+	"tetra.module.double/tomahawk.item_name": "Томагавк",
+	"tetra.module.double/tomahawk.name": "Голова томагавка",
+	"tetra.module.double/tomahawk.description": "Голова топора под названием томогавк. Используется, чтобы швыряться в других.",
+	"tetra.module.double/tomahawk.material_name": "%s томагавк",
+	"tetra.module.double/tomahawk.prefix": "%s",
+
+	"tetra/schematic/single/head/halberd_head/halberd_head.name": "Наконечник алебарды",
+	"tetra/schematic/single/head/halberd_head/halberd_head.description": "Устанавливает наконечник алебарды из данного материала. Алебарда - идеальное оружие ближнего боя: держит дистанцию, обеспечивает оглушение и пробитие брони.\n \n§fТвердость§r материала увеличивает §fурон§r. \n§fПлотность§r материала немного увеличивает §fурон§r и немного уменьшает §fскорость атаки§r.",
+	"tetra/schematic/single/head/halberd_head/halberd_head.slot1": "Head material",
+
+	"tetra.module.single/halberd_head.item_name": "Алебарда",
+	"tetra.module.single/halberd_head.name": "Наконечник алебарды",
+	"tetra.module.single/halberd_head.description": "Алебарда - идеальное оружие ближнего боя: держит дистанцию, обеспечивает оглушение и пробитие брони.",
+	"tetra.module.single/halberd_head.material_name": "%s алебарда",
+	"tetra.module.single/halberd_head.prefix": "%s",
+
+	"tetra/schematic/sword/saber_blade.name": "Клинок сабли",
+	"tetra/schematic/sword/saber_blade.description": "Заменит текущий клинок на саблю, так и отдающую благородством и воинственностью.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/saber_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/saber_blade.item_name": "Сабля",
+	"tetra.module.sword/saber_blade.name": "Сабля",
+	"tetra.module.sword/saber_blade.description": "Благородное и воинственное оружие.",
+	"tetra.module.sword/saber_blade.material_name": "%s сабля",
+	"tetra.module.sword/saber_blade.prefix": "%s",
+
+	"tetra/schematic/sword/key_guard.name": "Гарда",
+	"tetra/schematic/sword/key_guard.description": "Устанавливает эфес, который защищает руку, а также придаст харизмы поведению игрока.\n \n§fТвердость§r и §fгибкость§r материала увеличивает §fзащиту§r.",
+	"tetra/schematic/sword/key_guard.slot1": "Материал эфеса",
+
+	"tetra.module.sword/key_guard.name": "Эфес",
+	"tetra.module.sword/key_guard.description": "Эфес, который защищает руку, а также придаст харизмы поведению игрока.",
+	"tetra.module.sword/key_guard.material_name": "%s эфес",
+
+	"tetra/schematic/single/head/mace_head/mace_head.name": "Наконечник булавы",
+	"tetra/schematic/single/head/mace_head/mace_head.description": "Изготавливает наконечник булавы из данного материала. Булава мощное оружие ближнего боя, оглушает врагов и ращрушает их броню.\n \n§fТвердость§r материала увеличивает §fурон§r.\n§fПлотность§r материала немного увеличивает §fурон§r и немного уменьшает §fскорость атаки§r.",
+	"tetra/schematic/single/head/mace_head/mace_head.slot1": "Материал наконечника",
+
+	"tetra.module.single/mace_head.item_name": "Булава",
+	"tetra.module.single/mace_head.name": "Наконечник булавы",
+	"tetra.module.single/mace_head.description": "Наконечник булавы из данного материала. Булава мощное оружие ближнего боя, оглушает врагов и ращрушает их броню.",
+	"tetra.module.single/mace_head.material_name": "%s булава",
+	"tetra.module.single/mace_head.prefix": "%s",
+
+	"tetra.module.bow/dreadnought_stave.item_name": "Лук Дредноут",
+	"tetra.module.bow/dreadnought_stave.name": "Древко Дредноута",
+	"tetra.module.bow/dreadnought_stave.description": "Древко Дредноута. Оно более мощное чем обычное древко лука.",
+	"tetra.module.bow/dreadnought_stave.material_name": "%s древко дредноута",
+	"tetra.module.bow/dreadnought_stave.prefix": "%s",
+
+	"tetra/schematic/bow/stave/dreadnought_stave.name": "Древко дредноута",
+	"tetra/schematic/bow/stave/dreadnought_stave.description": "Заменяет древко на древко Дредноута сделанное из данного материала. Оно более мощное чем обычное древко лука.\n \nMaterial §fhardness§r increases §fstrength§r and §fdraw time§r.\nMaterial §fflexibility§r increases §fstrength§r and slightly decreases §fdraw time§r.",
+	"tetra/schematic/bow/stave/dreadnought_stave.slot1": "Материал",
+
+	"tetra/schematic/double/void_worm_pickaxe/void_worm_pickaxe.name": "Кирка Червя Пустоты",
+	"tetra/schematic/double/void_worm_pickaxe/void_worm_pickaxe.description": "Голова кирки сделанная из жвал Червя Пустоты, ничего личного чувак.",
+	"tetra/schematic/double/void_worm_pickaxe/void_worm_pickaxe.slot1": "Кирка Червя Пустоты",
+
+	"tetra.module.double/void_worm_pickaxe.item_name": "Кирка Червя Пустоты",
+	"tetra.module.double/void_worm_pickaxe.name": "Голова кирки",
+	"tetra.module.double/void_worm_pickaxe.description": "Голова кирки сделанная из жвал Червя Пустоты, ничего личного чувак.",
+	"tetra.variant.void_worm_pickaxe/void_worm_pickaxe": "Кирка Червя Пустоты",
+
+	"tetra/schematic/sword/void_worm_cleaver.name": "Секач Червя Пустоты",
+	"tetra/schematic/sword/void_worm_cleaver.description": "Клинок сделанный из жвал of the Пожирателя-I! (для друзей Червь Пустоты).",
+	"tetra/schematic/sword/void_worm_cleaver.slot1": "Секач Червя Пустоты",
+
+	"tetra.module.sword/void_worm_cleaver.item_name": "Секач Червя Пустоты",
+	"tetra.module.sword/void_worm_cleaver.name": "Секач Червя Пустоты",
+	"tetra.module.sword/void_worm_cleaver.description": "ТЫ НЕ СМОЖЕШЬ УБИТЬ БОГА.",
+	"tetra.variant.void_worm_cleaver/void_worm_cleaver": "Секач Червя Пустоты",
+
+	"tetra/schematic/sword/shifting_blade.name": "§dМерцающий клинок§r",
+	"tetra/schematic/sword/shifting_blade.description": "Странный клинок сделанный из блока аметиста. Его свойства придают ему магические свойства.",
+	"tetra/schematic/sword/shifting_blade.slot1": "§dМерцающий клинок§r",
+
+	"tetra.module.sword/shifting_blade.item_name": "§dМерцающий клинок§r",
+	"tetra.module.sword/shifting_blade.name": "§dМерцающий клинок§r",
+	"tetra.module.sword/shifting_blade.description": "Странный клинок сделанный из блока аметиста. Его свойства придают ему магические свойства.",
+	"tetra.variant.shifting_blade/shifting_blade": "§dМерцающий клинок§r",
+
+	"tetra/schematic/sword/bastard_blade.name": "Клинок проходимца",
+	"tetra/schematic/sword/bastard_blade.description": "Заменит текущий клинок на клинок проходимца, но надо заметить, на крайне практичный.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/bastard_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/bastard_blade.item_name": "Клинок проходимца",
+	"tetra.module.sword/bastard_blade.name": "Клинок проходимца",
+	"tetra.module.sword/bastard_blade.description": "Практичный клинок.",
+	"tetra.module.sword/bastard_blade.material_name": "%s клинок проходимца",
+	"tetra.module.sword/bastard_blade.prefix": "%s",
+
+	"tetra/schematic/sword/executioner_blade.name": "Клинок палача",
+	"tetra/schematic/sword/executioner_blade.description": "Заменит текущий клинок на клинок палача. Крайне грозное оружие.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/executioner_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/executioner_blade.item_name": "Клинок палача",
+	"tetra.module.sword/executioner_blade.name": "Клинок палача",
+	"tetra.module.sword/executioner_blade.description": "Грозное оружие",
+	"tetra.module.sword/executioner_blade.material_name": "%s клинок палача",
+	"tetra.module.sword/executioner_blade.prefix": "%s",
+
+	"tetra/schematic/sword/rending_scissor_red.name": "§4Клинок-Ножницы [Red]§r",
+	"tetra/schematic/sword/rending_scissor_red.description": "Клинок-Ножницы из закаленных живых волокн.",
+	"tetra/schematic/sword/rending_scissor_red.slot1": "Клинок-Ножницы",
+
+	"tetra.module.sword/rending_scissor_red.item_name": "Клинок-Ножницы",
+	"tetra.module.sword/rending_scissor_red.name": "Клинок-Ножницы",
+	"tetra.module.sword/rending_scissor_red.description": "Клинок-Ножницы из закаленных живых волокн.",
+	"tetra.variant.rending_scissor_red/rending_scissor_red": "§4Клинок-Ножницы [Red]§r",
+
+	"tetra/schematic/sword/rending_scissor_purple.name": "§5Клинок-Ножницы [Purple]§r",
+	"tetra/schematic/sword/rending_scissor_purple.description": "Клинок-Ножницы из закаленных живых волокн.",
+	"tetra/schematic/sword/rending_scissor_purple.slot1": "Клинок-Ножницы",
+
+	"tetra.module.sword/rending_scissor_purple.item_name": "Клинок-Ножницы",
+	"tetra.module.sword/rending_scissor_purple.name": "Клинок-Ножницы",
+	"tetra.module.sword/rending_scissor_purple.description": "Клинок-Ножницы из закаленных живых волокн.",
+	"tetra.variant.rending_scissor_purple/rending_scissor_purple": "§5Клинок-Ножницы [Purple]§r",
+
+	"tetra/schematic/sword/katana/katana_blade.name": "Клинок катаны",
+	"tetra/schematic/sword/katana/katana_blade.description": "Заменит текущий клинок на клинок катаны. Благородное оружие.\n \n§fТвердость§r материала увеличивает §fурон§r.",
+	"tetra/schematic/sword/katana/katana_blade.slot1": "Материал клинка",
+
+	"tetra.module.sword/katana_blade.item_name": "Катана",
+	"tetra.module.sword/katana_blade.name": "Катана",
+	"tetra.module.sword/katana_blade.description": "Благородный оружие.",
+	"tetra.module.sword/katana_blade.material_name": "%s катана",
+	"tetra.module.sword/katana_blade.prefix": "%s",
+
+	"tetra/schematic/shield/plate/kite.name": "Kite plate",
+	"tetra/schematic/shield/plate/kite.description": "Craft a kite shield plate, kite shields can block for an indefinite with no cooldown, and has a lower ability cooldown that a tower shield.",
+	"tetra/schematic/shield/plate/kite.slot1": "Material",
+
+	"tetra.module.shield/kite.item_name": "Kite shield",
+	"tetra.module.shield/kite.name": "Kite shield",
+	"tetra.module.shield/kite.description": "A long, thin shield that can block indefinitely without cooldown.",
+	"tetra.module.shield/kite.material_name": "%s kite shield",
+	"tetra.module.shield/kite.prefix": "%s",
+
+	"tetra/schematic/single/head/cane_head/cane_head.name": "Трость для ходьбы",
+	"tetra/schematic/single/head/cane_head/cane_head.description": "Изготавливает наконечник трости из данного материала. Трость - универсальная штука, которая к тому же увеличивает скорость в путешествии.\n \n§fТвердость§r материала увеличивает §fурон§r.\n§fПлотность§r материала немного увеличивает §fурон§r и немного снижает §fскорость атаки§r.",
+	"tetra/schematic/single/head/cane_head/cane_head.slot1": "Материал наконечника",
+
+	"tetra.module.single/cane_head.item_name": "Трость",
+	"tetra.module.single/cane_head.name": "Трость для ходьбы",
+	"tetra.module.single/cane_head.description": " Трость - универсальная штука, которая к тому же увеличивает скорость в путешествии. Надо лишь держать её в руках",
+	"tetra.module.single/cane_head.material_name": "%s трость",
+	"tetra.module.single/cane_head.prefix": "%s",
+
+	"tetra/schematic/crossbow/stave/burst_stave.name": "Взрывное древко",
+	"tetra/schematic/crossbow/stave/burst_stave.description": "Древко арбалета сделанное из планарного стабилизатора. WIP.",
+	"tetra/schematic/crossbow/stave/burst_stave.slot1": "Взрывная древко",
+
+	"tetra.module./crossbow/burst_stave.item_name": "Взрывное древко",
+	"tetra.module./crossbow/burst_stave.name": "Взрывное древко",
+	"tetra.module./crossbow/burst_stave.description": "Древко арбалета сделанное из планарного стабилизатора. WIP.",
+	"tetra.variant.burst_stave/burst_stave": "Взрывное древко",
+
+	"tetra/schematic/single/head/quarter_staff_head/quarter_staff_head.name": "Короткий посох",
+	"tetra/schematic/single/head/quarter_staff_head/quarter_staff_head.description": "Изготавливает короткий посох из данного материала. Короткий посох хорош для ближнего боя, позволяет совершать быстрые удары and даёт возможность блокировать.\n \n§fТвердость§r материала увеличивает §fурон§r.\n§fПлотность§r материала немного увеличивает §fурон§r и немного снижает §fскорость атаки§r.",
+	"tetra/schematic/single/head/quarter_staff_head/quarter_staff_head.slot1": "Head material",
+
+	"tetra.module.single/quarter_staff_head.item_name": "Короткий посох",
+	"tetra.module.single/quarter_staff_head.name": "Короткий посох",
+	"tetra.module.single/quarter_staff_head.description": "Короткий посох хорош для ближнего боя, позволяет совершать быстрые удары and даёт возможность блокировать. Также он может оглушить оппонента на короткий промежуток времени",
+	"tetra.module.single/quarter_staff_head.material_name": "%s короткий посох",
+	"tetra.module.single/quarter_staff_head.prefix": "%s",
+
+	"tetra.module.bow/compound_string.name": "Комбинированная тетива",
+	"tetra.module.bow/compound_string.description": "Комбинированная тетива. Более тугая чем обычная тетива.",
+	"tetra.module.bow/compound_string.material_name": "%s комбинированная тетива",
+
+	"tetra/schematic/bow/string/compound_string.name": "Комбинированная тетива",
+	"tetra/schematic/bow/string/compound_string.description": "Заменяет текущую тетиву на комбинированную тетиву сделанную из данного материала. Комбинированная тетива более тугая чем обычная тетива. Тетива основной источник прочности у лука.",
+	"tetra/schematic/bow/string/compound_string.slot1": "Материал",
+
+	"tetra.module.crossbow/dreadnought_cross_stave.item_name": "Арбалет-Дредноут",
+	"tetra.module.crossbow/dreadnought_cross_stave.name": "Древко Дредноута",
+	"tetra.module.crossbow/dreadnought_cross_stave.description": "Древко дредноута. Древко дредноута более мощное чем обычное древко.",
+	"tetra.module.crossbow/dreadnought_cross_stave.material_name": "%s древко Дредноута",
+	"tetra.module.crossbow/dreadnought_cross_stave.prefix": "%s",
+
+	"tetra/schematic/crossbow/stave/dreadnought_cross_stave.name": "Древко Дредноута",
+	"tetra/schematic/crossbow/stave/dreadnought_cross_stave.description": "Заменяет древко на древко дредноута сдлеанное из данного материала.  Древко дредноута более мощное чем обычное древко.",
+	"tetra/schematic/crossbow/stave/dreadnought_cross_stave.slot1": "Материал",
+
+	"tetra/schematic/crossbow/socket.name": "Гнездо",
+	"tetra/schematic/crossbow/socket.description": "Установив драгоценный камень, получим разные эффекты в зависимости от камня.",
+	"tetra/schematic/crossbow/socket.slot1": "Драгоценный камень",
+	"tetra.module.crossbow/socket.name": "Гнездо",
+	"tetra.module.crossbow/socket.description": "Драгоценный камень, аккуратно установленный на древко арбалета. Драгоценный камень зачарован и дает магические баффы владельцу арбалета.",
+	"tetra.module.crossbow/socket.material_name": "Гнездо [%s]",
+
+	"tetra.module.crossbow/compound_cross_string.name": "Комбинированная тетива",
+	"tetra.module.crossbow/compound_cross_string.description": "Комбинированная тетива. Более тугая чем обычная тетива.",
+	"tetra.module.crossbow/compound_cross_string.material_name": "%s комбинированная тетива",
+
+	"tetra/schematic/crossbow/string/compound_cross_string.name": "Комбинированная тетива",
+	"tetra/schematic/crossbow/string/compound_cross_string.description": "Заменяет текущую тетиву на комбинированную тетиву сделанную из данного материала. Комбинированная тетива более тугая чем обычная тетива. Тетива основной источник прочности у лука.",
+	"tetra/schematic/crossbow/string/compound_cross_string.slot1": "Материал",
+
+	"tetra/schematic/sword/echo_fuller.name": "Echo Fuller",
+	"tetra/schematic/sword/echo_fuller.description": "A fuller crafted from an echo shard. It might spread sculk taint.",
+	"tetra/schematic/sword/echo_fuller.slot1": "Echo Fuller",
+
+	"tetra.module.sword/echo_fuller.name": "§1Echo Fuller§r",
+	"tetra.module.sword/echo_fuller.description": "A fuller crafted from an echo shard. It might spread sculk taint.",
+	"tetra.variant.echo_fuller/echo_fuller": "§1Echo Fuller§r",
+
+
+
+	"tetra.synergy.double/quarry_hammer": "Quarry Hammer",
+
+
+
+	"tetra/schematic/katana/murasama_blade.name": "Murasama",
+	"tetra/schematic/katana/murasama_blade.description": "Improve your katana into the legendary Murasama blade.",
+	"tetra/schematic/katana/murasama_blade.slot1": "Murasama Blade",
+
+	"tetra.improvement.sword/murasama_imprv.name": "Murasama-ified",
+	"tetra.improvement.sword/murasama_imprv.description": "Allow your katana to take on the mantle of Murasama",
+
+	"tetra/schematic/double/basic_hammer/utilize.name": "Utilize",
+	"tetra/schematic/double/basic_hammer/utilize.description": "Utilize the head of tool to unlock a unique specialty within the module",
+
+	"tetra.improvement.double/utilized.name": "Utilized",
+
+	"tetra/schematic/double/basic_hammer/hone_radius_1.name": "Depth",
+	"tetra/schematic/double/basic_hammer/hone_radius_1.description": "Increase the depth at which your hammer can tunnel.",
+	"tetra/schematic/double/basic_hammer/hone_radius_2.name": "Hone: Depth II",
+	"tetra/schematic/double/basic_hammer/hone_radius_2.description": "Hone the depth improvement. The effect is increased to 27",
+	"tetra/schematic/double/basic_hammer/hone_radius_3.name": "Hone: Depth III",
+	"tetra/schematic/double/basic_hammer/hone_radius_3.description": "Further hone the depth improvement. The effect is increased to 36",
+	"tetra/schematic/double/basic_hammer/hone_radius_4.name": "Hone: Depth IV",
+	"tetra/schematic/double/basic_hammer/hone_radius_4.description": "Further hone the depth improvement. The effect is increased to 45",
+	"tetra/schematic/double/basic_hammer/hone_radius_5.name": "Hone: Depth V",
+	"tetra/schematic/double/basic_hammer/hone_radius_5.description": "Further hone the depth improvement. The effect is increased to 54",
+
+	"tetra.improvement.head_hone/radius_tier.name": "Depth",
+	"tetra.improvement.head_hone/radius_tier.prefix": "Depth",
+	"tetra.improvement.head_hone/radius_tier.description": "Increases tunnel depth",
+
+
+	"tetra.variant.compound_string/string": "Basic compound string",
+	"tetra.variant.compound_string/hide": "Hide dual cord",
+	"tetra.variant.compound_string/leather": "Leather dual cord",
+	"tetra.variant.compound_string/phantom_membrane": "Double-twined phantom membrane",
+	"tetra.variant.compound_string/dragon_sinew": "Dragon sinew compound",
+
+	"tetra.variant.compound_cross_string/string": "Basic compound string",
+	"tetra.variant.compound_cross_string/hide": "Hide dual cord",
+	"tetra.variant.compound_cross_string/leather": "Leather dual cord",
+	"tetra.variant.compound_cross_string/phantom_membrane": "Double-twined phantom membrane",
+	"tetra.variant.compound_cross_string/dragon_sinew": "Dragon sinew compound",
+
+
+
+	"tetra.material.warped_muscle": "Warped Muscle",
+	"tetra.material.warped_muscle.prefix": "Warped Muscle",
+
+	"tetra.variant.spike/serrated_tooth": "Serrated Shark Tooth",
+
+	"tetra.material.diabolium_ingot": "Diabolium",
+	"tetra.material.diabolium_ingot.prefix": "Diabolium",
+
+	"tetra.material.echo_shard": "Echo Shard",
+	"tetra.material.echo_shard.prefix": "Echo Shard",
+
+	"tetra.material.socket_void_worm_eye": "Void Worm Eye",
+	"tetra.material.socket_void_worm_eye.prefix": "§dVoid Worm Eye§r",
+
+
+
+	"item.tetra.scroll.tetra/flamberge_blade.prefix": "Art of Forging, Chapter 1",
+	"item.tetra.scroll.tetra/flamberge_blade.name": "Flamberges",
+	"item.tetra.scroll.tetra/flamberge_blade.description": "Contains knowledge on how to forge flamberge blades",
+	"item.tetra.scroll.tetra/flamberge_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.prefix": "Art of Forging, Chapter 2",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.name": "Halberds",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.description": "Contains knowledge on how to forge halberd heads",
+	"item.tetra.scroll.single/head/halberd_head/halberd_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.sword/key_guard.prefix": "Art of Forging, Chapter 3",
+	"item.tetra.scroll.sword/key_guard.name": "Key guards",
+	"item.tetra.scroll.sword/key_guard.description": "Contains knowledge on how to forge key guards",
+	"item.tetra.scroll.sword/key_guard.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.single/head/mace_head/mace_head.prefix": "Art of Forging, Chapter 4",
+	"item.tetra.scroll.single/head/mace_head/mace_head.name": "Maces",
+	"item.tetra.scroll.single/head/mace_head/mace_head.description": "Contains knowledge on how to forge mace heads",
+	"item.tetra.scroll.single/head/mace_head/mace_head.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.tetra/crucible_blade.prefix": "Art of Forging, Chapter 5",
+	"item.tetra.scroll.tetra/crucible_blade.name": "The Crucible",
+	"item.tetra.scroll.tetra/crucible_blade.description": "Contains knowledge on how to forge the Crucible",
+	"item.tetra.scroll.tetra/crucible_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.bow/stave/dreadnought_stave.prefix": "Art of Forging, Chapter 6",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.name": "Dreadnought Stave",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.description": "Contains knowledge on how to craft the dreadnought bow stave",
+	"item.tetra.scroll.bow/stave/dreadnought_stave.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.sword/katana/katana_blade.prefix": "Art of Forging, Chapter 7",
+	"item.tetra.scroll.sword/katana/katana_blade.name": "Katana Blade",
+	"item.tetra.scroll.sword/katana/katana_blade.description": "Contains knowledge on how to forge a katana blade",
+	"item.tetra.scroll.sword/katana/katana_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.bow/string/compound_string.prefix": "Art of Forging, Chapter 8",
+	"item.tetra.scroll.bow/string/compound_string.name": "Compound String",
+	"item.tetra.scroll.bow/string/compound_string.description": "Contains knowledge on how to twine a compounded bow string",
+	"item.tetra.scroll.bow/string/compound_string.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.utilize/hammer.prefix": "Art of Forging: Chapter 9",
+	"item.tetra.scroll.utilize/hammer.name": "Quarry Hammer",
+	"item.tetra.scroll.utilize/hammer.description": "Contains knowledge on how to utilize a hammer head to dig tunnels",
+	"item.tetra.scroll.utilize/hammer.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.tetra/rending_scissor_purple.prefix": "Art of Forging, Chapter ?",
+	"item.tetra.scroll.tetra/rending_scissor_purple.name": "Rending Scissors Pair",
+	"item.tetra.scroll.tetra/rending_scissor_purple.description": "Contains knowledge from a different world on how to create the Rending Scissors",
+	"item.tetra.scroll.tetra/rending_scissor_purple.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+	"item.tetra.scroll.sword/katana/murasama_blade.prefix": "Art of Forging, Chapter ?",
+	"item.tetra.scroll.sword/katana/murasama_blade.name": "Murasama",
+	"item.tetra.scroll.sword/katana/murasama_blade.description": "Contains knowledge from a different world on how create the Murasama",
+	"item.tetra.scroll.sword/katana/murasama_blade.description_extended": "§7[§8shift + rmb§7]§8 read more",
+
+
+
+	"tetra.variant.sword_socket/void_worm_eye": "Bound [§dVoid Worm Eye§r]",
+	"tetra.variant.sword_socket/void_worm_eye.description": "A legendary Void Worm Eye, bound onto the sword where the blade meets the hilt.\n \nA god does not fear death, thus provinding all of combined effects of the gems.",
+
+	"tetra.variant.double_socket/void_worm_eye": "Bound [§dVoid Worm Eye§r]",
+	"tetra.variant.double_socket/void_worm_eye.description": "A legendary Void Worm Eye, bound onto the side of the tool head.\n \nA god does not fear death, thus provinding all of combined effects of the gems.",
+
+	"tetra.variant.single_socket/void_worm_eye": "Bound [§dVoid Worm Eye§r]",
+	"tetra.variant.single_socket/void_worm_eye.description": "A legendary Void Worm Eye, bound where the head meets the handle.\n \nA god does not fear death, thus provinding all of combined effects of the gems.",
+
+
+
+	"tetra.advancements.scrolls.root.title": "Hidden Secrets (§eAoF§r)",
+	"tetra.advancements.scrolls.root.description": "Find a scroll, the locate the Art of Forging schematics",
+
+	"tetra.advancements.upgrades.rapier_upgrade.title": "Glorified Needle",
+	"tetra.advancements.upgrades.rapier_upgrade.description": "Craft a rapier",
+
+	"tetra.advancements.upgrades.flamberge_upgrade.title": "Heat-Waved Blade",
+	"tetra.advancements.upgrades.flamberge_upgrade.description": "Craft a flamberge",
+
+	"tetra.advancements.upgrades.crucible_upgrade.title": "The Only Thing They Fear",
+	"tetra.advancements.upgrades.crucible_upgrade.description": "Craft the legendary crucible blade",
+
+	"tetra.advancements.upgrades.dreadnought_upgrade.title": "Let It Rain Hellfire",
+	"tetra.advancements.upgrades.dreadnought_upgrade.description": "Craft a dreadnought stave",
+
+	"tetra.advancements.upgrades.tomahawk_upgrade.title": "Here's Johnny!",
+	"tetra.advancements.upgrades.tomahawk_upgrade.description": "Craft a tomahawk head",
+
+	"tetra.advancements.scrolls.find_scroll_halberd.title": "Feudal Warfare",
+	"tetra.advancements.scrolls.find_scroll_halberd.description": "Find a halberd scroll",
+
+	"tetra.advancements.scrolls.find_scroll_key_guard.title": "Kingdom Hearts",
+	"tetra.advancements.scrolls.find_scroll_key_guard.description": "Find a key guard scroll",
+
+	"tetra.advancements.scrolls.find_scroll_mace.title": "Degrading Blows",
+	"tetra.advancements.scrolls.find_scroll_mace.description": "Find a mace scroll",
+
+	"tetra.advancements.upgrades.bastard_upgrade.title": "Premarital Smithing",
+	"tetra.advancements.upgrades.bastard_upgrade.description": "Craft a bastard blade",
+
+	"tetra.advancements.upgrades.executioner_upgrade.title": "Off with their heads!",
+	"tetra.advancements.upgrades.executioner_upgrade.description": "Craft an executioner blade",
+
+	"tetra.advancements.scrolls.craft_scroll_flamberge.title": "Can You Take The Heat?",
+	"tetra.advancements.scrolls.craft_scroll_flamberge.description": "Craft a flamberge scroll",
+
+	"tetra.advancements.scrolls.craft_scroll_crucible.title": "A Hellish Endeavor",
+	"tetra.advancements.scrolls.craft_scroll_crucible.description": "Craft the legendary crucible scroll",
+
+	"tetra.advancements.upgrades.rending_scissor_red_upgrade.title": "Don't Lose Your Way!",
+	"tetra.advancements.upgrades.rending_scissor_red_upgrade.description": "Craft the red rending scissor blade.",
+
+	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.title": "I'm Not Your Cute Woman",
+	"tetra.advancements.upgrades.rending_scissor_purple_upgrade.description": "Craft the purple rending scissor blade",
+
+	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.title": "Send The Artillery!",
+	"tetra.advancements.scrolls.find_scroll_dreadnought_stave.description": "Find a dreadnought stave scroll",
+
+	"tetra.advancements.upgrades.katana_upgrade.title": "Way Of The Blade",
+	"tetra.advancements.upgrades.katana_upgrade.description": "Craft a katana blade",
+
+	"tetra.advancements.upgrades.echo_fuller.title": "I Used To Be Divinity",
+	"tetra.advancements.upgrades.echo_fuller.description": "Find an echo shard and use it as a sword fuller!",
+
+
+
+	"item.tetra.scroll.art_of_forging.details": "§l§nThe Art of Forging§r\\n Forging, the art of forming metal into anything you desire. While previously a coveted practice only the Ancient Smiths could partake in, I have discovered the method of creating your own tools. I release my knowledge onto you, in hope that even you can create your own masterpieces. \r§l§nFlamberges§r\\n The flamberge. Not only impressive in use of battle but also one of stunning design. It carries the iconic waved blade, perfect for landing a blow that leaves your opponent bleeding. \r§l§nHalberds§r\\n A strong, and classic weapon. Used primarily for siege, and for good reason; this weapon combines the traits of a blade, axe, and polearm into one. Best for penetrating the armor of your foes. \r§l§nMaces§r\\n Maces; a deadly weapon to any armored opponent. This bludgeoning will ignore armor, leaving devastating blows. At the cost of speed, of course. A nasty weapon to have in your arsenal, a conqueror on the battlefield. \r§l§nDreadnought§r\\n Didn't think I'd miss out on ranged weapons, did you now? The dreadnought stave is the perfect blend of speed and fury, allowing the ranger to send down a storm of arrows upon their enemies. Perfect for knocking down those who stand in your way, and perfect for vengeance. This can be used on both standard bows and crossbows. \r§l§nKatana§r\\n A blade hailing from the eastern most corners of this land. The combination of a balanced blade and careful craftsmanship, this blade is suitable for anyone wanting an quality blade. A katana can cut down anything into shreds and shards. \r§l§nCompound String§r\\n Compound strings, made by twining two bowstrings rather than just one. Although it slows down draw speed, it makes up for it with raw power, giving arrows a harder impact than a typical bowstring. Combining with a dreadnought stave is the perfect combination for ranged warfare. \r§l§nQuarry Hammer§r\\n The hammer has hidden potential within it. By utilizing a specific niche within it, you can unlock the Quarry Hammer. This hammer is ideal for boring tunnels and holes, able to tear up the earth with little effort. If you want a tool that can make quick work of stones and ores, then you have found the perfect tool for you. \r§c§l§nThe Crucible§r\\n §cTHEY think they can exile ME? They think they have a right to toss aside my creations and spit in my face?! I'll show them all, just they wait. This is my magnum opus; destruction incarnate. I'll leave nothing behind; I'll be the Annihilator.",
+
+	"item.tetra.scroll.otherworldly.details": "§l§nOTHERWORLDLY§r\\n After toying with an abandoned ruined portal, I have managed to find a link between this world and other worlds across this foreign realm of reality."
+}
