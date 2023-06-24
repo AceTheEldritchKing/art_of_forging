@@ -1,8 +1,7 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "fff",
-        "fff"
+        "ff"
     ],
     "key": {
         "s": {
@@ -11,6 +10,6 @@
     },
     "result": {
         "item": "tetra:forged_platform",
-        "count": 2
+        "count": 32
     }
 }
