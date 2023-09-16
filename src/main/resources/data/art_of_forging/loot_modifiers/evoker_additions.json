@@ -1,0 +1,14 @@
+{
+    "conditions": [
+        {
+            "condition": "forge:loot_table_id",
+            "loot_table_id": "minecraft:entities/evoker"
+        },
+        {
+            "condition": "minecraft:random_chance",
+            "chance": 0.2
+        }
+    ],
+    "type": "art_of_forging:add_to_table",
+    "loot_table": "art_of_forging:entities/fang_charm"
+}

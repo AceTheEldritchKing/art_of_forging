@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " s ",
+        "sas",
+        " s "
+    ],
+    "key": {
+        "s": {
+            "item": "art_of_forging:shards_of_malice"
+        },
+        "a": {
+            "item": "art_of_forging:ancient_axe"
+        }
+    },
+    "result": {
+        "item": "art_of_forging:demonic_axe",
+        "count": 1
+    }
+}

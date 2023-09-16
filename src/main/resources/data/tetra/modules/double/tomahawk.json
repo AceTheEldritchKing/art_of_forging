@@ -12,7 +12,7 @@
 	],
 	"variants": [
 		{
-			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/" ],
+			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
 			"key": "tomahawk/",
 			"attributes": {
 				"generic.attack_speed": -1.45,
@@ -46,7 +46,7 @@
 				"secondaryEffects": {
 					"throwable": [ 0, 0.2 ]
 				},
-				"tetriaryEffects": {
+				"tertiaryEffects": {
 					"stun": -0.2
 				},
 				"durability": 0.7,

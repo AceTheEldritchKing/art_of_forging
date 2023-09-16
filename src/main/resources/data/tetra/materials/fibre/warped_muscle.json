@@ -22,10 +22,9 @@
         "items": [ "alexsmobs:warped_muscle" ]
     },
     "requiredTools": {
-        "cut": "minecraft:stone"
+        "cut": "minecraft:iron"
     },
     "effects": {
-        "stabilizing": 5,
         "unbreaking": 2
     }
 }

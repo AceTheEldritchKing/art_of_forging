@@ -1,6 +1,5 @@
 {
 	"replace": true,
-	"locked": false,
 	"slots": [ "double/head_left" ],
 	"keySuffixes": [ "_left" ],
 	"materialSlotCount": 1,

@@ -1,0 +1,17 @@
+{
+    "verison": 1.0,
+    "attributemap": {
+        "sword/blade": {
+            "sword/euclidean_dagger": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:dagger"
+                    }
+                }
+            }
+        },
+        "double/head_left": {
+
+        }
+    }
+}

@@ -23,7 +23,7 @@
     },
     "experienceCost": 5,
     "effects": {
-        "sculkTaint": [ 1, 1 ],
+        "sculkTaint": [ 0, 1.0 ],
         "intuit": 1
     }
 }

@@ -1,7 +1,0 @@
-[
-    {
-        "modules": [ "sword/katana_blade" ],
-        "improvements": [ "sword/murasama_imprv" ],
-        "name": "sword/murasama"
-    }
-]

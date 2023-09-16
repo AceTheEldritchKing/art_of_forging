@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "art_of_forging:dragon_soul"
+        },
+        {
+            "item": "art_of_forging:forged_steel_ingot"
+        },
+        {
+            "item": "art_of_forging:forged_steel_ingot"
+        }
+    ],
+    "result": {
+        "item": "art_of_forging:endsteel_ingot",
+        "count": 2
+    }
+}

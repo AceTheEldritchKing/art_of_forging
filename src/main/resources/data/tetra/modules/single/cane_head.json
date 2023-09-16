@@ -6,6 +6,7 @@
         "tetra:single/head/cane/",
         "tetra:single/shared_head/",
         "tetra:single/head/shared/",
+        "tetra:single/shared/",
         "tetra:shared/"
     ],
     "variants": [

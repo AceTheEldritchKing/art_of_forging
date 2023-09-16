@@ -16,7 +16,7 @@
     "outcomes": [
         {
             "material": {
-                "items": [ "minecraft:netherite_ingot" ]
+                "items": [ "art_of_forging:life_fiber" ]
             },
             "requiredTools": {
                 "hammer_dig": "minecraft:diamond"

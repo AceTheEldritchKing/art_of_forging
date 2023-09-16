@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "name": "aof_wither_extended",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "art_of_forging:sigil_of_eden"
+                }
+            ]
+        }
+    ]
+}

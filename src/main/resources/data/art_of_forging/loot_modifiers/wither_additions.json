@@ -1,0 +1,14 @@
+{
+    "conditions": [
+        {
+            "condition": "forge:loot_table_id",
+            "loot_table_id": "minecraft:entities/wither"
+        },
+        {
+            "condition": "minecraft:random_chance",
+            "chance": 0.8
+        }
+    ],
+    "type": "art_of_forging:add_to_table",
+    "loot_table": "art_of_forging:entities/sigil_of_eden"
+}

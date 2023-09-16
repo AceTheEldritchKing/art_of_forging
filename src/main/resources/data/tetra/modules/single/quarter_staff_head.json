@@ -6,6 +6,7 @@
         "tetra:single/head/quarter_staff/",
         "tetra:single/shared_head/",
         "tetra:single/head/shared/",
+        "tetra:single/shared/",
         "tetra:shared/"
     ],
     "variants": [

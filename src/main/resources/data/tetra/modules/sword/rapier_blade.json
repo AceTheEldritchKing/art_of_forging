@@ -14,12 +14,12 @@
 			"key": "rapier_blade/",
 			"attributes": {
 				"generic.attack_speed": -1.3,
-				"generic.attack_damage": 0.15,
-				"forge:reach_distance": -1
+				"generic.attack_damage": 0.15
 			},
 			"effects": {
 				"armorPenetration": 2.5,
-				"skewering": [ 1, 2 ]
+				"skewering": [ 1, 2 ],
+				"art_of_forging:soul_charged": 2
 			},
 			"aspects": {
 				"edgedWeapon": 2,

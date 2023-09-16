@@ -2,21 +2,21 @@
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
 		" d ",
-        " a ",
-        "cbc"
+        "cbc",
+        " a "
 	],
 	"key": {
 		"a": {
 			"item": "minecraft:beacon"
 		},
 		"b": {
-			"item": "minecraft:book"
+			"item": "minecraft:writable_book"
 		},
 		"c": {
 			"item": "minecraft:netherite_ingot"
 		},
 		"d": {
-			"item": "minecraft:dragon_egg"
+			"item": "art_of_forging:enigmatic_construct"
 		}
 	},
 	"result": {

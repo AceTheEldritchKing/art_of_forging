@@ -12,18 +12,16 @@
 		"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
 		"key": "crucible_blade/",
 		"attributes": {
-			"generic.attack_speed": -2.8,
+			"generic.attack_speed": -2.9,
 			"generic.attack_damage": 0.65
 		},
 		"effects": {
 			"armorPenetration": 10,
-			"crushing": [ 1, 2 ],
 			"sweeping": 1,
-			"reap": [ 5, 8 ],
-			"severing": [ 3, 2 ],
+			"severing": [ 2, 2 ],
 			"abilityCombo": [ 5, 2 ],
 			"abilityExhilarated": [ 8, 2 ],
-			"abilityRevenge": [ 8, 2 ]
+			"art_of_forging:vengeance": [ 5, 5 ]
 		},
 		"tools": {
 			"cut": [ 2, 3 ]
@@ -37,18 +35,23 @@
 			"primaryAttributes": {
 				"generic.attack_damage": 1.4
 			},
+			"secondaryAttributes": {
+				"generic.attack_damage": 0.2,
+				"generic.attack_speed": -0.05
+			},
+			"tertiaryAttributes": {
+				"generic.attack_damage": -1,
+				"generic.attack_speed": 0.1
+			},
 			"primaryEffects": {
 				"armorPenetration": 6,
 				"severing": [ 2, 1 ]
 			},
 			"secondaryEffects": {
-				"crushing": 0.5,
-				"execute": 2,
-				"sweeping": -0.3
+				"sweeping": -1
 			},
 			"tertiaryEffects": {
 				"sweeping": 1,
-				"crushing": -0.5,
 				"armorPenetration": -0.5
 			},
 			"durability": 1,

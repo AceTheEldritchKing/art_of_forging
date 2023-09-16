@@ -2,20 +2,23 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
         classpath 'org.spongepowered:mixingradle:0.7.+'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.6.7-1.19.2'
+version = '1.7.0-1.19.2'
 group = 'net.acetheeldritchking.art_of_forging' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'art_of_forging'
 
@@ -37,7 +40,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.19.2'
+    mappings channel: 'parchment', version: '2022.08.14-1.19.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -154,11 +157,22 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation fg.deobf("curse.maven:tetra-289712:4487237")
+    implementation fg.deobf("curse.maven:tetra-289712:4738567")
     implementation fg.deobf("curse.maven:mutil-351914:3941314")
 
     implementation fg.deobf("curse.maven:alexsmobs-426558:4071154")
     implementation fg.deobf("curse.maven:citadel-331936:4469008")
+
+    //implementation fg.deobf("curse.maven:sofr-864307:4629168")
+
+    // These are just for testing damage values :P
+    implementation fg.deobf("curse.maven:mmmmm-225738:4410143")
+    implementation fg.deobf("curse.maven:moonlight-499980:4620027")
+
+    implementation fg.deobf("curse.maven:damageindicator-557596:3946489")
+    implementation fg.deobf("curse.maven:critalib-560696:3946347")
+
+    implementation fg.deobf("curse.maven:neat-238372:3878735")
 
     // runtimeOnly(fg.deobf("curse.maven:nbttool-451553:3748971"))
     // runtimeOnly(fg.deobf("curse.maven:Jei-238222:3940240"))

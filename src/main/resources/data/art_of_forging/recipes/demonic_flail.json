@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cs ",
+        "sas",
+        " s "
+    ],
+    "key": {
+        "s": {
+            "item": "art_of_forging:shards_of_malice"
+        },
+        "a": {
+            "item": "art_of_forging:ancient_flail"
+        },
+        "c": {
+            "item": "minecraft:chain"
+        }
+    },
+    "result": {
+        "item": "art_of_forging:demonic_flail",
+        "count": 1
+    }
+}

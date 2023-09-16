@@ -3,10 +3,10 @@
     "slots": [ "sword/blade" ],
     "type": "tetra:basic_major_module",
     "improvements": [
-      "tetra:sword/rending_scissor_purple/",
-      "tetra:sword/shared_blade/",
-      "tetra:sword/shared/",
-      "tetra:shared/"
+        "tetra:sword/rending_scissor_purple/",
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
     ],
     "variants": [
         {
@@ -14,7 +14,7 @@
             "integrity": -3,
             "attributes": {
                 "generic.attack_speed": -1.1,
-                "generic.attack_damage": 10.2
+                "generic.attack_damage": 10
             },
             "aspects": {
                 "edgedWeapon": 2,
@@ -24,11 +24,12 @@
             "effects": {
                 "armorPenetration": 35,
                 "sweeping": 2,
-                "crushing": 10,
+                "crushing": 5,
                 "abilityCombo": 10,
-                "abilityExhilaration": 10,
-                "severing": [ 3, 25 ],
-                "abilityDefensive": 1
+                "abilityExhilaration": 2,
+                "severing": [ 1, 15 ],
+                "abilityDefensive": 1,
+                "art_of_forging:life_fiber_loss": [ 1, 10 ]
             },
             "magicCapacity": 850,
             "glyph": {

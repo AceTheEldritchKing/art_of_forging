@@ -5,7 +5,7 @@
     "improvements": [
         "tetra:sword/katana_blade/",
         "tetra:sword/shared_blade/",
-        "tetra:sword/shared",
+        "tetra:sword/shared/",
         "tetra:shared/"
     ],
     "variants": [
@@ -14,8 +14,7 @@
             "key": "katana_blade/",
             "attributes": {
                 "generic.attack_speed": -1.5,
-                "generic.attack_damage": 0.12,
-                "forge:reach_distance": -1
+                "generic.attack_damage": 0.12
             },
             "effects": {
                 "skewering": [ 1, 1 ],

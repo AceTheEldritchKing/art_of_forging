@@ -14,8 +14,7 @@
 			"key": "saber_blade/",
 			"attributes": {
 				"generic.attack_speed": -1.8,
-				"generic.attack_damage": 0.13,
-				"forge:reach_distance": -1.5
+				"generic.attack_damage": 0.13
 			},
 			"effects": {
 				"sweeping": 1,

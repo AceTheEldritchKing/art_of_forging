@@ -3,9 +3,10 @@
 	"type": "tetra:basic_major_module",
 	"slots": [ "single/head" ],
 	"improvements": [
-        "tetra:single/head/halberd/",
+        "tetra:single/head/halberd_head/",
 		"tetra:single/shared_head/",
         "tetra:single/head/shared/",
+		"tetra:single/shared/",
         "tetra:shared/"
 	],
 	"variants": [
@@ -18,12 +19,14 @@
 			"effects": {
 				"armorPenetration": 2.5,
 				"stun": [ 15, 2 ],
-				"sweeping": 5
+				"sweeping": 5,
+				"art_of_forging:dismounting": [ 10, 2.5 ]
 			},
 			"aspects": {
 				"pointyWeapon": 1,
 				"edgedWeapon":  2,
-				"breakable": 2
+				"breakable": 2,
+				"shieldbreaker": 1
 			},
 			"durability": -20,
 			"extract": {
@@ -38,11 +41,13 @@
 					"axe": [ 0.3, 1 ]
 				},
 				"primaryEffects": {
-					"armorPenetration": 1
+					"armorPenetration": 1,
+					"art_of_forging:dismounting": 1
 				},
 				"secondaryEffects": {
 					"armorPenetration": 0.5,
-					"stun": [ 5, 1 ]
+					"stun": [ 5, 1 ],
+					"art_of_forging:dismounting": [ 5, 0.5 ]
 				},
 				"tetriaryEffects": {
 					"stun": -1,

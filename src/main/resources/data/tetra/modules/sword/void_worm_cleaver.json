@@ -14,7 +14,7 @@
 			"integrity": -3,
 			"attributes": {
 				"generic.attack_speed": -3.1,
-				"generic.attack_damage": 11
+				"generic.attack_damage": 10
 			},
 			"aspects": {
 				"edgedWeapon": 2,
@@ -28,7 +28,7 @@
 				"abilityCombo": 1,
 				"lunge": 2
 			},
-			"magicCapacity": 900,
+			"magicCapacity": 500,
 			"glyph": {
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
 				"textureX": 144

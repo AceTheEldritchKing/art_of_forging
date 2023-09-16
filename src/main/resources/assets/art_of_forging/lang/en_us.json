@@ -1,9 +1,135 @@
 {
-	"item.art_of_forging.forged_steel_ingot": "Forged Steel Ingot",
+	"art_of_forging.effect.decaying.name": "Decaying",
+	"art_of_forging.effect.decaying.tooltip": "Applies a withering effect to the target at §e%s potency§r for §e%s seconds§r.",
+
+	"art_of_forging.effect.stormcaller.name": "Storm Caller",
+	"art_of_forging.effect.stormcaller.tooltip": "Summon §e%s lightning bolts§r at the same time at hit with a §e%s chance§r.",
+
+	"art_of_forging.effect.evokingmaw.name": "Evoking Maw",
+	"art_of_forging.effect.evokingmaw.tooltip": "Summons §e%s evoker fangs at the same time at hit.",
+
+	"art_of_forging.effect.life_steal.name": "Life Steal",
+	"art_of_forging.effect.life_steal.tooltip": "Chance to gain §e%s health§r back after a successful hit (§e%s chance).",
+
+	"art_of_forging.effect.knockback.name": "Knockback",
+	"art_of_forging.effect.knockback.tooltip": "Knocks back target by an additional §e%s strength§r (This effect can also be reversed to drag targets in).",
+
+	"art_of_forging.effect.life_fiber_loss.name": "Life Fiber Loss",
+	"art_of_forging.effect.life_fiber_loss.tooltip": "On the death of your opponent, you get buffed for §e%s seconds.",
+
+	"art_of_forging.effect.cavalry.name": "Cavalry",
+	"art_of_forging.effect.cavalry.tooltip": "Does an bonus §e%s damage§r while riding an entity.",
+
+	"art_of_forging.effect.dismounting.name": "Dismounting",
+	"art_of_forging.effect.dismounting.tooltip": "Does an bonus §e%s damage§r to mounted entities, with a §e%s chance§r to dismount them.",
+
+	"art_of_forging.effect.dragon_mist.name": "Draconic Mist",
+	"art_of_forging.effect.dragon_mist.tooltip": "A mist that lasts for §e%s seconds§r with a §e%s chance§r to be summoned.",
+
+	"art_of_forging.effect.disorienting.name": "Disorienting",
+	"art_of_forging.effect.disorienting.tooltip": "Inflicts slowness, weakness and confusion at §e%s potency§r, that lasts for §e%s seconds§r.",
+
+	"art_of_forging.effect.vengeance.name": "Vengeance",
+	"art_of_forging.effect.vengeance.tooltip": "You gain §e%s percent more damage§r, at §e%s hearts or less§r.",
+
+	"art_of_forging.effect.resolve.name": "Resolve",
+	"art_of_forging.effect.resolve.tooltip": "You gain strength and resistance for §e%s seconds§r, at §e%s hearts or less§r.",
+
+	"art_of_forging.effect.devouring.name": "Curse of Devouring",
+	"art_of_forging.effect.devouring.tooltip": "If you do not attack any entity for a period of time, your item will begin to consume your life force.",
+
+	"art_of_forging.effect.infernal_rebuke.name": "Infernal Rebuke",
+	"art_of_forging.effect.infernal_rebuke.tooltip": "Sets enemies on fire for §e%s seconds§r and knocks them back, with a §e%s chance§r to do so.",
+
+	"art_of_forging.effect.hubris.name": "Curse of Hubris",
+	"art_of_forging.effect.hubris.tooltip": "At 90 percent health or greater, you deal §e%s extra damage§r. However, upon losing health, your weapon damage decreases until more than half its original damage at 30 percent or lower.",
+
+	"art_of_forging.effect.slaughtering.name": "Slaughtering",
+	"art_of_forging.effect.slaughtering.tooltip": "You deal §e%s extra damage§r when your target is above §e%s percent health§r",
+
+	"art_of_forging.effect.carnage.name": "Carnage",
+	"art_of_forging.effect.carnage.tooltip": "As you attack your target, you gain a 10 percent bonus in damage. For each consecutive attack, 10 percent more damage is added up to 40 percent. This stack is lost upon death.",
+
+	"art_of_forging.effect.judgement.name": "Judgement",
+	"art_of_forging.effect.judgement.tooltip": "If you enemy is below §e%s health§r, you have a §e%s percent chance§r to instantly kill them.",
+
+	"art_of_forging.effect.esoteric_edge.name": "Esoteric Edge",
+	"art_of_forging.effect.esoteric_edge.tooltip": "§e%s percent of your damage§r is converted into magic damage.",
+
+	"art_of_forging.effect.feasting.name": "Feasting",
+	"art_of_forging.effect.feasting.tooltip": "Regain hunger by §e%s amount§r, with a §e%s percent§r to take effect.",
+
+	"art_of_forging.effect.nano_fused.name": "Nano-Fused",
+	"art_of_forging.effect.nano_fused.tooltip": "You have a §e%s chance§r to have an altered drops from certain mobs.",
+
+	"art_of_forging.effect.beheading.name": "Beheading",
+	"art_of_forging.effect.beheading.tooltip": "You have a §e%s chance§r to drop a mob or player skull upon death.",
+
+
+
+	"itemGroup.art_of_forging_tab": "Art of Forging",
+
+
+
+	"effect.art_of_forging.devouring": "Devoured",
+	"effect.art_of_forging.evoking_maw": "Evoking Maw",
+	"effect.art_of_forging.defuse_creeper": "Defused",
+
+
+
 	"item.art_of_forging.resonant_alloy": "Resonant Alloy",
+	"item.art_of_forging.forged_steel_ingot": "Forged Steel Ingot",
+	"item.art_of_forging.vobrite_crystal": "Vobrite Crystal",
+	"item.art_of_forging.vobrivium_ingot": "Vobrivium Ingot",
+	"item.art_of_forging.endsteel_ingot": "Endsteel Ingot",
+
+	"item.art_of_forging.life_fiber": "Life Fibers",
+	"item.art_of_forging.fang_charm": "Evoker Fang Charm",
+	"item.art_of_forging.sigil_of_eden": "Sigil of Eden",
+	"item.art_of_forging.enigmatic_construct": "Enigmatic Construct",
+	"item.art_of_forging.ancient_axe": "Ancient Axe",
+	"item.art_of_forging.ancient_blade": "Ancient Blade",
+	"item.art_of_forging.ancient_flail": "Ancient Flail",
+	"item.art_of_forging.demonic_axe": "Annihilated Axe",
+	"item.art_of_forging.demonic_blade": "Cataclysmic Blade",
+	"item.art_of_forging.demonic_flail": "Grievous Flail",
+
+	"item.art_of_forging.nano_insectoid": "Nano-Insectoid",
+
+	"item.art_of_forging.dragon_soul": "Dragon Soul",
+	"item.art_of_forging.shards_of_malice": "Shards of Malice",
+	"item.art_of_forging.potent_mixture": "Potent Mixture",
+	"item.art_of_forging.heart_of_ender": "Heart of Ender",
+	"item.art_of_forging.eerie_shard": "Eerie Shard",
+
+
+
+	"item.enigmatic_construct.tooltip": "A strange machination constructed from the maimed soul of the Ender Dragon. It feels wrong.",
+	"item.life_fiber.tooltip": "A synthetic replica of the real deal.",
+	"item.ancient_item.tooltip": "An weapon forged long ago. It requires evil energy to be reawakened.",
+
+
 
 	"tetra.material.forged_steel_ingot": "Forged Steel",
 	"tetra.material.forged_steel_ingot.prefix": "Forged Steel",
+
+	"tetra.material.vobrivium_ingot": "Vobrivium",
+	"tetra.material.vobrivium_ingot.prefix": "Vobrivium",
+
+	"tetra.material.vobrite_crystal": "Vobrite Crystal",
+	"tetra.material.vobrite_crystal.prefix": "§bVobrite Crystal§r",
+
+	"tetra.material.sigil_of_eden": "Sigil of Eden",
+	"tetra.material.sigil_of_eden.prefix": "§4Sigil of Eden§r",
+
+	"tetra.material.fang_charm": "Fang Charm",
+	"tetra.material.fang_charm.prefix": "§eFang Charm§r",
+
+	"tetra.material.endsteel_ingot": "Endsteel",
+	"tetra.material.endsteel_ingot.prefix": "Endsteel",
+
+	"tetra.material.life_fiber": "Life Fiber",
+	"tetra.material.life_fiber.prefix": "§cLife Fiber§r",
 
 
 
@@ -17,9 +143,9 @@
 	"tetra.module.sword/rapier_blade.material_name": "%s rapier",
 	"tetra.module.sword/rapier_blade.prefix": "%s",
 
-	"tetra/schematic/sword/flamberge_blade.name": "Flamberge blade",
-	"tetra/schematic/sword/flamberge_blade.description": "Replace the current sword blade with a flamberge.\n \nMaterial §fhardness§r increases §fdamage§r.",
-	"tetra/schematic/sword/flamberge_blade.slot1": "Blade material",
+	"tetra/schematic/sword/flamberge/flamberge_blade.name": "Flamberge blade",
+	"tetra/schematic/sword/flamberge/flamberge_blade.description": "Replace the current sword blade with a flamberge.\n \nMaterial §fhardness§r increases §fdamage§r.",
+	"tetra/schematic/sword/flamberge/flamberge_blade.slot1": "Blade material",
 
 	"tetra.module.sword/flamberge_blade.item_name": "Flamberge",
 	"tetra.module.sword/flamberge_blade.name": "Flamberge",
@@ -27,9 +153,9 @@
 	"tetra.module.sword/flamberge_blade.material_name": "%s flamberge",
 	"tetra.module.sword/flamberge_blade.prefix": "%s",
 
-	"tetra/schematic/sword/crucible_blade.name": "§cCrucible Blade§r",
-	"tetra/schematic/sword/crucible_blade.description": "Replace the current sword blade with a crucible blade.\n \nMaterial §fhardness§r increases §fdamage§r.",
-	"tetra/schematic/sword/crucible_blade.slot1": "Blade material",
+	"tetra/schematic/sword/crucible/crucible_blade.name": "§cCrucible Blade§r",
+	"tetra/schematic/sword/crucible/crucible_blade.description": "Replace the current sword blade with a crucible blade.\n \nMaterial §fhardness§r increases §fdamage§r.",
+	"tetra/schematic/sword/crucible/crucible_blade.slot1": "Blade material",
 
 	"tetra.module.sword/crucible_blade.item_name": "Crucible",
 	"tetra.module.sword/crucible_blade.name": "Crucible",
@@ -100,7 +226,7 @@
 	"tetra/schematic/double/void_worm_pickaxe/void_worm_pickaxe.slot1": "Void Worm Pickaxe",
 
 	"tetra.module.double/void_worm_pickaxe.item_name": "Void Worm Pickaxe",
-	"tetra.module.double/void_worm_pickaxe.name": "Pickaxe Head",
+	"tetra.module.double/void_worm_pickaxe.name": "Void Worm Pickaxe",
 	"tetra.module.double/void_worm_pickaxe.description": "A pickaxe head made from the Void Worm mandibles, nothing personal kid.",
 	"tetra.variant.void_worm_pickaxe/void_worm_pickaxe": "Void Worm Pickaxe",
 
@@ -250,9 +376,39 @@
 	"tetra.module.sword/echo_fuller.description": "A fuller crafted from an echo shard. It might spread sculk taint.",
 	"tetra.variant.echo_fuller/echo_fuller": "§1Echo Fuller§r",
 
+	"tetra/schematic/sword/euclidean_dagger.name": "§6Euclidean Dagger§r",
+	"tetra/schematic/sword/euclidean_dagger.description": "An ancient dagger forged from a fragment of Eden. The night belongs to you.",
+	"tetra/schematic/sword/euclidean_dagger.slot1": "§6Euclidean Dagger§r",
+
+	"tetra.module.sword/euclidean_dagger.item_name": "§6Euclidean Dagger§r",
+	"tetra.module.sword/euclidean_dagger.name": "§6Euclidean Dagger§r",
+	"tetra.module.sword/euclidean_dagger.description": "An ancient dagger forged from a fragment of Eden. The night belongs to you.",
+	"tetra.variant.euclidean_dagger/euclidean_dagger": "§6Euclidean Dagger§r",
+
+	"tetra/schematic/double/annihilator_axe/annihilator_axe.name": "§4Annihilator§r",
+	"tetra/schematic/double/annihilator_axe/annihilator_axe.description": "An axe head forged from demonic essence solidified. It hungers for blood.",
+	"tetra/schematic/double/annihilator_axe/annihilator_axe.slot1": "§4Annihilator§r",
+
+	"tetra.module.double/annihilator_axe.item_name": "§4Annihilator§r",
+	"tetra.module.double/annihilator_axe.name": "§4Annihilator Axe Head§r",
+	"tetra.module.double/annihilator_axe.description": "An axe head forged from demonic essence solidified. It hungers for blood.",
+	"tetra.variant.annihilator_axe/annihilator_axe": "§cAnnihilator§r",
+
+	"tetra/schematic/sword/cataclysm_blade.name": "§4Cataclysm§r",
+	"tetra/schematic/sword/cataclysm_blade.description": "A blade forged from demonic essence solidified. It hungers for blood.",
+	"tetra/schematic/sword/cataclysm_blade.slot1": "§4Cataclysm§r",
+
+	"tetra.module.sword/cataclysm_blade.item_name": "§4Cataclysm§r",
+	"tetra.module.sword/cataclysm_blade.name": "§4Cataclysm§r",
+	"tetra.module.sword/cataclysm_blade.description": "A blade forged from demonic essence solidified. It hungers for blood.",
+	"tetra.variant.cataclysm_blade/cataclysm_blade": "§cCataclysm§r",
+
 
 
 	"tetra.synergy.double/quarry_hammer": "Quarry Hammer",
+	"tetra.synergy.double/mjolnir": "Mjolnir",
+	"tetra.synergy.double/dual_throwing_axe": "Double-Bit Axe",
+	"tetra.synergy.sword/murasama": "Murasama Blade",
 
 
 
@@ -268,20 +424,44 @@
 
 	"tetra.improvement.double/utilized.name": "Utilized",
 
-	"tetra/schematic/double/basic_hammer/hone_radius_1.name": "Depth",
-	"tetra/schematic/double/basic_hammer/hone_radius_1.description": "Increase the depth at which your hammer can tunnel.",
-	"tetra/schematic/double/basic_hammer/hone_radius_2.name": "Hone: Depth II",
-	"tetra/schematic/double/basic_hammer/hone_radius_2.description": "Hone the depth improvement. The effect is increased to 27",
-	"tetra/schematic/double/basic_hammer/hone_radius_3.name": "Hone: Depth III",
-	"tetra/schematic/double/basic_hammer/hone_radius_3.description": "Further hone the depth improvement. The effect is increased to 36",
-	"tetra/schematic/double/basic_hammer/hone_radius_4.name": "Hone: Depth IV",
-	"tetra/schematic/double/basic_hammer/hone_radius_4.description": "Further hone the depth improvement. The effect is increased to 45",
-	"tetra/schematic/double/basic_hammer/hone_radius_5.name": "Hone: Depth V",
-	"tetra/schematic/double/basic_hammer/hone_radius_5.description": "Further hone the depth improvement. The effect is increased to 54",
-
 	"tetra.improvement.head_hone/radius_tier.name": "Depth",
 	"tetra.improvement.head_hone/radius_tier.prefix": "Depth",
 	"tetra.improvement.head_hone/radius_tier.description": "Increases tunnel depth",
+
+	"tetra/schematic/double/basic_hammer/hone_radius_1.name": "Depth",
+	"tetra/schematic/double/basic_hammer/hone_radius_1.description": "Increase the depth at which your hammer can tunnel.",
+	"tetra/schematic/double/basic_hammer/hone_radius_2.name": "Hone: Depth II",
+	"tetra/schematic/double/basic_hammer/hone_radius_2.description": "Hone the depth improvement. The effect is increased to 27.",
+	"tetra/schematic/double/basic_hammer/hone_radius_3.name": "Hone: Depth III",
+	"tetra/schematic/double/basic_hammer/hone_radius_3.description": "Further hone the depth improvement. The effect is increased to 36.",
+	"tetra/schematic/double/basic_hammer/hone_radius_4.name": "Hone: Depth IV",
+	"tetra/schematic/double/basic_hammer/hone_radius_4.description": "Further hone the depth improvement. The effect is increased to 45.",
+	"tetra/schematic/double/basic_hammer/hone_radius_5.name": "Hone: Depth V",
+	"tetra/schematic/double/basic_hammer/hone_radius_5.description": "Further hone the depth improvement. The effect is increased to 54.",
+
+	"tetra.improvement.blade/vengeance_tier.name": "Wrathful",
+	"tetra.improvement.blade/vengeance_tier.prefix": "Wrathful",
+	"tetra.improvement.blade/vengeance_tier.description": "Increases vengeance damage",
+
+	"tetra/schematic/sword/crucible/hone_vengeance_1.name": "Path of Wrath",
+	"tetra/schematic/sword/crucible/hone_vengeance_1.description": "Increase vengeance damage by 5 percent at low health.",
+	"tetra/schematic/sword/crucible/hone_vengeance_2.name": "Hone: Wrathful II",
+	"tetra/schematic/sword/crucible/hone_vengeance_2.description": "Hone the vengeance improvement. Damage is up to 15 percent at low health.",
+	"tetra/schematic/sword/crucible/hone_vengeance_3.name": "Hone: Wrathful III",
+	"tetra/schematic/sword/crucible/hone_vengeance_3.description": "Further hone the vengeance improvement. Damage is up to 20 percent at low health.",
+
+	"tetra.improvement.blade/infernal.name": "Infernal",
+	"tetra.improvement.blade/infernal.prefix": "Infernal",
+	"tetra.improvement.blade/infernal.description": "Chance to set enemies ablaze and knock them back when hit.",
+
+	"tetra/schematic/sword/flamberge/hone_infernal_1.name": "Infernal Rebuke",
+	"tetra/schematic/sword/flamberge/hone_infernal_1.description": "Set enemies ablaze for 3 seconds, with a 15 percent chance to occur.",
+	"tetra/schematic/sword/flamberge/hone_infernal_2.name": "Hone: Infernal II",
+	"tetra/schematic/sword/flamberge/hone_infernal_2.description": "Hone the infernal improvement. Set enemies ablaze for 4 seconds, with a 20 percent chance to occur.",
+	"tetra/schematic/sword/flamberge/hone_infernal_3.name": "Hone: Infernal III",
+	"tetra/schematic/sword/flamberge/hone_infernal_3.description": "Further hone the infernal improvement. Set enemies ablaze for 5 seconds, with a 25 percent chance to occur",
+	"tetra/schematic/sword/flamberge/hone_infernal_4.name": "Hone: Infernal IV",
+	"tetra/schematic/sword/flamberge/hone_infernal_4.description": "Further hone the infernal improvement. Set enemies ablaze for 6 seconds, with a 30 percent chance to occur",
 
 
 	"tetra.variant.compound_string/string": "Basic compound string",
@@ -295,6 +475,34 @@
 	"tetra.variant.compound_cross_string/leather": "Leather dual cord",
 	"tetra.variant.compound_cross_string/phantom_membrane": "Double-twined phantom membrane",
 	"tetra.variant.compound_cross_string/dragon_sinew": "Dragon sinew compound",
+
+	"tetra/schematic/single/head/halberd_head/serrated_1.name": "Serrate",
+	"tetra/schematic/single/head/halberd_head/serrated_1.description": "Serrate the head. Attacks have a 30%% chance to cause the target to bleed for 4 damage over 2 seconds. Not effective against undead.",
+	"tetra/schematic/single/head/halberd_head/serrated_2.name": "Hone: Serrated II",
+	"tetra/schematic/single/head/halberd_head/serrated_2.description": "Hone the serrated improvement, increases the damage dealt to 8.",
+	"tetra/schematic/single/head/halberd_head/serrated_3.name": "Hone: Serrated III",
+	"tetra/schematic/single/head/halberd_head/serrated_3.description": "Further hone the serrated improvement, increases the damage dealt to 16.",
+
+	"tetra.improvement.halberd_head/serrated.name": "Serrated",
+	"tetra.improvement.halberd_head/serrated.prefix": "Serrated",
+	"tetra.improvement.halberd_head/serrated.description": "Attacks may inflict bleed",
+
+	"tetra/schematic/single/head/halberd_head/tempered_1.name": "Temper",
+	"tetra/schematic/single/head/halberd_head/tempered_1.description": "Temper the the blade, greatly increasing its hardness. Causes some of the damage dealt to ignore armor.",
+	"tetra/schematic/single/head/halberd_head/tempered_2.name": "Hone: Tempered II",
+	"tetra/schematic/single/head/halberd_head/tempered_2.description": "Hone the tempered improvement, increases the amount of damage that penetrates armor to 3.",
+	"tetra/schematic/single/head/halberd_head/tempered_3.name": "Hone: Tempered III",
+	"tetra/schematic/single/head/halberd_head/tempered_3.description": "Further hone the serrated improvement, increases the amount of damage that penetrates armor to 5.",
+
+	"tetra.improvement.halberd_head/tempered.name": "Tempered",
+	"tetra.improvement.halberd_head/tempered.prefix": "Tempered",
+	"tetra.improvement.halberd_head/tempered.description": "Attacks partially ignore armor",
+
+	"tetra.improvement.halberd_head_hone/damage.name": "Hone: Damage",
+	"tetra.improvement.halberd_head_hone/damage.description": "Increases damage dealt",
+
+	"tetra.improvement.tomahawk_head_hone/damage.name": "Hone: Damage",
+	"tetra.improvement.tomahawk_head_hone/damage.description": "Increases damage dealt",
 
 
 

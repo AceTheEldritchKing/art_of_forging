@@ -23,7 +23,9 @@
 				"availableTextures": [
 					"pristine",
 					"default",
-					"worm_eye"
+					"worm_eye",
+					"thermal",
+					"sigil_of_eden"
 				],
 				"models":
 				[
