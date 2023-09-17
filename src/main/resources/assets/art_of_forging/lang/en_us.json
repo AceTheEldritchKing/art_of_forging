@@ -65,6 +65,9 @@
 	"art_of_forging.effect.beheading.name": "Beheading",
 	"art_of_forging.effect.beheading.tooltip": "You have a §e%s chance§r to drop a mob or player skull upon death.",
 
+	"art_of_forging.effect.soul_charged.name": "Soul Charged",
+	"art_of_forging.effect.soul_charged.tooltip": "Upon killing an entity, you gain 1 soul charge point. Once you gain 5 points, you are able to release a wave of fire and magic damage in a radius around you. Requires ability level 2 or greater.",
+
 
 
 	"itemGroup.art_of_forging_tab": "Art of Forging",

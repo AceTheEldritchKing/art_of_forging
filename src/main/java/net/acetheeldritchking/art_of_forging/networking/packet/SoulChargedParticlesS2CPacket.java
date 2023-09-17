@@ -41,9 +41,9 @@ public class SoulChargedParticlesS2CPacket {
             // Server to Client
             Level world = S2CPacketHandling.getLevel();
 
-            double radius = 3;
+            double radius = 2;
             double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
-            int speedFactor = 15;
+            int speedFactor = -10;
 
             for (double angle = 0; angle < Math.PI * 2; angle += angleIncrement)
             {

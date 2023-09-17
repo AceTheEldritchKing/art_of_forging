@@ -2,12 +2,16 @@ package net.acetheeldritchking.art_of_forging.effects.gui;
 
 import net.acetheeldritchking.art_of_forging.ArtOfForging;
 import net.acetheeldritchking.art_of_forging.effects.SoulChargedEffect;
+import net.acetheeldritchking.art_of_forging.mixins.tetra.ItemModularHandheldAccessor;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
 import se.mickelus.tetra.effect.ItemEffect;
 
-public class EffectGuiStats {
-    public static final ChargedAbilityEffect[] aofAbilities;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
+public class EffectGuiStats {
     // Cavalry
     public static final ItemEffect cavalryEffect =
             ItemEffect.get(ArtOfForging.MOD_ID + ":cavalry");
@@ -268,9 +272,17 @@ public class EffectGuiStats {
 
 
     // Charged Abilities
-    static {
-        aofAbilities = new ChargedAbilityEffect[]{
-                SoulChargedEffect.instance
-        };
+    public static List<ChargedAbilityEffect> setupAbilites() {
+        List<ChargedAbilityEffect> list = new ArrayList<>();
+        list.addAll(Arrays.stream(ItemModularHandheldAccessor.getAbilities()).toList());
+        // Add abilities here
+        list.add(SoulChargedEffect.instance);
+        list = list.stream().filter(Objects::nonNull).toList();
+        ChargedAbilityEffect[] abilityEffects = list.toArray(new ChargedAbilityEffect[list.size()]);
+        for(int i = 0;i<list.size();i++){
+            abilityEffects[i] = list.get(i);
+        }
+        ItemModularHandheldAccessor.setAbilities(abilityEffects);
+        return list;
     }
 }

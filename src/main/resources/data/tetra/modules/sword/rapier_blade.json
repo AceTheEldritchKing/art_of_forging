@@ -18,8 +18,7 @@
 			},
 			"effects": {
 				"armorPenetration": 2.5,
-				"skewering": [ 1, 2 ],
-				"art_of_forging:soul_charged": 2
+				"skewering": [ 1, 2 ]
 			},
 			"aspects": {
 				"edgedWeapon": 2,

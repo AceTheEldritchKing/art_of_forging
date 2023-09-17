@@ -3,6 +3,11 @@ package net.acetheeldritchking.art_of_forging.effects;
 import net.acetheeldritchking.art_of_forging.capabilities.soulCharge.PlayerSoulChargeProvider;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
 import net.acetheeldritchking.art_of_forging.networking.packet.SoulChargedParticlesS2CPacket;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -14,12 +19,13 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.AbilityUseResult;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
-import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
 import se.mickelus.tetra.gui.stats.getter.IStatGetter;
 import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
@@ -55,7 +61,7 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
 
     // Gain soul charge points
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
+    public void onLivingDeathEvent(LivingDeathEvent event)
     {
         Entity attackingEntity = event.getSource().getEntity();
 
@@ -72,7 +78,13 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
                 {
                     player.getCapability(PlayerSoulChargeProvider.PLAYER_SOUL_CHARGE).ifPresent(soul_charge -> {
                         soul_charge.addSoulCharge(1);
-                        System.out.println("Added: " + soul_charge.getSoulCharge());
+                        // System.out.println("Added: " + soul_charge.getSoulCharge());
+
+                        if (soul_charge.getSoulCharge() >= 5)
+                        {
+                            player.level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                                    SoundEvents.BLAZE_HURT, SoundSource.PLAYERS, 1.0F, 0.8F);
+                        }
                     });
                 }
             }
@@ -84,24 +96,31 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
         if (!target.level.isClientSide)
         {
             attacker.getCapability(PlayerSoulChargeProvider.PLAYER_SOUL_CHARGE).ifPresent(soul_charge -> {
-                // double radius = 5;
-                // double height = 2;
+                // AoE
+                double radius = 5;
+                double height = 2;
 
+                // Particles & Sounds
                 double attackerX = attacker.getX();
                 double attackerY = attacker.getY(0.5D);
                 double attackerZ = attacker.getZ();
 
+                // Seconds on fire
                 int level = item.getEffectLevel(itemStack, soulChargedEffect);
+
+                // Magic damage
+                float eff = item.getEffectEfficiency(itemStack, soulChargedEffect);
 
                 if (soul_charge.getSoulCharge() >= 5)
                 {
-                    System.out.println("Do actual shit????");
-                    AbilityUseResult result = this.doAoeAttack(attackerX, attackerY, attackerZ, level,
-                            attacker, hand, item, itemStack, target, hitVec);
-                    this.playSoundsAndParticles(attackerX, attackerY, attackerZ, attacker);
+                    // System.out.println("Do actual shit????");
 
                     // reset
                     soul_charge.resetSoulCharge();
+
+                    AbilityUseResult result = this.doAoeAttack(radius, height, radius, level*2, eff,
+                            attacker, hand, item, itemStack, target, hitVec);
+                    this.playSoundsAndParticles(attackerX, attackerY, attackerZ, (ServerPlayer) attacker);
                 }
             });
         }
@@ -113,27 +132,61 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
     }
 
     // Actual AoE
-    private AbilityUseResult doAoeAttack(double x, double y, double z, int seconds, Player attacker, InteractionHand hand, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, Vec3 hitVec)
+    private AbilityUseResult doAoeAttack(double x, double y, double z, int seconds, float damage, Player attacker, InteractionHand hand, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, Vec3 hitVec)
     {
+        // System.out.println("Does it go to function?");
         AbilityUseResult result = item.hitEntity(itemStack, attacker, target, 1, 1, 1, 1);
-        AABB aoeAttack = new AABB(hitVec, hitVec).inflate(x, y, z);
-        List<LivingEntity> targets = (List<LivingEntity>) attacker.level.getEntitiesOfClass(LivingEntity.class, aoeAttack)
-                .stream().filter(Entity::isAlive).filter(Entity::isAttackable);
 
         if (result != AbilityUseResult.fail)
         {
+            // System.out.println("Does it actually do the effect?");
+            AABB aoeAttack = new AABB(hitVec, hitVec).inflate(x*2, y, z*2);
+            List<LivingEntity> targets = (List)attacker.level.getEntities(attacker, aoeAttack);
+
             for (LivingEntity livingTargets : targets)
             {
+                // System.out.println("Loop, brother");
                 livingTargets.setSecondsOnFire(seconds);
-                livingTargets.hurt(DamageSource.MAGIC, 5);
+                livingTargets.hurt(DamageSource.MAGIC, damage);
             }
         }
         return result;
     }
 
-    // Sound and Effects
-    private void playSoundsAndParticles(double x, double y, double z, LivingEntity entity)
+    // Particles around player once perform is ready
+    @SubscribeEvent
+    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event)
     {
-        AoFPackets.sendToEntity(new SoulChargedParticlesS2CPacket(x, y, z), entity);
+        ItemStack heldStack = event.player.getMainHandItem();
+
+        if (heldStack.getItem() instanceof  ModularItem item)
+        {
+            // Ensures particle effects
+            int level = item.getEffectLevel(heldStack, soulChargedEffect);
+
+            // Coords
+            double posX = event.player.getX();
+            double posY = event.player.getY(0.5D);
+            double posZ = event.player.getZ();
+
+            if (level >= 2)
+            {
+                event.player.getCapability(PlayerSoulChargeProvider.PLAYER_SOUL_CHARGE).ifPresent(soul_charge -> {
+                    if (soul_charge.getSoulCharge() >= 5)
+                    {
+                        ServerLevel world = (ServerLevel) event.player.level;
+                        world.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, posX, posY, posZ,
+                                5, 0.5D, 0.5D, 0.5D, 0.0D);
+                    }
+                });
+            }
+        }
+    }
+
+    // Sound and Effects
+    private void playSoundsAndParticles(double x, double y, double z, ServerPlayer player)
+    {
+        AoFPackets.sendToPlayer(new SoulChargedParticlesS2CPacket(x, y, z), player);
+        player.level.playSound(null, x, y, z, SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F);
     }
 }
