@@ -92,6 +92,7 @@ public class ArtOfForging
         // Soul Charged
         MinecraftForge.EVENT_BUS.register(new SoulChargedEffect());
         // Sonic Shock
+        MinecraftForge.EVENT_BUS.register(new SonicShockEffect());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -136,6 +137,7 @@ public class ArtOfForging
             NanoFusedEffect.init();
             BeheadingEffect.init();
             SoulChargedEffect.init();
+            SonicShockEffect.init();
         }
     }
 }

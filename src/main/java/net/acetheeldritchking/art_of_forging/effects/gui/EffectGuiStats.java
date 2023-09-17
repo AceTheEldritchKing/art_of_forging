@@ -1,6 +1,7 @@
 package net.acetheeldritchking.art_of_forging.effects.gui;
 
 import net.acetheeldritchking.art_of_forging.ArtOfForging;
+import net.acetheeldritchking.art_of_forging.effects.SonicShockEffect;
 import net.acetheeldritchking.art_of_forging.effects.SoulChargedEffect;
 import net.acetheeldritchking.art_of_forging.mixins.tetra.ItemModularHandheldAccessor;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
@@ -277,6 +278,8 @@ public class EffectGuiStats {
         list.addAll(Arrays.stream(ItemModularHandheldAccessor.getAbilities()).toList());
         // Add abilities here
         list.add(SoulChargedEffect.instance);
+        list.add(SonicShockEffect.instance);
+        // End of abilities
         list = list.stream().filter(Objects::nonNull).toList();
         ChargedAbilityEffect[] abilityEffects = list.toArray(new ChargedAbilityEffect[list.size()]);
         for(int i = 0;i<list.size();i++){
