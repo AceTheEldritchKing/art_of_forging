@@ -20,6 +20,13 @@
             {
                 "type": "tetra:module",
                 "module": "sword/katana_blade"
+            },
+            {
+                "type": "tetra:not",
+                "requirement": {
+                    "type": "tetra:improvement",
+                    "improvement": "sword/thousand_cold_nights_imprv"
+                }
             }
         ]
     },

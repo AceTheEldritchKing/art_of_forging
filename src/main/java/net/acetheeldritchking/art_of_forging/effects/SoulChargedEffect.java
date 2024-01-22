@@ -92,7 +92,7 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
 
     @Override
     public void perform(Player attacker, InteractionHand hand, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, Vec3 hitVec, int chargedTicks) {
-        if (!target.level.isClientSide)
+        if (!target.level.isClientSide())
         {
             attacker.getCapability(PlayerSoulChargeProvider.PLAYER_SOUL_CHARGE).ifPresent(soul_charge -> {
                 // AoE
@@ -123,6 +123,7 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
                 }
             });
         }
+
         attacker.swing(hand, false);
         attacker.getCooldowns().addCooldown(item, this.getCooldown(item, itemStack));
         item.tickProgression(attacker, itemStack, 2);
@@ -175,7 +176,7 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
                     {
                         ServerLevel world = (ServerLevel) event.player.level;
                         world.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, posX, posY, posZ,
-                                5, 0.5D, 0.5D, 0.5D, 0.0D);
+                                1, 0.5D, 0.5D, 0.5D, 0.0D);
                     }
                 });
             }

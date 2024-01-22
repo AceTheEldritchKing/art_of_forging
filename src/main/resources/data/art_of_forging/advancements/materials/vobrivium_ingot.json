@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:vobrivium_ingot"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.vobrivium_ingot.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.vobrivium_ingot.description"
+        },
+        "frame": "goal"
+    },
+    "parent": "art_of_forging:materials/forged_ingot",
+    "criteria": {
+        "vobrivium_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:vobrivium_ingot"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "vobrivium_ingot"
+        ]
+    ]
+}

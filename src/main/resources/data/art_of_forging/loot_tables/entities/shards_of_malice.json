@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "name": "aof_wither_skeleton_extended",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 3,
+                                "min": 1
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "art_of_forging:shards_of_malice"
+                }
+            ]
+        }
+    ]
+}

@@ -3,6 +3,7 @@ package net.acetheeldritchking.art_of_forging.effects;
 import net.acetheeldritchking.art_of_forging.AoFRegistry;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.EnderMan;
@@ -66,6 +67,7 @@ public class NanoFusedEffect {
                     if (target instanceof Creeper) nanoDrop = new ItemStack(AoFRegistry.POTENT_MIXTURE.get());
                     else if (target instanceof EnderMan) nanoDrop = new ItemStack(AoFRegistry.HEART_OF_ENDER.get());
                     else if (target instanceof Warden) nanoDrop = new ItemStack(AoFRegistry.EERIE_SHARD.get());
+                    else if (target instanceof WitherBoss) nanoDrop = new ItemStack(AoFRegistry.DEVILS_SOUL_GEM.get());
 
                     // Actual drop stuff
                     if (!nanoDrop.isEmpty())

@@ -50,7 +50,7 @@ public class HubrisEffect {
                 // Base attack damage
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percent
-                float bonusDamage = baseAmount * (level/100);
+                float bonusDamage = getDecimalPercentage(level, baseAmount);
 
                 // Base health, constant
                 final float BASE_HEALTH = attacker.getMaxHealth();
@@ -64,14 +64,14 @@ public class HubrisEffect {
                     // Uncomment all of the loggers if you wish to test/debug
                     if (percent <= 30)
                     {
-                        System.out.println("30 or less");
+                        //System.out.println("30 or less");
                         double totalDamage = calculateReducedDamageAmount(baseAmount, 2);
                         if (Double.isInfinite(totalDamage) || Double.isNaN(totalDamage) || totalDamage <= 0)
                         {
-                            System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
-                            System.out.println("Resetting damage back to base damage");
-                            System.out.println("Total Damage: " + totalDamage);
-                            System.out.println("Base amount: " + baseAmount);
+                            //System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
+                            //System.out.println("Resetting damage back to base damage");
+                            //System.out.println("Total Damage: " + totalDamage);
+                            //System.out.println("Base amount: " + baseAmount);
                             event.setAmount(baseAmount);
                         } else {
                             //System.out.println("Base Damage: " + baseAmount);
@@ -82,14 +82,14 @@ public class HubrisEffect {
                     }
                     else if (percent <= 40)
                     {
-                        System.out.println("30 or 40");
+                        //System.out.println("30 or 40");
                         double totalDamage = calculateReducedDamageAmount(baseAmount, 1.5);
                         if (Double.isInfinite(totalDamage) || Double.isNaN(totalDamage) || totalDamage <= 0)
                         {
-                            System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
-                            System.out.println("Resetting damage back to base damage");
-                            System.out.println("Total Damage: " + totalDamage);
-                            System.out.println("Base amount: " + baseAmount);
+                            //System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
+                            //System.out.println("Resetting damage back to base damage");
+                            //System.out.println("Total Damage: " + totalDamage);
+                            //System.out.println("Base amount: " + baseAmount);
                             event.setAmount(baseAmount);
                         } else {
                             //System.out.println("Base Damage: " + baseAmount);
@@ -100,20 +100,20 @@ public class HubrisEffect {
                     }
                     else if (percent <= 60)
                     {
-                        System.out.println("50 or 60");
+                        //System.out.println("50 or 60");
                         //System.out.println("Base Damage: " + baseAmount);
                         event.setAmount(baseAmount);
                     }
                     else if (percent <= 70)
                     {
-                        System.out.println("60 or 70");
+                        //System.out.println("60 or 70");
                         double totalDamage = calculateBonusDamageAmount(baseAmount, bonusDamage, 1.5);
                         if (Double.isInfinite(totalDamage) || Double.isNaN(totalDamage) || totalDamage <= 0)
                         {
-                            System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
-                            System.out.println("Resetting damage back to base damage");
-                            System.out.println("Total Damage: " + totalDamage);
-                            System.out.println("Base amount: " + baseAmount);
+                            //System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
+                            //System.out.println("Resetting damage back to base damage");
+                            //System.out.println("Total Damage: " + totalDamage);
+                            //System.out.println("Base amount: " + baseAmount);
                             event.setAmount(baseAmount);
                         } else {
                             //System.out.println("Base Damage: " + baseAmount);
@@ -124,7 +124,7 @@ public class HubrisEffect {
                     }
                     else if (percent <= 80)
                     {
-                        System.out.println("80 or 90");
+                        //System.out.println("80 or 90");
                         double totalDamage = calculateBonusDamageAmount(baseAmount, bonusDamage, 1);
                         //System.out.println("Base Damage: " + baseAmount);
                         //System.out.println("Bonus Amount: " + bonusDamage);
@@ -132,7 +132,7 @@ public class HubrisEffect {
                         event.setAmount((float) totalDamage);
                     }
                     else {
-                        System.out.println("Over 90");
+                        //System.out.println("Over 90");
                         double totalDamage = calculateBonusDamageAmount(baseAmount, bonusDamage, 1);
                         //System.out.println("Base Damage: " + baseAmount);
                         //System.out.println("Bonus Amount: " + bonusDamage);

@@ -1,0 +1,100 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:ancient_blade"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.find_demonic_item.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.find_demonic_item.description"
+        },
+        "frame": "goal",
+        "hidden": true
+    },
+    "parent": "art_of_forging:materials/root",
+    "criteria": {
+        "axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:ancient_axe"
+                        ]
+                    }
+                ]
+            }
+        },
+        "sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:ancient_blade"
+                        ]
+                    }
+                ]
+            }
+        },
+        "flail": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:ancient_flail"
+                        ]
+                    }
+                ]
+            }
+        },
+        "awakened_axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:demonic_axe"
+                        ]
+                    }
+                ]
+            }
+        },
+        "awakened_sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:demonic_blade"
+                        ]
+                    }
+                ]
+            }
+        },
+        "awakened_flail": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:demonic_flail"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "axe",
+            "sword",
+            "flail",
+            "awakened_axe",
+            "awakened_sword",
+            "awakened_flail"
+        ]
+    ]
+}

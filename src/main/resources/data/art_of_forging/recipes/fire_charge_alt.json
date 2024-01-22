@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "art_of_forging:potent_mixture"
+        },
+        {
+            "item": "minecraft:blaze_powder"
+        },
+        [
+            {
+                "item": "minecraft:coal"
+            },
+            {
+                "item": "minecraft:charcoal"
+            }
+        ]
+    ],
+    "result": {
+        "count": 6,
+        "item": "minecraft:fire_charge"
+    }
+}

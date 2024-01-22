@@ -1,18 +1,20 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "art_of_forging:dragon_soul"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " d ",
+        "dfd",
+        " d "
+    ],
+    "key": {
+        "d": {
+            "item": "minecraft:dragon_breath"
         },
-        {
-            "item": "art_of_forging:forged_steel_ingot"
-        },
-        {
+        "f": {
             "item": "art_of_forging:forged_steel_ingot"
         }
-    ],
+    },
     "result": {
         "item": "art_of_forging:endsteel_ingot",
-        "count": 2
+        "count": 4
     }
 }

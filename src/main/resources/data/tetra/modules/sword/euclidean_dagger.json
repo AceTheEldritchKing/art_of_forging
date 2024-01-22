@@ -23,7 +23,6 @@
             "durability": 65,
             "effects": {
                 "art_of_forging:life_steal": [ 3, 35 ],
-                "art_of_forging:evoking_maw": [ 1, 2 ],
                 "art_of_forging:decaying": [ 1, 2 ],
                 "armorPenetration": 15,
                 "jab": 45

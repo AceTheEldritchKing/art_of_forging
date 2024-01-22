@@ -46,7 +46,7 @@ public class VengeanceEffect {
             if (heldStack.getItem() instanceof ModularItem item)
             {
                 // Extra damage
-                int level = item.getEffectLevel(heldStack, vengeanceEffect);
+                double level = item.getEffectLevel(heldStack, vengeanceEffect);
 
                 // Hearts left
                 float eff = item.getEffectEfficiency(heldStack, vengeanceEffect);

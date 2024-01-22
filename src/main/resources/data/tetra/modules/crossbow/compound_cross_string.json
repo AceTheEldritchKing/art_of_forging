@@ -43,6 +43,10 @@
                     {
                         "type": "draw_2",
                         "location": "tetra:items/module/crossbow/string/compound_cross_string/2_"
+                    },
+                    {
+                        "type": "loaded",
+                        "location": "tetra:items/module/crossbow/string/compound_cross_string/2_"
                     }
                 ]
             }

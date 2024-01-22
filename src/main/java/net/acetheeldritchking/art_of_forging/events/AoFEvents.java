@@ -3,10 +3,16 @@ package net.acetheeldritchking.art_of_forging.events;
 import net.acetheeldritchking.art_of_forging.ArtOfForging;
 import net.acetheeldritchking.art_of_forging.capabilities.carnage.PlayerCarnage;
 import net.acetheeldritchking.art_of_forging.capabilities.carnage.PlayerCarnageProvider;
+import net.acetheeldritchking.art_of_forging.capabilities.conquer.PlayerConquer;
+import net.acetheeldritchking.art_of_forging.capabilities.conquer.PlayerConquerProvider;
 import net.acetheeldritchking.art_of_forging.capabilities.devouring.PlayerDevouring;
 import net.acetheeldritchking.art_of_forging.capabilities.devouring.PlayerDevouringProvider;
+import net.acetheeldritchking.art_of_forging.capabilities.karma.PlayerKarma;
+import net.acetheeldritchking.art_of_forging.capabilities.karma.PlayerKarmaProvider;
 import net.acetheeldritchking.art_of_forging.capabilities.soulCharge.PlayerSoulCharge;
 import net.acetheeldritchking.art_of_forging.capabilities.soulCharge.PlayerSoulChargeProvider;
+import net.acetheeldritchking.art_of_forging.capabilities.subjugation.PlayerSubjugation;
+import net.acetheeldritchking.art_of_forging.capabilities.subjugation.PlayerSubjugationProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -39,6 +45,19 @@ public class AoFEvents {
             }
 
             // Karma
+            if (!event.getObject().getCapability(PlayerKarmaProvider.PLAYER_KARMA).isPresent()) {
+                event.addCapability(new ResourceLocation(ArtOfForging.MOD_ID, "karma"), new PlayerKarmaProvider());
+            }
+
+            // Conquer
+            if (!event.getObject().getCapability(PlayerConquerProvider.PLAYER_CONQUER).isPresent()) {
+                event.addCapability(new ResourceLocation(ArtOfForging.MOD_ID, "conquer"), new PlayerConquerProvider());
+            }
+
+            // Subjugation
+            if (!event.getObject().getCapability(PlayerSubjugationProvider.PLAYER_SUBJUGATION).isPresent()) {
+                event.addCapability(new ResourceLocation(ArtOfForging.MOD_ID, "subjugation"), new PlayerSubjugationProvider());
+            }
         }
     }
 
@@ -51,15 +70,6 @@ public class AoFEvents {
                     newStore.copyFrom(oldStore);
                 });
             });
-
-            // Carnage
-            /*event.getOriginal().getCapability(PlayerCarnageProvider.PLAYER_CARNAGE).ifPresent(oldStore -> {
-                event.getOriginal().getCapability(PlayerCarnageProvider.PLAYER_CARNAGE).ifPresent(newStore -> {
-                    newStore.copyFrom(oldStore);
-                });
-            });*/
-
-            // Soul Charged
 
             // Karma
         }
@@ -78,6 +88,13 @@ public class AoFEvents {
         event.register(PlayerSoulCharge.class);
 
         // Karma
+        event.register(PlayerKarma.class);
+
+        // Conquer
+        event.register(PlayerConquer.class);
+
+        // Subjugation
+        event.register(PlayerSubjugation.class);
     }
 
 }

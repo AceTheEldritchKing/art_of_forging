@@ -26,7 +26,7 @@
             "BlockEntityTag": {
                 "data": [{
                     "key": "sword/katana/katana_blade",
-                    "schematics": [ "tetra:sword/katana/katana_blade" ],
+                    "schematics": [ "tetra:sword/katana/katana_blade", "tetra:sword/tsuba_guard" ],
                     "intricate": false,
                     "details": "art_of_forging",
                     "material": 2,

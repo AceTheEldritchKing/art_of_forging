@@ -15,6 +15,7 @@
         "texture": "e82c32"
     },
     "textures": [
+        "metal",
         "default"
     ],
     "material": {

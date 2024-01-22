@@ -1,0 +1,35 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:sigil_of_eden"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.sigil_of_eden.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.sigil_of_eden.description"
+        },
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "art_of_forging:materials/root",
+    "criteria": {
+        "eden": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:sigil_of_eden"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "eden"
+        ]
+    ]
+}

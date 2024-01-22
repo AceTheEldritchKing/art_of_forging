@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "art_of_forging:esoteric_codex"
+        },
+        {
+            "item": "art_of_forging:encoded_canister"
+        },
+        {
+            "item": "art_of_forging:encoded_canister"
+        }
+    ],
+    "result": {
+        "item": "art_of_forging:mark_of_the_architect",
+        "count": 1
+    }
+}

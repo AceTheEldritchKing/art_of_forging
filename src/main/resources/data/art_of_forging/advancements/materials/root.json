@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:resonant_alloy"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.root.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.root.description"
+        },
+        "background": "minecraft:textures/block/netherite_block.png"
+    },
+    "criteria": {
+        "alloy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:resonant_alloy"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "alloy"
+        ]
+    ]
+}

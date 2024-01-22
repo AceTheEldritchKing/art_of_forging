@@ -1,0 +1,35 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:endsteel_ingot"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.endsteel_ingot.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.endsteel_ingot.description"
+        },
+        "frame": "goal",
+        "hidden": true
+    },
+    "parent": "art_of_forging:materials/vobrivium_ingot",
+    "criteria": {
+        "endsteel_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:endsteel_ingot"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "endsteel_ingot"
+        ]
+    ]
+}

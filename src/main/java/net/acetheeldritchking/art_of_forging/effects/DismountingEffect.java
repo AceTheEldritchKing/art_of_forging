@@ -51,7 +51,7 @@ public class DismountingEffect {
 
                 float baseAmount = event.getAmount();
                 // Gets bonus damage as percentage
-                float bonusDamage = baseAmount * ((float) level / 100);
+                float bonusDamage = getDecimalPercentage(level, baseAmount);
 
                 // Chance to dismount entity
                 double eff = item.getEffectEfficiency(heldStack, dismountingEffect);
@@ -63,7 +63,7 @@ public class DismountingEffect {
                     // If target is riding
                     if (target.isPassenger())
                     {
-                        event.setAmount(baseAmount + bonusDamage);
+                        event.setAmount(getExactPercentage(baseAmount, bonusDamage));
 
                         if (eff > (target.getRandom().nextFloat()*100))
                         {

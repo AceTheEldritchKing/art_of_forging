@@ -27,7 +27,7 @@
 	},
 	"outcomes": [
 		{
-			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/" ],
+			"materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
 			"countFactor": 1,
 			"moduleKey": "double/tomahawk",
 			"moduleVariant": "tomahawk/"

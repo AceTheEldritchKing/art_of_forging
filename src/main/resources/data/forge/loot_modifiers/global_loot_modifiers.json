@@ -5,6 +5,10 @@
         "art_of_forging:evoker_additions",
         "art_of_forging:wither_additions",
         "art_of_forging:underwater_ruin_small_additions",
-        "art_of_forging:ender_dragon_additions"
+        "art_of_forging:ender_dragon_additions",
+        "art_of_forging:ancient_city_additions",
+        "art_of_forging:forged_container_additions",
+        "art_of_forging:wither_skeleton_additions",
+        "art_of_forging:blaze_condition_additions"
     ]
 }

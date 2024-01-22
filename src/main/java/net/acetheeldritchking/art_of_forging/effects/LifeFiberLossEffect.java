@@ -42,7 +42,6 @@ public class LifeFiberLossEffect {
         if (attackingEntity instanceof LivingEntity attacker)
         {
             ItemStack heldStack = attacker.getMainHandItem();
-            //ItemStack offHeldStack = attacker.getOffhandItem();
 
             if (heldStack.getItem() instanceof ModularItem item)
             {

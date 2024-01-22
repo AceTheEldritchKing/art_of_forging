@@ -1,0 +1,19 @@
+{
+    "parent": "forge:item/default",
+    "base": {
+        "parent": "art_of_forging:item/mark_of_the_architect_3d"
+    },
+    "loader": "forge:separate_transforms",
+    "perspectives": {
+        "gui": {
+            "parent": "art_of_forging:item/mark_of_the_architect_2d",
+            "gui_light": "front"
+        },
+        "ground": {
+            "parent": "art_of_forging:item/mark_of_the_architect_2d"
+        },
+        "fixed": {
+            "parent": "art_of_forging:item/mark_of_the_architect_2d"
+        }
+    }
+}

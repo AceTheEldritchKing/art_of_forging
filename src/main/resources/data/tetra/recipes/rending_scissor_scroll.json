@@ -1,8 +1,8 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " a ",
-        "aba",
+        " c ",
+        "rbp",
         " a "
     ],
     "key": {
@@ -10,7 +10,16 @@
             "item": "art_of_forging:life_fiber"
         },
         "b": {
-            "tag": "minecraft:writable_book"
+            "item": "minecraft:writable_book"
+        },
+        "r": {
+            "item": "art_of_forging:rending_scissor_red"
+        },
+        "p": {
+            "item": "art_of_forging:rending_scissor_purple"
+        },
+        "c": {
+            "item": "art_of_forging:life_fiber"
         }
     },
     "result": {
@@ -19,8 +28,8 @@
         "nbt": {
             "BlockEntityTag": {
                 "data": [{
-                    "key": "tetra/rending_scissor_purple",
-                    "schematics": [ "tetra:sword/rending_scissor_red", "tetra:sword/rending_scissor_purple" ],
+                    "key": "tetra/rending_scissor_complete",
+                    "schematics": [ "tetra:sword/scissor_blade_left", "tetra:sword/scissor_blade_right", "tetra:sword/rending_scissor_complete" ],
                     "intricate": false,
                     "details": "otherworldly",
                     "material": 2,

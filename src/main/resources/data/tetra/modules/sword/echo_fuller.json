@@ -9,8 +9,8 @@
                 "generic.attack_speed": -0.15
             },
             "effects": {
-                "truesweep": 3,
-                "sculkTaint": [ 15, 0.5 ],
+                "truesweep": 1,
+                "sculkTaint": [ 3, 0.01 ],
                 "intuit": 1
             },
             "durability": 25,
@@ -24,6 +24,10 @@
             "models": [
                 {
                     "location": "tetra:items/module/sword/fuller/echo_fuller/echo_fuller"
+                },
+                {
+                    "location": "tetra:items/module/sword/fuller/echo_fuller/echo_fuller",
+                    "emission": 8
                 }
             ]
         }

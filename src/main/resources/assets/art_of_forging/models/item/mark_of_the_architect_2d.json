@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "art_of_forging:item/mark_of_the_architect_2d"
+    }
+}

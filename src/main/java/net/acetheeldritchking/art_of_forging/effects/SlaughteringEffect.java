@@ -54,7 +54,7 @@ public class SlaughteringEffect {
                 // Base attack damage
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percentage
-                float bonusDamage = baseAmount * (level/100);
+                float bonusDamage = getDecimalPercentage(level, baseAmount);
 
                 // Target health
                 // Base health, constant
@@ -67,7 +67,7 @@ public class SlaughteringEffect {
                 if (level > 0 && eff <= healthPercentage)
                 {
                     //System.out.println("Applying bonus...");
-                    event.setAmount(baseAmount + bonusDamage);
+                    event.setAmount(getExactPercentage(baseAmount, bonusDamage));
                 }
             }
         }

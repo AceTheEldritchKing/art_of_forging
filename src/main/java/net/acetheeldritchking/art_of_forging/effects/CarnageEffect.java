@@ -104,7 +104,7 @@ public class CarnageEffect {
                                 event.setAmount((baseAmount + bonusDamage) + addedPercent(baseAmount, 0.30F));
 
                                 // Play Sounds
-                                player.level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.RAVAGER_ROAR, SoundSource.PLAYERS, 0.8F, 1.0F);
+                                player.level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.RAVAGER_ROAR, SoundSource.PLAYERS, 1.0F, 0.5F);
                                 break;
                             }
                         }

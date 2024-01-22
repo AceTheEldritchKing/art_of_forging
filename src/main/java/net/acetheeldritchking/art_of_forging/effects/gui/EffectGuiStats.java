@@ -3,7 +3,11 @@ package net.acetheeldritchking.art_of_forging.effects.gui;
 import net.acetheeldritchking.art_of_forging.ArtOfForging;
 import net.acetheeldritchking.art_of_forging.effects.SonicShockEffect;
 import net.acetheeldritchking.art_of_forging.effects.SoulChargedEffect;
+import net.acetheeldritchking.art_of_forging.effects.SubjugationEffect;
 import net.acetheeldritchking.art_of_forging.mixins.tetra.ItemModularHandheldAccessor;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.registries.ForgeRegistries;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
 import se.mickelus.tetra.effect.ItemEffect;
 
@@ -11,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+
+import static net.acetheeldritchking.art_of_forging.util.AoFTags.Entities.BOSS_ENTITIES;
 
 public class EffectGuiStats {
     // Cavalry
@@ -213,15 +219,55 @@ public class EffectGuiStats {
     public static final String sonicShockTooltip =
             ArtOfForging.MOD_ID + ".effect.sonic_shock.tooltip";
 
+    // Conquering
+    public static final ItemEffect conqueringEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":conquering");
+    public static final String conqueringName =
+            ArtOfForging.MOD_ID + ".effect.conquering.name";
+    public static final String conqueringTooltip =
+            ArtOfForging.MOD_ID + ".effect.conquering.tooltip";
+
+    // Subjugation
+    public static final ItemEffect subjugationEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":subjugation");
+    public static final String subjugationName =
+            ArtOfForging.MOD_ID + ".effect.subjugation.name";
+    public static final String subjugationTooltip =
+            ArtOfForging.MOD_ID + ".effect.subjugation.tooltip";
+
+    // Goliath Slayer
+    public static final ItemEffect goliathSlayerEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":goliath_slayer");
+    public static final String goliathSlayerName =
+            ArtOfForging.MOD_ID + ".effect.goliath_slayer.name";
+    public static final String goliathSlayerTooltip =
+            ArtOfForging.MOD_ID + ".effect.goliath_slayer.tooltip";
+
 
     // CURIO EFFECTS //
-    // Venom protection
-    public static final ItemEffect venomProtectionEffect =
-            ItemEffect.get(ArtOfForging.MOD_ID + ":venom_protection");
-    public static final String venomProtectionName =
-            ArtOfForging.MOD_ID + ".effect.venom_protection.name";
-    public static final String venomProtectionTooltip =
-            ArtOfForging.MOD_ID + ".effect.venom_protection.tooltip";
+    // Extra Belt Slot
+    public static final ItemEffect extraBeltSlotEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":extra_belt_slot");
+    public static final String extraBeltSlotName =
+            ArtOfForging.MOD_ID + ".effect.extra_belt_slot.name";
+    public static final String extraBeltSlotTooltip =
+            ArtOfForging.MOD_ID + ".effect.extra_belt_slot.tooltip";
+
+    // Extra Charm Slot
+    public static final ItemEffect extraCharmSlotEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":extra_charm_slot");
+    public static final String extraCharmSlotName =
+            ArtOfForging.MOD_ID + ".effect.extra_charm_slot.name";
+    public static final String extraCharmSlotTooltip =
+            ArtOfForging.MOD_ID + ".effect.extra_charm_slot.tooltip";
+
+    // Extra Curio Slot
+    public static final ItemEffect extraCurioSlotEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":extra_curio_slot");
+    public static final String extraCurioSlotName =
+            ArtOfForging.MOD_ID + ".effect.extra_curio_slot.name";
+    public static final String extraCurioSlotTooltip =
+            ArtOfForging.MOD_ID + ".effect.extra_curio_slot.tooltip";
 
     // Flame protection
     public static final ItemEffect flameProtectionEffect =
@@ -238,14 +284,6 @@ public class EffectGuiStats {
             ArtOfForging.MOD_ID + ".effect.arcane_protection.name";
     public static final String arcaneProtectionTooltip =
             ArtOfForging.MOD_ID + ".effect.arcane_protection.tooltip";
-
-    // Wisdom infused
-    public static final ItemEffect wisdomInfusedEffect =
-            ItemEffect.get(ArtOfForging.MOD_ID + ":wisdom_infused");
-    public static final String wisdomInfusedName =
-            ArtOfForging.MOD_ID + ".effect.wisdom_infused.name";
-    public static final String wisdomInfusedTooltip =
-            ArtOfForging.MOD_ID + ".effect.wisdom_infused.tooltip";
 
     // Strength infused
     public static final ItemEffect strengthInfusedEffect =
@@ -271,14 +309,56 @@ public class EffectGuiStats {
     public static final String karmaInfusedTooltip =
             ArtOfForging.MOD_ID + ".effect.karma_infused.tooltip";
 
+    // Haste Infused
+    public static final ItemEffect hasteInfusedEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":haste_infused");
+    public static final String hasteInfusedName =
+            ArtOfForging.MOD_ID + ".effect.haste_infused.name";
+    public static final String hasteInfusedTooltip =
+            ArtOfForging.MOD_ID + ".effect.haste_infused.tooltip";
+
+    // Third Sight
+    public static final ItemEffect thirdSightEffect =
+            ItemEffect.get(ArtOfForging.MOD_ID + ":third_sight");
+    public static final String thirdSightName =
+            ArtOfForging.MOD_ID + ".effect.third_sight.name";
+    public static final String thirdSightTooltip =
+            ArtOfForging.MOD_ID + ".effect.third_sight.tooltip";
+
+    // Helper methods
+
+    // Bosses
+    public static boolean isBossEntity(EntityType<?> entity)
+    {
+        return Objects.requireNonNull(ForgeRegistries.ENTITY_TYPES.tags()).getTag(BOSS_ENTITIES).contains(entity);
+    }
+
+    // Percentage Math
+    public static float getDecimalPercentage(float percentage, float base)
+    {
+        float totalPercentage = (base * (percentage/100));
+
+        return totalPercentage;
+    }
+
+    public static float getExactPercentage(float base, float percentage)
+    {
+        float totalPercentage = base + percentage;
+
+        return totalPercentage;
+    }
+
 
     // Charged Abilities
     public static List<ChargedAbilityEffect> setupAbilites() {
         List<ChargedAbilityEffect> list = new ArrayList<>();
         list.addAll(Arrays.stream(ItemModularHandheldAccessor.getAbilities()).toList());
+
         // Add abilities here
         list.add(SoulChargedEffect.instance);
         list.add(SonicShockEffect.instance);
+        list.add(SubjugationEffect.instance);
+
         // End of abilities
         list = list.stream().filter(Objects::nonNull).toList();
         ChargedAbilityEffect[] abilityEffects = list.toArray(new ChargedAbilityEffect[list.size()]);

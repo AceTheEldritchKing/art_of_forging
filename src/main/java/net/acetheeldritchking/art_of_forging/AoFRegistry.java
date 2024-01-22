@@ -5,6 +5,8 @@ import net.acetheeldritchking.art_of_forging.item.DummyItem;
 import net.acetheeldritchking.art_of_forging.item.custom.AncientItem;
 import net.acetheeldritchking.art_of_forging.item.custom.EnigmaticConstructItem;
 import net.acetheeldritchking.art_of_forging.item.custom.LifeFiberItem;
+import net.acetheeldritchking.art_of_forging.item.custom.SigilOfEdenItem;
+import net.acetheeldritchking.art_of_forging.item.modular.ModularArtifact;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,9 +17,19 @@ public class AoFRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ArtOfForging.MOD_ID);
 
     public static final RegistryObject<Item> DUMMY_ITEM = ITEMS.register("dummyitem", DummyItem::new);
+    //               //
+    // Modular Items //
+    //               //
+    // Modular Artifact
+    public static final RegistryObject<Item> MODULAR_ARTIFACT = ITEMS.register(ModularArtifact.identifier, ModularArtifact::new);
+
+    public static final RegistryObject<Item> CURIOUS_ARTIFACT = ITEMS.register("curious_artifact",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB)));
+
 
     //        //
     // INGOTS //
+    //        //
     // Resonant Alloy
     public static final RegistryObject<Item> RESONANT_ALLOY = ITEMS.register("resonant_alloy",
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).fireResistant()));
@@ -44,6 +56,7 @@ public class AoFRegistry {
 
     //          //
     // TREASURE //
+    //          //
     // Life Fiber
     public static RegistryObject<Item> LIFE_FIBER = ITEMS.register("life_fiber",
             () -> new LifeFiberItem(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).rarity(Rarity.RARE)));
@@ -54,7 +67,7 @@ public class AoFRegistry {
 
     // Sigil of Eden
     public static RegistryObject<Item> SIGIL_OF_EDEN = ITEMS.register("sigil_of_eden",
-            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+            () -> new SigilOfEdenItem(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
                     rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
 
     // Enigmatic Construct
@@ -92,11 +105,25 @@ public class AoFRegistry {
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
                     rarity(Rarity.EPIC).fireResistant().stacksTo(1)));
 
-    // Encoded Manuscript
+    // Devil's Soul Gem
+    public static RegistryObject<Item> DEVILS_SOUL_GEM = ITEMS.register("devils_soul_gem",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
 
-    // Esoteric Codex
+    // Rending Scissor Red
+    public static RegistryObject<Item> RENDING_SCISSOR_RED = ITEMS.register("rending_scissor_red",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
 
-    // Mark of The Architect
+    // Rending Scissor Purple
+    public static RegistryObject<Item> RENDING_SCISSOR_PURPLE = ITEMS.register("rending_scissor_purple",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
+
+    // Rending Scissor Complete
+    public static RegistryObject<Item> RENDING_SCISSOR_COMPLETE = ITEMS.register("rending_scissor_complete",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
 
 
     //      //
@@ -107,9 +134,30 @@ public class AoFRegistry {
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
                     rarity(Rarity.UNCOMMON).stacksTo(16)));
 
+    // Encoded Canister
+    public static RegistryObject<Item> ENCODED_CANISTER = ITEMS.register("encoded_canister",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.UNCOMMON).stacksTo(16)));
+
+    // Esoteric Codex
+    public static RegistryObject<Item> ESOTERIC_CODEX = ITEMS.register("esoteric_codex",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.RARE).stacksTo(1)));
+
+    // Mark of The Architect
+    public static RegistryObject<Item> MARK_OF_THE_ARCHITECT = ITEMS.register("mark_of_the_architect",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.EPIC).stacksTo(1)));
+
+    // Shockwave Chamber
+    public static RegistryObject<Item> SHOCKWAVE_CHAMBER = ITEMS.register("shockwave_chamber",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.RARE).stacksTo(16)));
+
 
     //           //
     // MOB DROPS //
+    //           //
     // Dragon Soul
     public static RegistryObject<Item> DRAGON_SOUL = ITEMS.register("dragon_soul",
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
@@ -118,7 +166,7 @@ public class AoFRegistry {
     // Shards of Malice
     public static RegistryObject<Item> SHARDS_OF_MALICE = ITEMS.register("shards_of_malice",
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
-                    rarity(Rarity.UNCOMMON).fireResistant().stacksTo(16)));
+                    rarity(Rarity.UNCOMMON).fireResistant()));
 
     // Potent Mixture
     public static RegistryObject<Item> POTENT_MIXTURE = ITEMS.register("potent_mixture",
@@ -134,5 +182,15 @@ public class AoFRegistry {
     public static RegistryObject<Item> EERIE_SHARD = ITEMS.register("eerie_shard",
             () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
                     rarity(Rarity.RARE).stacksTo(16)));
+
+    // Soul Ember
+    public static RegistryObject<Item> SOUL_EMBER = ITEMS.register("soul_ember",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB)));
+
+    // Fragment of Eden
+    public static RegistryObject<Item> FRAGMENT_OF_EDEN = ITEMS.register("fragment_of_eden",
+            () -> new Item(new Item.Properties().tab(AoFCreativeModeTab.AOF_TAB).
+                    rarity(Rarity.RARE).stacksTo(16)));
+
 
 }

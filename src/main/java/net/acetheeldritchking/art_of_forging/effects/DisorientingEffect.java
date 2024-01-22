@@ -53,7 +53,7 @@ public class DisorientingEffect {
             {
                 // Level of effect
                 int level = item.getEffectLevel(heldStack, disorientingEffect);
-                // Duration of effect & attacker invis time
+                // Duration of effect
                 int eff = (int) item.getEffectEfficiency(heldStack, disorientingEffect);
 
                 // Apply potion effects

@@ -4,6 +4,7 @@
     "type": "tetra:basic_major_module",
     "improvements": [
         "tetra:crossbow/burst_stave/",
+        "tetra:crossbow/shared_stave/",
         "tetra:crossbow/shared/",
         "tetra:shared/"
     ],
@@ -22,8 +23,9 @@
             "durability": 20,
             "effects": {
                 "piercing": 8,
-                "multishot": 3,
-                "velocity": 15
+                "multishot": [ 3, 2 ],
+                "velocity": 15,
+                "art_of_forging:knockback": [ 1.5, 1 ]
             },
             "magicCapacity": 100,
             "glyph": {

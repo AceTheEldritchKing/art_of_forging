@@ -5,7 +5,7 @@
     "primary": 0,
     "secondary": 0,
     "tertiary": 0,
-    "durability": 15,
+    "durability": 50,
     "integrityCost": 1,
     "integrityGain": 0,
     "magicCapacity": 0,
@@ -16,6 +16,7 @@
     },
     "effects": {
         "art_of_forging:decaying": [ 1, 5 ],
+        "art_of_forging:life_steal": [ 2, 15 ],
         "intuit": 4
     },
     "tints": {

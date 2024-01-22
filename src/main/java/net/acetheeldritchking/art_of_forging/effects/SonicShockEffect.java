@@ -34,7 +34,7 @@ public class SonicShockEffect extends ChargedAbilityEffect {
     public static final SonicShockEffect instance = new SonicShockEffect();
 
     public SonicShockEffect() {
-        super(35, 0.15D, 120, 1.0D, sonicShockEffect, TargetRequirement.either, UseAnim.SPEAR, "raised");
+        super(60, 0.15D, 450, 1.0D, sonicShockEffect, TargetRequirement.either, UseAnim.SPEAR, "raised");
     }
 
     @OnlyIn(Dist.CLIENT)

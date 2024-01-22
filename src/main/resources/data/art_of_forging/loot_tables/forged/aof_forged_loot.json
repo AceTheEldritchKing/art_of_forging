@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "name": "forged/container_strange_content",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 5,
+                                "min": 2
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "art_of_forging:nano_insectoid"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "art_of_forging:encoded_canister"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "art_of_forging:esoteric_codex"
+                }
+            ]
+        }
+    ]
+}

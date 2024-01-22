@@ -53,7 +53,7 @@ public class EsotericEdgeEffect {
                 // Base attack damage
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percentage
-                float magicBonusDamage = baseAmount * (level/100);
+                float magicBonusDamage = getDecimalPercentage(level, baseAmount);
 
                 if (level > 0)
                 {
@@ -82,11 +82,11 @@ public class EsotericEdgeEffect {
                 // Base attack damage
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percentage
-                float magicBonusDamage = baseAmount * (level/100);
+                // float magicBonusDamage = baseAmount * (level/100);
 
                 if (level > 0)
                 {
-                    event.setAmount(baseAmount - magicBonusDamage);
+                    event.setAmount(baseAmount);
                 }
             }
         }

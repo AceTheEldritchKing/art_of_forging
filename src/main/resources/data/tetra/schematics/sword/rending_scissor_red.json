@@ -2,10 +2,7 @@
     "replace": true,
     "slots": [ "sword/blade" ],
     "materialSlotCount": 1,
-    "requirement": {
-        "type": "tetra:locked",
-        "key": "tetra:sword/rending_scissor_red"
-    },
+    "materialRevealSlot": 0,
     "rarity": "temporary",
     "displayType": "major",
     "glyph": {
@@ -16,7 +13,7 @@
     "outcomes": [
         {
             "material": {
-                "items": [ "art_of_forging:life_fiber" ]
+                "items": [ "art_of_forging:rending_scissor_red" ]
             },
             "requiredTools": {
                 "hammer_dig": "minecraft:diamond"

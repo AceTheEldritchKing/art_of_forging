@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "art_of_forging:vobrite_crystal"
+        },
+        "title": {
+            "translate": "art_of_forging.advancements.materials.vobrite_crystal.title"
+        },
+        "description": {
+            "translate": "art_of_forging.advancements.materials.vobrite_crystal.description"
+        }
+    },
+    "parent": "art_of_forging:materials/root",
+    "criteria": {
+        "vobrite_crystal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "art_of_forging:vobrite_crystal"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "vobrite_crystal"
+        ]
+    ]
+}

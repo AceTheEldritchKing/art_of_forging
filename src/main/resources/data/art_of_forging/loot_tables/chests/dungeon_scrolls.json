@@ -84,6 +84,36 @@
                             "schematics": [ "tetra:bow/string/compound_string", "tetra:crossbow/string/compound_cross_string" ]
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "tetra:scroll_rolled",
+                    "functions": [
+                        {
+                            "function": "tetra:scroll",
+                            "key": "sword/tonal_blade",
+                            "intricate": false,
+                            "details": "art_of_forging",
+                            "material": 1,
+                            "ribbon": "daf7a6",
+                            "glyphs": [ 3, 5, 6, 9 ],
+                            "schematics": [ "tetra:sword/tonal_blade" ]
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 1.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "art_of_forging:curious_artifact"
                 }
             ]
         }

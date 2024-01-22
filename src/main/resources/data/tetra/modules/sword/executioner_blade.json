@@ -16,7 +16,8 @@
 				"generic.attack_speed": -1.9
 			},
 			"effects": {
-				"sweeping": 1
+				"sweeping": 1,
+				"art_of_forging:beheading": 10
 			},
 			"tools": {
 				"cut": [ 1, 2 ]

@@ -8,18 +8,18 @@
         "_left"
     ],
     "improvements": [
-      "tetra:double/annihilator_axe/",
-      "tetra:double/shared_head/",
-      "tetra:double/shared/",
-      "tetra:shared/"
+        "tetra:double/annihilator_axe/",
+        "tetra:double/shared_head/",
+        "tetra:double/shared/",
+        "tetra:shared/"
     ],
     "variants": [
         {
             "key": "annihilator_axe/annihilator_axe",
             "integrity": -2,
             "attributes": {
-              "generic.attack_damage": 12,
-              "generic.attack_speed": -1.2
+              "generic.attack_damage": 13,
+              "generic.attack_speed": -1.5
             },
             "aspects": {
                 "blockBreaker": 2,
@@ -29,7 +29,7 @@
             "effects": {
                 "shieldbreaker": 1,
                 "art_of_forging:devouring": [ 2, 5 ],
-                "art_of_forging:life_steal": [ 3, 30 ],
+                "art_of_forging:life_steal": [ 1.5, 30 ],
                 "art_of_forging:knockback": [ 0.5, 0 ],
                 "art_of_forging:hubris": 30,
                 "crushing": 2,
@@ -53,6 +53,10 @@
             "models": [
                 {
                     "location": "tetra:items/module/double/head/annihilator_axe/annihilator_axe"
+                },
+                {
+                    "location": "tetra:items/module/double/head/annihilator_axe/annihilator_axe_glow",
+                    "emission": 10
                 }
             ]
         }

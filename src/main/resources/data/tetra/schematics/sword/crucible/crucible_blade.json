@@ -21,7 +21,7 @@
 			"armorPenetration": 2
 		},
 		"tertiaryEffects": {
-			"truesweep": 1
+			"sweeping": 1
 		},
 		"durability": 4,
 		"integrity": -3,

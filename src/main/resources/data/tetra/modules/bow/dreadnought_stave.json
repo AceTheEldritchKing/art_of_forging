@@ -4,7 +4,6 @@
 	"type": "tetra:basic_major_module",
 	"improvements": [
 		"tetra:bow/stave/dreadnought_stave",
-		"tetra:bow/straight_stave/",
 		"tetra:bow/shared_stave/",
 		"tetra:bow/shared/",
 		"tetra:shared/"

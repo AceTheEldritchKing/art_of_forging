@@ -1,20 +1,23 @@
 [
     {
         "key": "sword/murasama_imprv",
-        "integrity": -2,
+        "integrity": -1,
         "effects": {
-            "severing": [ 10, 3 ],
-            "truesweep": [ 1, 2 ],
-            "bleeding": [ 2, 2 ],
-            "abilityMomentum": [ 8, 1 ]
+            "severing": [ 5, 1 ],
+            "bleeding": [ 1, 1 ],
+            "abilityMomentum": [ 1, 1 ]
         },
         "attributes": {
             "generic.attack_speed": 0.1,
-            "generic.attack_damage": 1.2
+            "generic.attack_damage": 0.5
         },
         "models": [
             {
                 "location": "tetra:items/module/sword/blade/murasama_blade/murasama_blade"
+            },
+            {
+                "location": "tetra:items/module/sword/blade/murasama_blade/murasama_blade_glow",
+                "emission": 15
             }
         ]
     }

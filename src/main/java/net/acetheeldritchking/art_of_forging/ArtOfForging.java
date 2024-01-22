@@ -2,17 +2,23 @@ package net.acetheeldritchking.art_of_forging;
 
 import com.mojang.logging.LogUtils;
 import net.acetheeldritchking.art_of_forging.effects.*;
+import net.acetheeldritchking.art_of_forging.effects.curio.*;
 import net.acetheeldritchking.art_of_forging.effects.potion.PotionEffects;
 import net.acetheeldritchking.art_of_forging.loot.AoFLootModifiers;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ArtOfForging.MOD_ID)
@@ -26,12 +32,12 @@ public class ArtOfForging
         // IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // https://forums.minecraftforge.net/topic/114424-get-all-entities-in-the-specified-area-and-damage-them/
-
 
         // Register the commonSetup method for modloading
         // modEventBus.addListener(this::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
+        // Curios
+        bus.addListener(this::enqueueIMC);
 
         // Items //
         AoFRegistry.ITEMS.register(bus);
@@ -93,6 +99,28 @@ public class ArtOfForging
         MinecraftForge.EVENT_BUS.register(new SoulChargedEffect());
         // Sonic Shock
         MinecraftForge.EVENT_BUS.register(new SonicShockEffect());
+        // Conquering
+        MinecraftForge.EVENT_BUS.register(new ConqueringEffect());
+        // Subjugation
+        MinecraftForge.EVENT_BUS.register(new SubjugationEffect());
+        // Goliath Slayer
+        MinecraftForge.EVENT_BUS.register(new GoliathSlayerEffect());
+
+        // Curio Effects //
+        // Flame Protection
+        MinecraftForge.EVENT_BUS.register(new CurioFireResistanceEffect());
+        // Arcane Protection
+        MinecraftForge.EVENT_BUS.register(new CurioMagicResistanceEffect());
+        // Strength Infused
+        MinecraftForge.EVENT_BUS.register(new CurioStrengthEffect());
+        // Healing Infused
+        MinecraftForge.EVENT_BUS.register(new CurioRegenerationEffect());
+        // Karma Infused
+        MinecraftForge.EVENT_BUS.register(new CurioKarmaEffect());
+        // Haste Infused
+        MinecraftForge.EVENT_BUS.register(new CurioHasteEffect());
+        // Third Sight
+        MinecraftForge.EVENT_BUS.register(new CurioGlowingEffect());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -104,6 +132,14 @@ public class ArtOfForging
         event.enqueueWork(() -> {
             AoFPackets.register();
         });
+    }
+
+    // Curios Compat
+    // I looked at how Artifacts did it
+    public void enqueueIMC(final InterModEnqueueEvent event)
+    {
+        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE,
+                () -> SlotTypePreset.CHARM.getMessageBuilder().size(1).build());
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -138,6 +174,17 @@ public class ArtOfForging
             BeheadingEffect.init();
             SoulChargedEffect.init();
             SonicShockEffect.init();
+            ConqueringEffect.init();
+            SubjugationEffect.init();
+            GoliathSlayerEffect.init();
+            // Curio
+            CurioFireResistanceEffect.init();
+            CurioMagicResistanceEffect.init();
+            CurioStrengthEffect.init();
+            CurioRegenerationEffect.init();
+            CurioKarmaEffect.init();
+            CurioHasteEffect.init();
+            CurioGlowingEffect.init();
         }
     }
 }

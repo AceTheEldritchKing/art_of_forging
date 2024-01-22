@@ -60,11 +60,14 @@ public class DummyItem extends Item {
             items.add(this.setupSchematic("single/head/mace_head/mace_head", "art_of_forging",new String[]{"single/head/mace_head/mace_head"}, false, 1, 5636192, 9, 3, 6, 2));
             items.add(this.setupSchematic("tetra/crucible_blade", "art_of_forging",new String[]{"sword/crucible_blade"}, false, 2, 16719360, 8, 7, 9, 2));
             items.add(this.setupSchematic("bow/stave/dreadnought_stave", "art_of_forging",new String[]{"bow/stave/dreadnought_stave", "bow/stave/dreadnought_cross_stave"}, false, 1, 15971103, 8, 1, 9, 5));
-            items.add(this.setupSchematic("sword/katana/katana_blade", "art_of_forging",new String[]{"sword/katana/katana_blade"}, false, 2, 14417680, 5, 10, 13, 2));
+            items.add(this.setupSchematic("sword/katana/katana_blade", "art_of_forging",new String[]{"sword/katana/katana_blade", "sword/tsuba_guard"}, false, 2, 14417680, 5, 10, 13, 2));
             items.add(this.setupSchematic("bow/string/compound_string", "art_of_forging",new String[]{"bow/string/compound_string", "crossbow/string/compound_cross_string"}, false, 1, 1697160, 15, 13, 12, 14));
             items.add(this.setupSchematic("utilize/hammer", "art_of_forging",new String[]{"utilize/hammer"}, false, 2, 16422889, 1, 15, 12, 8));
             items.add(this.setupSchematic("sword/katana/murasama_blade", "otherworldly",new String[]{"sword/katana/murasama_blade"}, false, 2, 12919587, 6, 7, 13, 15));
-            items.add(this.setupSchematic("tetra/rending_scissor_purple", "otherworldly",new String[]{"sword/rending_scissor_red", "sword/rending_scissor_purple"}, false, 2, 14885250, 1, 15, 2, 13));
+            items.add(this.setupSchematic("tetra/rending_scissor_complete", "otherworldly",new String[]{"sword/scissor_blade_left", "sword/scissor_blade_right", "sword/rending_scissor_complete"}, false, 2, 14885250, 1, 15, 2, 13));
+            items.add(this.setupSchematic("sword/crucible/architects_crucible_blade", "true_crucible",new String[]{"sword/crucible_blade", "sword/crucible/architects_crucible_blade"}, true, 2, 16711746, 8, 7, 9, 2));
+            items.add(this.setupSchematic("sword/tonal_blade", "art_of_forging",new String[]{"sword/tonal_blade"}, false, 1, 14350246, 3, 5, 6, 9));
+            items.add(this.setupSchematic("sword/thousand_cold_nights", "otherworldly",new String[]{"sword/katana/murasama_blade", "sword/thousand_cold_nights"}, true, 2, 6061184, 7, 8, 14, 13));
         }
     }
 

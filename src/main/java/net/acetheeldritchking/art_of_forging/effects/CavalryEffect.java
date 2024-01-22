@@ -46,12 +46,12 @@ public class CavalryEffect {
 
                 float baseAmount = event.getAmount();
                 // Gets bonus damage as percentage
-                float bonusDamage = baseAmount * ((float) level / 100);
+                float bonusDamage = getDecimalPercentage(level, baseAmount);
 
                 // Add bonus damage while riding entity
                 if (level > 0 && attacker.isPassenger())
                 {
-                    event.setAmount(baseAmount + bonusDamage);
+                    event.setAmount(getExactPercentage(baseAmount, bonusDamage));
                 }
             }
         }

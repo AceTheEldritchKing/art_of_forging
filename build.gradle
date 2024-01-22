@@ -144,7 +144,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.3.0'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -158,7 +158,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation fg.deobf("curse.maven:tetra-289712:4738567")
+    implementation fg.deobf("curse.maven:tetra-289712:4941337")
     implementation fg.deobf("curse.maven:mutil-351914:3941314")
 
     implementation fg.deobf("curse.maven:alexsmobs-426558:4071154")
@@ -170,13 +170,22 @@ dependencies {
     implementation fg.deobf("curse.maven:mmmmm-225738:4410143")
     implementation fg.deobf("curse.maven:moonlight-499980:4620027")
 
-    implementation fg.deobf("curse.maven:damageindicator-557596:3946489")
-    implementation fg.deobf("curse.maven:critalib-560696:3946347")
+    // implementation fg.deobf("curse.maven:damageindicator-557596:3946489")
+    // implementation fg.deobf("curse.maven:critalib-560696:3946347")
 
-    implementation fg.deobf("curse.maven:neat-238372:3878735")
+    // implementation fg.deobf("curse.maven:neat-238372:3878735")
+
+    // Better Combat Compat
+    implementation fg.deobf("curse.maven:bettercombat-639842:4534619")
+    implementation fg.deobf("curse.maven:playeranim-658587:4418149")
+    implementation fg.deobf("curse.maven:cloth-348521:4633416")
+    implementation fg.deobf("curse.maven:tetratic-665884:4583547")
 
     // runtimeOnly(fg.deobf("curse.maven:nbttool-451553:3748971"))
-    // runtimeOnly(fg.deobf("curse.maven:Jei-238222:3940240"))
+    runtimeOnly(fg.deobf("curse.maven:Jei-238222:4712866"))
+
+    // CURIOS
+    implementation fg.deobf("curse.maven:curios-309927:4902099")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }

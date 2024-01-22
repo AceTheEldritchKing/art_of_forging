@@ -12,17 +12,25 @@ public class PotionEffects {
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS,
                     ArtOfForging.MOD_ID);
 
-    // Evoking Maw Potion
+    // Evoking Maw Potion Effect
     public static final RegistryObject<MobEffect> EVOKING_MAW =
             MOB_EFFECTS.register("evoking_maw", EvokingMawPotionEffect::new);
 
-    // Defuse Creeper Potion
+    // Defuse Creeper Potion Effect
     public static final RegistryObject<MobEffect> DEFUSE_CREEPER =
             MOB_EFFECTS.register("defuse_creeper", DefuseCreeperPotionEffect::new);
 
     // Devouring Potion Effect
     public static final RegistryObject<MobEffect> DEVOURING =
             MOB_EFFECTS.register("devouring", DevouringPotionEffect::new);
+
+    // Mortal Wounds Potion Effect
+    public static final RegistryObject<MobEffect> MORTAL_WOUNDS =
+            MOB_EFFECTS.register("mortal_wounds", MortalWoundsPotionEffect::new);
+
+    // Targeted Potion Effect
+    public static final RegistryObject<MobEffect> TARGETED =
+            MOB_EFFECTS.register("targeted", TargetedPotionEffect::new);
 
     public static void register(IEventBus bus)
     {

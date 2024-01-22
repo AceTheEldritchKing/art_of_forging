@@ -20,13 +20,13 @@
 				"armorPenetration": 2.5,
 				"stun": [ 15, 2 ],
 				"sweeping": 5,
+				"shieldbreaker": 1,
 				"art_of_forging:dismounting": [ 10, 2.5 ]
 			},
 			"aspects": {
 				"pointyWeapon": 1,
 				"edgedWeapon":  2,
-				"breakable": 2,
-				"shieldbreaker": 1
+				"breakable": 2
 			},
 			"durability": -20,
 			"extract": {

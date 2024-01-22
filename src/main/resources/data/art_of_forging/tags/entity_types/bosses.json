@@ -1,0 +1,52 @@
+{
+    "replace": true,
+    "values": [
+        "minecraft:ender_dragon",
+        "minecraft:wither",
+        "minecraft:warden",
+        {
+            "id": "cataclysm:ender_golem",
+            "required": false
+        },
+        {
+            "id": "cataclysm:ender_guardian",
+            "required": false
+        },
+        {
+            "id": "cataclysm:ignis",
+            "required": false
+        },
+        {
+            "id": "cataclysm:ignited_revenant",
+            "required": false
+        },
+        {
+            "id": "cataclysm:amethyst_crab",
+            "required": false
+        },
+        {
+            "id": "cataclysm:netherite_monstrosity",
+            "required": false
+        },
+        {
+            "id": "cataclysm:the_harbinger",
+            "required": false
+        },
+        {
+            "id": "cataclysm:the_leviathan",
+            "required": false
+        },
+        {
+            "id": "alexsmobs:void_worm",
+            "required": false
+        },
+        {
+            "id": "alexsmobs:void_worm_part",
+            "required": false
+        },
+        {
+            "id": "alexsmobs:warped_mosco",
+            "required": false
+        }
+    ]
+}

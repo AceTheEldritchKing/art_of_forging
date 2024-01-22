@@ -7,7 +7,7 @@ import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class SoulChargedParticlesS2CPacket {
+public class SoulChargedParticlesS2CPacket extends SoulChargedPacketHandler {
     private final double xPos;
     private final double yPos;
     private final double zPos;
@@ -39,25 +39,7 @@ public class SoulChargedParticlesS2CPacket {
 
         context.enqueueWork(() -> {
             // Server to Client
-            Level world = S2CPacketHandling.getLevel();
-
-            double radius = 2;
-            double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
-            int speedFactor = -10;
-
-            for (double angle = 0; angle < Math.PI * 2; angle += angleIncrement)
-            {
-                double offsetX = radius * Math.sin(angle);
-                double offsetZ = radius * Math.cos(angle);
-
-                double targetX = this.xPos + offsetX;
-                double targetY = this.yPos;
-                double targetZ = this.zPos + offsetZ;
-
-                world.addParticle(ParticleTypes.SOUL_FIRE_FLAME,
-                        targetX, targetY, targetZ, offsetX*speedFactor,
-                        0.15D, offsetZ*speedFactor);
-            }
+            doSoulParticles(this.xPos, this.yPos, this.zPos);
         });
         return true;
     }

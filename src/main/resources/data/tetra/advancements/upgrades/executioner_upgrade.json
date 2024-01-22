@@ -11,7 +11,7 @@
 			"translate": "tetra.advancements.upgrades.executioner_upgrade.description"
 		}
 	},
-	"parent": "tetra:upgrades/rapier_upgrade",
+	"parent": "tetra:upgrades/sword_upgrade",
 	"criteria": {
 		"module": {
 			"trigger": "tetra:craft_module",

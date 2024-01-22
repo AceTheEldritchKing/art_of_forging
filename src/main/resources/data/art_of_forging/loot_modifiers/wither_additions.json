@@ -6,7 +6,7 @@
         },
         {
             "condition": "minecraft:random_chance",
-            "chance": 0.8
+            "chance": 0.3
         }
     ],
     "type": "art_of_forging:add_to_table",

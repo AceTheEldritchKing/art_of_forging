@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "fff",
+        "fsf",
+        "fff"
+    ],
+    "key": {
+        "s": {
+            "item": "art_of_forging:shards_of_malice"
+        },
+        "f": {
+            "item": "art_of_forging:fragment_of_eden"
+        }
+    },
+    "result": {
+        "item": "art_of_forging:sigil_of_eden",
+        "count": 1
+    }
+}

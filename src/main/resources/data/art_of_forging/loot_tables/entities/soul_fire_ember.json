@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "art_of_forging:soul_ember",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 1
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:location_check",
+                            "predicate": {
+                                "biome": "minecraft:soul_sand_valley"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

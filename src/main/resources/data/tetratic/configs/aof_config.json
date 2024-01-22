@@ -8,10 +8,99 @@
                         "parent": "bettercombat:dagger"
                     }
                 }
+            },
+            "sword/tonal_blade": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:sword"
+                    }
+                }
+            },
+            "sword/cataclysm_blade": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            },
+            "sword/crucible_blade": {
+                "conditions": [
+                    {
+                        "type": "improvement",
+                        "improvement": "sword/architect_imprv",
+                        "config": {
+                            "attributes": {
+                                "parent": "bettercombat:crucible"
+                            }
+                        }
+                    }
+                ],
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            },
+            "sword/rending_scissor_complete": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:rending_scissor"
+                    }
+                }
+            },
+            "sword/scissor_blade_left": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:sword"
+                    }
+                }
+            },
+            "sword/scissor_blade_right": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:sword"
+                    }
+                }
             }
         },
         "double/head_left": {
-
+            "double/shockwave_hammer_left": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:hammer"
+                    }
+                }
+            },
+            "double/annihilator_axe_left": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:heavy_axe"
+                    }
+                }
+            },
+            "double/reaping_scythe_left": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:sickle"
+                    }
+                }
+            },
+            "double/soul_fire_scythe_left": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:scythe"
+                    }
+                }
+            }
+        },
+        "single/head": {
+            "single/mourning_star": {
+                "config": {
+                    "attributes": {
+                        "parent": "bettercombat:mace"
+                    }
+                }
+            }
         }
     }
 }
