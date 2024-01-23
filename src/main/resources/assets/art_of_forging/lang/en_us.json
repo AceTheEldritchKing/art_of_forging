@@ -1,108 +1,178 @@
 {
 	"art_of_forging.effect.decaying.name": "Decaying",
 	"art_of_forging.effect.decaying.tooltip": "Applies a withering effect to the target at §e%s potency§r for §e%s seconds§r.",
+	"tetra.stats.art_of_forging:decaying": "Decaying",
+	"tetra.stats.art_of_forging:decaying.tooltip_short": "Applies the withering effect",
 
 	"art_of_forging.effect.stormcaller.name": "Storm Caller",
 	"art_of_forging.effect.stormcaller.tooltip": "Summon §e%s lightning bolts§r at the same time at hit with a §e%s chance§r.",
+	"tetra.stats.art_of_forging:stormcaller": "Storm Caller",
+	"tetra.stats.art_of_forging:stormcaller.tooltip_short": "Summons lightning bolts§r at the same time at hit",
 
-	"art_of_forging.effect.evokingmaw.name": "Evoking Maw",
-	"art_of_forging.effect.evokingmaw.tooltip": "Summons §e%s evoker fangs at the same time at hit.",
+	"art_of_forging.effect.evoking_maw.name": "Evoking Maw",
+	"art_of_forging.effect.evoking_maw.tooltip": "Summons §e%s evoker fangs at the same time at hit.",
+	"tetra.stats.art_of_forging:evoking_maw": "Evoking Maw",
+	"tetra.stats.art_of_forging:evoking_maw.tooltip_short": "Summons evoker fangs at the same time at hit",
 
 	"art_of_forging.effect.life_steal.name": "Life Steal",
 	"art_of_forging.effect.life_steal.tooltip": "Chance to gain §e%s health§r back after a successful hit (§e%s chance).",
+	"tetra.stats.art_of_forging:life_steal": "Life Steal",
+	"tetra.stats.art_of_forging:life_steal.tooltip_short": "Chance to gain health back after a successful hit",
 
 	"art_of_forging.effect.knockback.name": "Knockback",
 	"art_of_forging.effect.knockback.tooltip": "Knocks back target by an additional §e%s strength§r (This effect can also be reversed to drag targets in).",
+	"tetra.stats.art_of_forging:knockback": "Knockback",
+	"tetra.stats.art_of_forging:knockback.tooltip_short": "Knocks back target by an additional amount",
 
 	"art_of_forging.effect.life_fiber_loss.name": "Life Fiber Loss",
 	"art_of_forging.effect.life_fiber_loss.tooltip": "On the death of your opponent, you get buffed for §e%s seconds.",
+	"tetra.stats.art_of_forging:life_fiber_loss": "Life Fiber Loss",
+	"tetra.stats.art_of_forging:life_fiber_loss.tooltip_short": "On the death of your opponent, you gain buffs",
 
 	"art_of_forging.effect.cavalry.name": "Cavalry",
 	"art_of_forging.effect.cavalry.tooltip": "Does an bonus §e%s damage§r while riding an entity.",
+	"tetra.stats.art_of_forging:cavalry": "Cavalry",
+	"tetra.stats.art_of_forging:cavalry.tooltip_short": "Does an bonus damage while riding an entity",
 
 	"art_of_forging.effect.dismounting.name": "Dismounting",
 	"art_of_forging.effect.dismounting.tooltip": "Does an bonus §e%s damage§r to mounted entities, with a §e%s chance§r to dismount them.",
+	"tetra.stats.art_of_forging:dismounting": "Dismounting",
+	"tetra.stats.art_of_forging:dismounting.tooltip_short": "Does an bonus damage to mounted entities, with a chance to dismount them",
 
 	"art_of_forging.effect.dragon_mist.name": "Draconic Mist",
 	"art_of_forging.effect.dragon_mist.tooltip": "A mist that lasts for §e%s seconds§r with a §e%s chance§r to be summoned.",
+	"tetra.stats.art_of_forging:dragon_mist": "Draconic Mist",
+	"tetra.stats.art_of_forging:dragon_mist.tooltip_short": "A mist that has a chance to be summoned",
 
 	"art_of_forging.effect.disorienting.name": "Disorienting",
 	"art_of_forging.effect.disorienting.tooltip": "Inflicts slowness, weakness and confusion at §e%s potency§r, that lasts for §e%s seconds§r.",
+	"tetra.stats.art_of_forging:disorienting": "Disorienting",
+	"tetra.stats.art_of_forging:disorienting.tooltip_short": "Inflicts slowness, weakness and confusion at §e%s potency§r, that lasts for §e%s seconds§r",
 
 	"art_of_forging.effect.vengeance.name": "Vengeance",
-	"art_of_forging.effect.vengeance.tooltip": "You gain §e%s percent more damage§r, at §e%s hearts or less§r.",
+	"art_of_forging.effect.vengeance.tooltip": "You deal §e%s percent more damage§r, at §e%s hearts or less§r.",
+	"tetra.stats.art_of_forging:vengeance": "Vengeance",
+	"tetra.stats.art_of_forging:vengeance.tooltip_short": "You deal more damage at low health",
 
 	"art_of_forging.effect.resolve.name": "Resolve",
 	"art_of_forging.effect.resolve.tooltip": "You gain strength and resistance for §e%s seconds§r, at §e%s hearts or less§r.",
+	"tetra.stats.art_of_forging:resolve": "Resolve",
+	"tetra.stats.art_of_forging:resolve.tooltip_short": "You gain strength and resistance at low health",
 
 	"art_of_forging.effect.devouring.name": "Curse of Devouring",
 	"art_of_forging.effect.devouring.tooltip": "If you do not attack any entity for a period of time, your item will begin to consume your life force.",
+	"tetra.stats.art_of_forging:devouring": "Curse of Devouring",
+	"tetra.stats.art_of_forging:devouring.tooltip_short": "If you do not attack any entity for a period of time, your item will begin to consume your life force",
 
 	"art_of_forging.effect.infernal_rebuke.name": "Infernal Rebuke",
 	"art_of_forging.effect.infernal_rebuke.tooltip": "Sets enemies on fire for §e%s seconds§r and knocks them back, with a §e%s chance§r to do so.",
+	"tetra.stats.art_of_forging:infernal_rebuke": "Infernal Rebuke",
+	"tetra.stats.art_of_forging:infernal_rebuke.tooltip_short": "Sets enemies on fire and knocks them back, with a chance to do so",
 
 	"art_of_forging.effect.hubris.name": "Curse of Hubris",
 	"art_of_forging.effect.hubris.tooltip": "At 90 percent health or greater, you deal §e%s extra damage§r. However, upon losing health, your weapon damage decreases until more than half its original damage at 30 percent or lower.",
+	"tetra.stats.art_of_forging:hubris": "Curse of Hubris",
+	"tetra.stats.art_of_forging:hubris.tooltip_short": "At full health you deal extra damage, however, the lower your health is the less damage you deal",
 
 	"art_of_forging.effect.slaughtering.name": "Slaughtering",
-	"art_of_forging.effect.slaughtering.tooltip": "You deal §e%s extra damage§r when your target is above §e%s percent health§r",
+	"art_of_forging.effect.slaughtering.tooltip": "You deal §e%s extra damage§r when your target is above §e%s percent health§r.",
+	"tetra.stats.art_of_forging:slaughtering": "Slaughtering",
+	"tetra.stats.art_of_forging:slaughtering.tooltip_short": "You deal extra damage when your target is above a certain amount of health",
 
 	"art_of_forging.effect.carnage.name": "Carnage",
 	"art_of_forging.effect.carnage.tooltip": "As you attack your target, you gain a 10 percent bonus in damage. For each consecutive attack, 10 percent more damage is added up to 40 percent. This stack is lost upon death.",
+	"tetra.stats.art_of_forging:carnage": "Carnage",
+	"tetra.stats.art_of_forging:carnage.tooltip_short": "As you attack your target, you gain bonus damage that is stacked for each attack until your death",
 
 	"art_of_forging.effect.judgement.name": "Judgement",
 	"art_of_forging.effect.judgement.tooltip": "If you enemy is below §e%s health§r, you have a §e%s percent chance§r to instantly kill them.",
+	"tetra.stats.art_of_forging:judgement": "Judgement",
+	"tetra.stats.art_of_forging:judgement.tooltip_short": "If you enemy is below a certain amount of health, you have a chance to instantly kill them",
 
 	"art_of_forging.effect.retribution.name": "Retribution",
-	"art_of_forging.effect.retribution.tooltip": "You deal §e%s damage§r when you are attacked with a §e%s percent chance§r harm your attacker.",
+	"art_of_forging.effect.retribution.tooltip": "You deal §e%s damage§r when you are attacked, with a §e%s percent chance§r harm your attacker.",
+	"tetra.stats.art_of_forging:retribution": "Retribution",
+	"tetra.stats.art_of_forging:retribution.tooltip_short": "You deal more damage when you are attacked, with a chance harm your attacker",
 
 	"art_of_forging.effect.esoteric_edge.name": "Esoteric Edge",
 	"art_of_forging.effect.esoteric_edge.tooltip": "§e%s percent of your damage§r is converted into magic damage.",
+	"tetra.stats.art_of_forging:esoteric_edge": "Esoteric Edge",
+	"tetra.stats.art_of_forging:esoteric_edge.tooltip_short": "A percentage of your damage is converted into magic damage",
 
 	"art_of_forging.effect.feasting.name": "Feasting",
 	"art_of_forging.effect.feasting.tooltip": "Regain hunger by §e%s amount§r, with a §e%s percent§r to take effect.",
+	"tetra.stats.art_of_forging:feasting": "Feasting",
+	"tetra.stats.art_of_forging:feasting.tooltip_short": "Regain hunger by a certain amount with a chance to take effect",
 
 	"art_of_forging.effect.nano_fused.name": "Nano-Fused",
 	"art_of_forging.effect.nano_fused.tooltip": "You have a §e%s chance§r to have an altered drops from certain mobs.",
+	"tetra.stats.art_of_forging:nano_fused": "Nano-Fused",
+	"tetra.stats.art_of_forging:nano_fused.tooltip_short": "You have a chance to have an altered drops from certain mobs",
 
 	"art_of_forging.effect.beheading.name": "Beheading",
 	"art_of_forging.effect.beheading.tooltip": "You have a §e%s chance§r to drop a mob or player skull upon death.",
+	"tetra.stats.art_of_forging:beheading": "Beheading",
+	"tetra.stats.art_of_forging:beheading.tooltip_short": "You have a chance to drop a mob or player skull upon death",
 
 	"art_of_forging.effect.soul_charged.name": "Soul Charged",
 	"art_of_forging.effect.soul_charged.tooltip": "Upon killing an entity, you gain 1 soul charge point. Once you gain 5 points, you are able to release a wave of fire and magic damage in a radius around you. Requires ability level 2 or greater.",
+	"tetra.stats.art_of_forging:soul_charged": "Soul Charged",
+	"tetra.stats.art_of_forging:soul_charged.tooltip_short": "Upon killing an entity, you gain 1 charge point. On gaining max points, release a wave of fire and magic damage around you",
 
 	"art_of_forging.effect.sonic_shock.name": "Sonic Shock",
 	"art_of_forging.effect.sonic_shock.tooltip": "Release a sonic boom attack that deals §e%s damage§r to the target.",
+	"tetra.stats.art_of_forging:sonic_shock": "Sonic Shock",
+	"tetra.stats.art_of_forging:sonic_shock.tooltip_short": "Release a sonic boom attack",
 
 	"art_of_forging.effect.flame_protection.name": "Fire Protection",
 	"art_of_forging.effect.flame_protection.tooltip": "Grants fire resistance §e%s§r upon wearing.",
+	"tetra.stats.art_of_forging:flame_protection": "Fire Protection",
+	"tetra.stats.art_of_forging:flame_protection.tooltip_short": "Grants fire resistance upon wearing",
 
 	"art_of_forging.effect.arcane_protection.name": "Arcane Protection",
 	"art_of_forging.effect.arcane_protection.tooltip": "Reduces incoming magic damage by §e%s§r upon wearing.",
+	"tetra.stats.art_of_forging:arcane_protection": "Arcane Protection",
+	"tetra.stats.art_of_forging:arcane_protection.tooltip_short": "Reduces incoming magic damage upon wearing",
 
 	"art_of_forging.effect.strength_infused.name": "Strength Infused",
 	"art_of_forging.effect.strength_infused.tooltip": "Grants strength §e%s§r upon wearing.",
+	"tetra.stats.art_of_forging:strength_infused": "Strength Infused",
+	"tetra.stats.art_of_forging:strength_infused.tooltip_short": "Grants strength upon wearing",
 
 	"art_of_forging.effect.healing_infused.name": "Healing Infused",
 	"art_of_forging.effect.healing_infused.tooltip": "Grants regeneration §e%s§r upon wearing.",
+	"tetra.stats.art_of_forging:healing_infused": "Healing Infused",
+	"tetra.stats.art_of_forging:healing_infused.tooltip_short": "Grants regeneration upon wearing",
 
 	"art_of_forging.effect.karma_infused.name": "Karma Infused",
 	"art_of_forging.effect.karma_infused.tooltip": "Based on what you've killed, you will receive luck or bad luck for §e%s§r seconds upon wearing, each with increasing potency for your deeds.",
+	"tetra.stats.art_of_forging:karma_infused": "Karma Infused",
+	"tetra.stats.art_of_forging:karma_infused.tooltip_short": "Based on what you've killed, you will receive either good luck or bad luck",
 
 	"art_of_forging.effect.haste_infused.name": "Haste Infused",
 	"art_of_forging.effect.haste_infused.tooltip": "Grants haste §e%s§r upon wearing.",
+	"tetra.stats.art_of_forging:haste_infused": "Haste Infused",
+	"tetra.stats.art_of_forging:haste_infused.tooltip_short": "Grants haste upon wearing",
 
 	"art_of_forging.effect.third_sight.name": "Hunter's Mark",
 	"art_of_forging.effect.third_sight.tooltip": "Grants glowing for §e%s§r seconds on any living entity you have damaged.",
+	"tetra.stats.art_of_forging:third_sight": "Hunter's Mark",
+	"tetra.stats.art_of_forging:third_sight.tooltip_short": "Grants glowing on any living entity you have damaged",
 
 	"art_of_forging.effect.conquering.name": "Conquering",
 	"art_of_forging.effect.conquering.tooltip": "Holding this weapon grants you strength, while weakening your opponents on hit. When reaching the max amount of kills, you gain increased strength at the cost of reduced max health.",
+	"tetra.stats.art_of_forging:conquering": "Conquering",
+	"tetra.stats.art_of_forging:conquering.tooltip_short": "Holding this weapon grants you strength, while weakening your opponents on hit.",
 
 	"art_of_forging.effect.subjugation.name": "Subjugation",
 	"art_of_forging.effect.subjugation.tooltip": "Constantly attacking a target for 10 hits straight allows you to unleash a charged, targeted attack, giving the target blindness, slowness, and weakness. This attack also heals you.",
+	"tetra.stats.art_of_forging:subjugation": "Subjugation",
+	"tetra.stats.art_of_forging:subjugation.tooltip_short": "Constantly attacking a target allows you to unleash a targeted attack that inflicts debuffs and steals their life",
 
 	"art_of_forging.effect.goliath_slayer.name": "Goliath Slayer",
 	"art_of_forging.effect.goliath_slayer.tooltip": "Deals §e%s§r more damage to bosses or boss-like entities.",
+	"tetra.stats.art_of_forging:goliath_slayer": "Goliath Slayer",
+	"tetra.stats.art_of_forging:goliath_slayer.tooltip_short": "Deals more damage to bosses or boss-like entities",
 
 
 
