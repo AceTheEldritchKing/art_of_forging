@@ -18,7 +18,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.7.1-1.19.2'
+version = '1.7.2-1.19.2'
 group = 'net.acetheeldritchking.art_of_forging' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'art_of_forging'
 
