@@ -7,7 +7,7 @@ import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class SoulChargedParticlesS2CPacket extends SoulChargedPacketHandler {
+public class SoulChargedParticlesS2CPacket {
     private final double xPos;
     private final double yPos;
     private final double zPos;
@@ -39,7 +39,7 @@ public class SoulChargedParticlesS2CPacket extends SoulChargedPacketHandler {
 
         context.enqueueWork(() -> {
             // Server to Client
-            doSoulParticles(this.xPos, this.yPos, this.zPos);
+            SoulChargedPacketHandler.doSoulParticles(this.xPos, this.yPos, this.zPos);
         });
         return true;
     }
