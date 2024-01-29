@@ -5,7 +5,7 @@ import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class LifeStealParticlesS2CPacket extends LifeStealPacketHandler {
+public class LifeStealParticlesS2CPacket {
     private final double xPos;
     private final double yPos;
     private final double zPos;
@@ -37,7 +37,7 @@ public class LifeStealParticlesS2CPacket extends LifeStealPacketHandler {
 
         context.enqueueWork(() -> {
             // Server to Client
-            doLifestealParticles(this.xPos, this.yPos, this.zPos);
+            LifeStealPacketHandler.doLifestealParticles(this.xPos, this.yPos, this.zPos);
         });
         return true;
     }

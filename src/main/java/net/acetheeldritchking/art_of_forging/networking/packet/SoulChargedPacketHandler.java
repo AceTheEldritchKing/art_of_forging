@@ -1,30 +1,33 @@
 package net.acetheeldritchking.art_of_forging.networking.packet;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SoulChargedPacketHandler {
-
-    public void doSoulParticles(double xPos, double yPos, double zPos)
+    public static void doSoulParticles(double xPos, double yPos, double zPos)
     {
-        Level world = S2CPacketHandling.getLevel();
-
-        double radius = 2;
-        double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
-        int speedFactor = -10;
-
-        for (double angle = 0; angle < Math.PI * 2; angle += angleIncrement)
+        Level world = Minecraft.getInstance().level;
+        if (world != null)
         {
-            double offsetX = radius * Math.sin(angle);
-            double offsetZ = radius * Math.cos(angle);
+            double radius = 2;
+            double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
+            int speedFactor = -10;
 
-            double targetX = xPos + offsetX;
-            double targetY = yPos;
-            double targetZ = zPos + offsetZ;
+            for (double angle = 0; angle < Math.PI * 2; angle += angleIncrement) {
+                double offsetX = radius * Math.sin(angle);
+                double offsetZ = radius * Math.cos(angle);
 
-            world.addParticle(ParticleTypes.SOUL_FIRE_FLAME,
-                    targetX, targetY, targetZ, offsetX*speedFactor,
-                    0.15D, offsetZ*speedFactor);
+                double targetX = xPos + offsetX;
+                double targetY = yPos;
+                double targetZ = zPos + offsetZ;
+
+                world.addParticle(ParticleTypes.SOUL_FIRE_FLAME,
+                        targetX, targetY, targetZ, offsetX * speedFactor,
+                        0.15D, offsetZ * speedFactor);
+            }
         }
     }
 }
