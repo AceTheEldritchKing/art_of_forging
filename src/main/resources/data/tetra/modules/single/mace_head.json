@@ -19,7 +19,7 @@
 			},
 			"effects": {
 				"stun": [ 18, 2 ],
-				"crushing": 7,
+				"crushing": 4,
 				"shieldbreaker": 1
 			},
 			"aspects": {
