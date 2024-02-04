@@ -1,8 +1,8 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "ff",
-        "ff"
+        "fff",
+        " f "
     ],
     "key": {
         "f": {
@@ -10,7 +10,7 @@
         }
     },
     "result": {
-        "item": "tetra:forged_wall",
-        "count": 32
+        "item": "tetra:forged_workbench",
+        "count": 1
     }
 }
