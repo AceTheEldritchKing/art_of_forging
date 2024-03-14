@@ -1,6 +1,5 @@
 package net.acetheeldritchking.art_of_forging.effects;
 
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -23,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class EsotericEdgeEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(esotericEdgeEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, esotericEdgeName, 0, 30, false, effectStatGetter,
@@ -36,17 +34,14 @@ public class EsotericEdgeEffect {
 
     // This does the magic damage
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingAttackEvent event)
-    {
+    public void onLivingAttackEvent(LivingAttackEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Magic Damage bonus
                 float level = item.getEffectLevel(heldStack, esotericEdgeEffect);
 
@@ -55,9 +50,8 @@ public class EsotericEdgeEffect {
                 // Bonus damage as a percentage
                 float magicBonusDamage = getDecimalPercentage(level, baseAmount);
 
-                if (level > 0)
-                {
-                    target.hurt(DamageSource.MAGIC, magicBonusDamage);
+                if (level > 0) {
+                    target.hurt(target.damageSources().magic(), magicBonusDamage);
                 }
             }
         }
@@ -65,17 +59,14 @@ public class EsotericEdgeEffect {
 
     // This does the normal damage
     @SubscribeEvent
-    public void onLivingDamageEvent(LivingDamageEvent event)
-    {
+    public void onLivingDamageEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         // LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Magic Damage bonus
                 float level = item.getEffectLevel(heldStack, esotericEdgeEffect);
 
@@ -84,8 +75,7 @@ public class EsotericEdgeEffect {
                 // Bonus damage as a percentage
                 // float magicBonusDamage = baseAmount * (level/100);
 
-                if (level > 0)
-                {
+                if (level > 0) {
                     event.setAmount(baseAmount);
                 }
             }

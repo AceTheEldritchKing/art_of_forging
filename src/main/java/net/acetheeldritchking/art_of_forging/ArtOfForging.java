@@ -4,7 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.acetheeldritchking.art_of_forging.effects.*;
 import net.acetheeldritchking.art_of_forging.effects.curio.*;
 import net.acetheeldritchking.art_of_forging.effects.potion.PotionEffects;
-import net.acetheeldritchking.art_of_forging.loot.AoFLootModifiers;
+import net.acetheeldritchking.art_of_forging.loot.ModLootModifiers;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,13 +22,11 @@ import top.theillusivec4.curios.api.SlotTypePreset;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ArtOfForging.MOD_ID)
-public class ArtOfForging
-{
+public class ArtOfForging {
     public static final String MOD_ID = "art_of_forging";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public ArtOfForging()
-    {
+    public ArtOfForging() {
         // IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -43,7 +41,7 @@ public class ArtOfForging
         AoFRegistry.ITEMS.register(bus);
 
         // Loot Tables //
-        AoFLootModifiers.register(bus);
+        ModLootModifiers.register(bus);
 
         // Potion Effects //
         PotionEffects.register(bus);
@@ -126,8 +124,7 @@ public class ArtOfForging
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
         // Packets let's go!
         event.enqueueWork(() -> {
             AoFPackets.register();
@@ -136,19 +133,16 @@ public class ArtOfForging
 
     // Curios Compat
     // I looked at how Artifacts did it
-    public void enqueueIMC(final InterModEnqueueEvent event)
-    {
+    public void enqueueIMC(final InterModEnqueueEvent event) {
         InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE,
                 () -> SlotTypePreset.CHARM.getMessageBuilder().size(1).build());
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             WitheringEffect.init();
             StormCallerEffect.init();
             EvokingMawEffect.init();

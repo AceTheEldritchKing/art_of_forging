@@ -27,8 +27,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class NanoFusedEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(nanoFusedEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, nanoFusedName, 0, 30, false, effectStatGetter,
@@ -40,27 +39,23 @@ public class NanoFusedEffect {
 
     // I looked at Tetra Pak's code to help with this
     @SubscribeEvent
-    public void onLivingDropEvent(LivingDropsEvent event)
-    {
+    public void onLivingDropEvent(LivingDropsEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
         // System.out.println("Called?");
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Chance to have changed loot drops
                 float level = item.getEffectLevel(heldStack, nanoFusedEffect);
 
                 // This is for the randomness to work
-                float chance = level/100;
+                float chance = level / 100;
 
                 // System.out.println("Level: " + level);
-                if (level > 0)
-                {
+                if (level > 0) {
                     // For the loot drop
                     ItemStack nanoDrop = ItemStack.EMPTY;
 
@@ -70,14 +65,12 @@ public class NanoFusedEffect {
                     else if (target instanceof WitherBoss) nanoDrop = new ItemStack(AoFRegistry.DEVILS_SOUL_GEM.get());
 
                     // Actual drop stuff
-                    if (!nanoDrop.isEmpty())
-                    {
-                        boolean drop = target.level.random.nextFloat() < chance;
+                    if (!nanoDrop.isEmpty()) {
+                        boolean drop = target.level().random.nextFloat() < chance;
 
-                        if (drop)
-                        {
+                        if (drop) {
                             ItemEntity itemDrop = new ItemEntity
-                                    (target.level, target.getX(), target.getY(), target.getZ(), nanoDrop);
+                                    (target.level(), target.getX(), target.getY(), target.getZ(), nanoDrop);
                             itemDrop.setDefaultPickUpDelay();
                             event.getDrops().add(itemDrop);
                         }

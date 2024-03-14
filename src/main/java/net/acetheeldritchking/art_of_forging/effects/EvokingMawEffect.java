@@ -24,8 +24,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class EvokingMawEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(evokingMaw, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, evokingMawName, 0, 30, false, effectStatGetter,
@@ -36,26 +35,22 @@ public class EvokingMawEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity eAttacker = event.getSource().getEntity();
 
-        if (eAttacker instanceof LivingEntity attacker)
-        {
+        if (eAttacker instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // How many jaws spawn
                 int level = item.getEffectLevel(heldStack, evokingMaw);
                 // Duration of jaw effect
                 int eff = (int) item.getEffectEfficiency(heldStack, evokingMaw);
 
-                if (level > 0 && !attacker.level.isClientSide())
-                {
+                if (level > 0 && !attacker.level().isClientSide()) {
                     target.addEffect(new MobEffectInstance
-                            (PotionEffects.EVOKING_MAW.get(), eff*20, level,
+                            (PotionEffects.EVOKING_MAW.get(), eff * 20, level,
                                     false, false, false));
                 }
             }

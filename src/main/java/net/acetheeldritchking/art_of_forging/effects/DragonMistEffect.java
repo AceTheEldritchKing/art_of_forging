@@ -25,8 +25,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class DragonMistEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(dragonMist, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, dragonMistName, 0, 30, false, effectStatGetter,
@@ -41,26 +40,22 @@ public class DragonMistEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Duration of mist
                 int level = item.getEffectLevel(heldStack, dragonMist);
                 // Percentage chance to summon mist
                 float eff = item.getEffectEfficiency(heldStack, dragonMist);
 
-                if (level > 0 && !attacker.level.isClientSide()
-                    && eff > (target.getRandom().nextFloat() * 100))
-                {
-                    ServerLevel world = (ServerLevel) attacker.level;
+                if (level > 0 && !attacker.level().isClientSide()
+                        && eff > (target.getRandom().nextFloat() * 100)) {
+                    ServerLevel world = (ServerLevel) attacker.level();
 
                     // Target pos
                     double posX = target.getX();
@@ -75,7 +70,7 @@ public class DragonMistEffect {
                     aoeCloud.setParticle(ParticleTypes.DRAGON_BREATH);
                     aoeCloud.setRadius(0.5F);
                     aoeCloud.setDuration(level);
-                    aoeCloud.setRadiusPerTick((5.0F - aoeCloud.getRadius()) / (float)aoeCloud.getDuration());
+                    aoeCloud.setRadiusPerTick((5.0F - aoeCloud.getRadius()) / (float) aoeCloud.getDuration());
                     aoeCloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 1));
 
                     // Summon mist

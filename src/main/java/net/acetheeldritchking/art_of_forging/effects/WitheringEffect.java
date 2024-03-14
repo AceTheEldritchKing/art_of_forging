@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class WitheringEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(decaying, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, decayingName, 0, 30, false, effectStatGetter,
@@ -38,23 +37,19 @@ public class WitheringEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity eAttacker = event.getSource().getEntity();
 
-        if (eAttacker instanceof LivingEntity attacker)
-        {
+        if (eAttacker instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 int level = item.getEffectLevel(heldStack, decaying);
                 int efficiency = (int) item.getEffectEfficiency(heldStack, decaying);
 
-                if (level > 0 && !target.hasEffect(MobEffects.WITHER))
-                {
-                    target.addEffect(new MobEffectInstance(MobEffects.WITHER, efficiency*20,
+                if (level > 0 && !target.hasEffect(MobEffects.WITHER)) {
+                    target.addEffect(new MobEffectInstance(MobEffects.WITHER, efficiency * 20,
                             level, true, true, true));
                 }
             }

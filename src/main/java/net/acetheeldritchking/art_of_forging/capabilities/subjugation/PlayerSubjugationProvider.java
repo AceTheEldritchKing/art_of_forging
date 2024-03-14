@@ -21,8 +21,7 @@ public class PlayerSubjugationProvider implements ICapabilityProvider, INBTSeria
     private final LazyOptional<PlayerSubjugation> optional = LazyOptional.of(this::createPlayerSubjugation);
 
     private PlayerSubjugation createPlayerSubjugation() {
-        if (this.subjugation == null)
-        {
+        if (this.subjugation == null) {
             this.subjugation = new PlayerSubjugation();
         }
 
@@ -31,8 +30,7 @@ public class PlayerSubjugationProvider implements ICapabilityProvider, INBTSeria
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_SUBJUGATION)
-        {
+        if (cap == PLAYER_SUBJUGATION) {
             return optional.cast();
         }
 

@@ -21,10 +21,8 @@ public class PlayerConquerProvider implements ICapabilityProvider, INBTSerializa
     private PlayerConquer conquer = null;
     private final LazyOptional<PlayerConquer> optional = LazyOptional.of(this::createPlayerConquer);
 
-    private PlayerConquer createPlayerConquer()
-    {
-        if (this.conquer == null)
-        {
+    private PlayerConquer createPlayerConquer() {
+        if (this.conquer == null) {
             this.conquer = new PlayerConquer();
         }
 
@@ -33,8 +31,7 @@ public class PlayerConquerProvider implements ICapabilityProvider, INBTSerializa
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_CONQUER)
-        {
+        if (cap == PLAYER_CONQUER) {
             return optional.cast();
         }
 

@@ -21,8 +21,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class FeastingEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(feastingEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, feastingName, 0, 30, false, effectStatGetter,
@@ -36,34 +35,29 @@ public class FeastingEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Flat amount of hunger gained
                 int level = item.getEffectLevel(heldStack, feastingEffect);
 
                 // Chance for effect to proc
                 float eff = item.getEffectEfficiency(heldStack, feastingEffect);
 
-                if (level > 0 && eff > (target.getRandom().nextFloat()*100) && attacker instanceof Player player)
-                {
+                if (level > 0 && eff > (target.getRandom().nextFloat() * 100) && attacker instanceof Player player) {
                     FoodData playerFood = player.getFoodData();
 
-                    player.getFoodData().setFoodLevel( Math.min(playerFood.getFoodLevel() + level, playerFood.getFoodLevel()));
+                    player.getFoodData().setFoodLevel(Math.min(playerFood.getFoodLevel() + level, playerFood.getFoodLevel()));
 
-                    if (target instanceof Player targetPlayer)
-                    {
+                    if (target instanceof Player targetPlayer) {
                         FoodData targetFood = targetPlayer.getFoodData();
                         // This should reduce hunger, hopefully
-                        targetPlayer.getFoodData().setFoodLevel( Math.max(targetFood.getFoodLevel() - level, 0));
+                        targetPlayer.getFoodData().setFoodLevel(Math.max(targetFood.getFoodLevel() - level, 0));
                     }
                 }
             }

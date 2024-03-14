@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class InfernalRebukeEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(infernalRebukeEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, infernalRebukeName, 0, 30, false, effectStatGetter,
@@ -37,18 +36,15 @@ public class InfernalRebukeEffect {
     }
 
     @SubscribeEvent
-    public void onLivingHurtEvent(LivingHurtEvent event)
-    {
+    public void onLivingHurtEvent(LivingHurtEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = target.getMainHandItem();
             //ItemStack offHeldStack = target.getOffhandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Seconds on fire
                 int level = item.getEffectLevel(heldStack, infernalRebukeEffect);
 
@@ -65,13 +61,12 @@ public class InfernalRebukeEffect {
                 // Gotta normalize the knockback
                 Vec3 vec3 = new Vec3(xTarget, 0, zTarget).subtract(xAttacker, 0, zAttacker).normalize();
 
-                if (level > 0 && eff > (attacker.getRandom().nextFloat()*100))
-                {
+                if (level > 0 && eff > (attacker.getRandom().nextFloat() * 100)) {
                     attacker.knockback(0.4, vec3.x, vec3.z);
                     attacker.setSecondsOnFire(level);
 
                     // Play Sound
-                    target.level.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.SHIELD_BLOCK, SoundSource.PLAYERS, 0.5F, 1.0F);
+                    target.level().playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.SHIELD_BLOCK, SoundSource.PLAYERS, 0.5F, 1.0F);
                 }
             }
         }

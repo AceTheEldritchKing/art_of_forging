@@ -1,14 +1,25 @@
 {
+    "type": "art_of_forging:add_item",
     "conditions": [
         {
-            "condition": "forge:loot_table_id",
-            "loot_table_id": "minecraft:entities/blaze"
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "minecraft:blaze"
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "biome": "minecraft:soul_sand_valley"
+            }
         },
         {
             "condition": "minecraft:random_chance",
             "chance": 0.8
         }
     ],
-    "type": "art_of_forging:add_to_table",
-    "loot_table": "art_of_forging:entities/soul_fire_ember"
+    "items": [
+        "art_of_forging:soul_ember"
+    ]
 }

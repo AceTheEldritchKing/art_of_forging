@@ -13,8 +13,7 @@ public class DefuseCreeperPotionEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
         // Defuses Creeper
-        if (pLivingEntity instanceof Creeper creeper)
-        {
+        if (pLivingEntity instanceof Creeper creeper) {
             creeper.setSwellDir(-1);
         }
 

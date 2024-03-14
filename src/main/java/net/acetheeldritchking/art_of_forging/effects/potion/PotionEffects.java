@@ -32,8 +32,7 @@ public class PotionEffects {
     public static final RegistryObject<MobEffect> TARGETED =
             MOB_EFFECTS.register("targeted", TargetedPotionEffect::new);
 
-    public static void register(IEventBus bus)
-    {
+    public static void register(IEventBus bus) {
         MOB_EFFECTS.register(bus);
     }
 }

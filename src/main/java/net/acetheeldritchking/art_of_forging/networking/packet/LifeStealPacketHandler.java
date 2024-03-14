@@ -1,18 +1,14 @@
 package net.acetheeldritchking.art_of_forging.networking.packet;
 
-import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.DustColorTransitionOptions;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import org.joml.Vector3f;
 
 public class LifeStealPacketHandler {
-    public static void doLifestealParticles(double xPos, double yPos, double zPos)
-    {
+    public static void doLifestealParticles(double xPos, double yPos, double zPos) {
         Level world = Minecraft.getInstance().level;
-        if (world != null)
-        {
+        if (world != null) {
             double radius = 0.7;
             double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
             int speedFactor = 10;

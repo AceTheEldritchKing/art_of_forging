@@ -8,9 +8,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.Skeleton;
+import net.minecraft.world.entity.monster.WitherSkeleton;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,8 +33,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class BeheadingEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(beheadingEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, beheadingName, 0, 30, false, effectStatGetter,
@@ -43,35 +44,31 @@ public class BeheadingEffect {
     }
 
     @SubscribeEvent
-    public void onLivingDropEvent(LivingDropsEvent event)
-    {
+    public void onLivingDropEvent(LivingDropsEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Chance to have head drops
                 float level = item.getEffectLevel(heldStack, beheadingEffect);
 
                 // Actual chance
-                float chance = level/100;
+                float chance = level / 100;
 
-                if (level > 0)
-                {
+                if (level > 0) {
                     // For the loot drop
                     ItemStack headDrop = ItemStack.EMPTY;
 
                     if (target instanceof Zombie) headDrop = new ItemStack(Items.ZOMBIE_HEAD);
                     else if (target instanceof Creeper) headDrop = new ItemStack(Items.CREEPER_HEAD);
                     else if (target instanceof Skeleton) headDrop = new ItemStack(Items.SKELETON_SKULL);
-                    else if (target instanceof WitherSkeleton || target instanceof WitherBoss) headDrop = new ItemStack(Items.WITHER_SKELETON_SKULL);
+                    else if (target instanceof WitherSkeleton || target instanceof WitherBoss)
+                        headDrop = new ItemStack(Items.WITHER_SKELETON_SKULL);
                     else if (target instanceof EnderDragon) headDrop = new ItemStack(Items.DRAGON_HEAD);
-                    else if (target instanceof Player player)
-                    {
+                    else if (target instanceof Player player) {
                         // Looked at how Tetra Pak did this
                         headDrop = new ItemStack(Items.PLAYER_HEAD);
                         GameProfile profile = player.getGameProfile();
@@ -79,14 +76,12 @@ public class BeheadingEffect {
                     }
 
                     // Drop
-                    if (!headDrop.isEmpty())
-                    {
-                        boolean drop = target.level.random.nextFloat() < chance;
+                    if (!headDrop.isEmpty()) {
+                        boolean drop = target.level().random.nextFloat() < chance;
 
-                        if (drop)
-                        {
+                        if (drop) {
                             ItemEntity itemDrop = new ItemEntity
-                                    (target.level, target.getX(), target.getY(), target.getZ(), headDrop);
+                                    (target.level(), target.getX(), target.getY(), target.getZ(), headDrop);
                             itemDrop.setDefaultPickUpDelay();
                             event.getDrops().add(itemDrop);
                         }

@@ -27,8 +27,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class StormCallerEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(stormCaller, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, stormCallerName, 0, 30, false, effectStatGetter,
@@ -43,32 +42,27 @@ public class StormCallerEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity eAttacker = event.getSource().getEntity();
 
-        if (eAttacker instanceof LivingEntity attacker)
-        {
+        if (eAttacker instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // How many entities to summon
                 int level = item.getEffectLevel(heldStack, stormCaller);
                 // Chance for effect to proc
                 float eff = item.getEffectEfficiency(heldStack, stormCaller);
 
-                if (level > 0 && !attacker.level.isClientSide()
-                        && eff > (target.getRandom().nextFloat()*100))
-                {
-                    ServerLevel world = (ServerLevel) attacker.level;
+                if (level > 0 && !attacker.level().isClientSide()
+                        && eff > (target.getRandom().nextFloat() * 100)) {
+                    ServerLevel world = (ServerLevel) attacker.level();
                     ServerPlayer player = (ServerPlayer) attacker;
                     BlockPos position = target.blockPosition();
 
                     // Summoning lightning based on effect level
-                    for (int i = 0; i < level; i++)
-                    {
+                    for (int i = 0; i < level; i++) {
                         world.addFreshEntity(Objects.requireNonNull(EntityType.LIGHTNING_BOLT.spawn(world, null, player, position,
                                 MobSpawnType.TRIGGERED, true, true)));
                     }

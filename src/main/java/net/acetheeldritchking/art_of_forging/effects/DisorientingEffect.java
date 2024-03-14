@@ -25,8 +25,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class DisorientingEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(disorientingEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, disorientingName, 0, 30, false, effectStatGetter,
@@ -40,41 +39,32 @@ public class DisorientingEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Level of effect
                 int level = item.getEffectLevel(heldStack, disorientingEffect);
                 // Duration of effect
                 int eff = (int) item.getEffectEfficiency(heldStack, disorientingEffect);
 
                 // Apply potion effects
-                if (level > 0 && !MobType.UNDEAD.equals(target.getMobType()))
-                {
-                    if (target instanceof Player)
-                    {
+                if (level > 0 && !MobType.UNDEAD.equals(target.getMobType())) {
+                    if (target instanceof Player) {
                         applyEffects(level, eff, target);
-                        target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, eff*20,
+                        target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, eff * 20,
                                 level, true, true, true));
-                    }
-                    else if (target instanceof Creeper creeper)
-                    {
+                    } else if (target instanceof Creeper creeper) {
                         applyEffects(level, eff, creeper);
                         // Stop creeper from exploding
                         // 5X the duration of effect to actually stop the creeper from exploding
-                        creeper.addEffect(new MobEffectInstance(PotionEffects.DEFUSE_CREEPER.get(), eff*100,
+                        creeper.addEffect(new MobEffectInstance(PotionEffects.DEFUSE_CREEPER.get(), eff * 100,
                                 2, false, false, false));
-                    }
-                    else
-                    {
+                    } else {
                         applyEffects(level, eff, target);
                     }
                 }
@@ -82,11 +72,10 @@ public class DisorientingEffect {
         }
     }
 
-    private void applyEffects(int level, int duration, LivingEntity target)
-    {
-        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration*20,
+    private void applyEffects(int level, int duration, LivingEntity target) {
+        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration * 20,
                 level, true, true, true));
-        target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration*20,
+        target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration * 20,
                 level, true, true, true));
     }
 }

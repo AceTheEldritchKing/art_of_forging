@@ -21,8 +21,7 @@ public class PlayerCarnageProvider implements ICapabilityProvider, INBTSerializa
     private final LazyOptional<PlayerCarnage> optional = LazyOptional.of(this::createPlayerCarnage);
 
     private PlayerCarnage createPlayerCarnage() {
-        if (this.carnage == null)
-        {
+        if (this.carnage == null) {
             this.carnage = new PlayerCarnage();
         }
 
@@ -31,8 +30,7 @@ public class PlayerCarnageProvider implements ICapabilityProvider, INBTSerializa
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_CARNAGE)
-        {
+        if (cap == PLAYER_CARNAGE) {
             return optional.cast();
         }
 

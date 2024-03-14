@@ -19,8 +19,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class SlaughteringEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(slaughteringEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, slaughteringName, 0, 30, false, effectStatGetter,
@@ -34,17 +33,14 @@ public class SlaughteringEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Bonus damage
                 float level = item.getEffectLevel(heldStack, slaughteringEffect);
 
@@ -62,10 +58,9 @@ public class SlaughteringEffect {
                 // Base health, not constant
                 float baseHealth = target.getHealth();
                 // Health as a percentage
-                double healthPercentage = (baseHealth/BASE_HEALTH) * 100;
+                double healthPercentage = (baseHealth / BASE_HEALTH) * 100;
 
-                if (level > 0 && eff <= healthPercentage)
-                {
+                if (level > 0 && eff <= healthPercentage) {
                     //System.out.println("Applying bonus...");
                     event.setAmount(getExactPercentage(baseAmount, bonusDamage));
                 }

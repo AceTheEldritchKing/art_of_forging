@@ -3,15 +3,11 @@ package net.acetheeldritchking.art_of_forging.networking.packet;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SoulChargedPacketHandler {
-    public static void doSoulParticles(double xPos, double yPos, double zPos)
-    {
+    public static void doSoulParticles(double xPos, double yPos, double zPos) {
         Level world = Minecraft.getInstance().level;
-        if (world != null)
-        {
+        if (world != null) {
             double radius = 2;
             double angleIncrement = 2.0 * Math.toRadians(0.5 / radius);
             int speedFactor = -10;

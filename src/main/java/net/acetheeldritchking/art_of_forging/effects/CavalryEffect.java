@@ -9,7 +9,10 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
-import se.mickelus.tetra.gui.stats.getter.*;
+import se.mickelus.tetra.gui.stats.getter.IStatGetter;
+import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
+import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
+import se.mickelus.tetra.gui.stats.getter.TooltipGetterPercentage;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
@@ -19,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class CavalryEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(cavalryEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, cavalryEffectName, 0, 30, false, effectStatGetter,
@@ -31,16 +33,13 @@ public class CavalryEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Amount of extra damage while riding entity
                 int level = item.getEffectLevel(heldStack, cavalryEffect);
 
@@ -49,8 +48,7 @@ public class CavalryEffect {
                 float bonusDamage = getDecimalPercentage(level, baseAmount);
 
                 // Add bonus damage while riding entity
-                if (level > 0 && attacker.isPassenger())
-                {
+                if (level > 0 && attacker.isPassenger()) {
                     event.setAmount(getExactPercentage(baseAmount, bonusDamage));
                 }
             }

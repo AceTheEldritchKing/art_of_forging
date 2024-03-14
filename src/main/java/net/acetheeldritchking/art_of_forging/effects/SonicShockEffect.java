@@ -1,6 +1,5 @@
 package net.acetheeldritchking.art_of_forging.effects;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -38,8 +37,7 @@ public class SonicShockEffect extends ChargedAbilityEffect {
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(sonicShockEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, sonicShockName, 0, 30, false, effectStatGetter,
@@ -51,8 +49,7 @@ public class SonicShockEffect extends ChargedAbilityEffect {
 
     @Override
     public void perform(Player attacker, InteractionHand hand, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, Vec3 hitVec, int chargedTicks) {
-        if (!target.level.isClientSide)
-        {
+        if (!target.level().isClientSide) {
             // Sonic Boom damage
             int level = item.getEffectLevel(itemStack, sonicShockEffect);
 
@@ -68,27 +65,24 @@ public class SonicShockEffect extends ChargedAbilityEffect {
     }
 
     // Literally just sonic boom code, don't you dare judge me
-    private AbilityUseResult doSonicBoomAttack(float damage, Player attacker, ItemModularHandheld item, ItemStack itemStack, LivingEntity target)
-    {
+    private AbilityUseResult doSonicBoomAttack(float damage, Player attacker, ItemModularHandheld item, ItemStack itemStack, LivingEntity target) {
         AbilityUseResult result = item.hitEntity(itemStack, attacker, target, 0, 1, 1, 1);
-        ServerLevel world = (ServerLevel) attacker.level;
+        ServerLevel world = (ServerLevel) attacker.level();
 
-        if (result != AbilityUseResult.fail)
-        {
-            Vec3 vec3 = attacker.position().add(0.0D, (double)1.6F, 0.0D);
+        if (result != AbilityUseResult.fail) {
+            Vec3 vec3 = attacker.position().add(0.0D, (double) 1.6F, 0.0D);
             Vec3 vec31 = target.getEyePosition().subtract(vec3);
             Vec3 vec32 = vec31.normalize();
 
-            for (int i = 1; i < Mth.floor(vec31.length()) + 7; i++)
-            {
+            for (int i = 1; i < Mth.floor(vec31.length()) + 7; i++) {
                 Vec3 vec33 = vec3.add(vec32.scale(i));
                 world.sendParticles(ParticleTypes.SONIC_BOOM, vec33.x, vec33.y, vec33.z,
                         1, 0.0D, 0.0D, 0.0D, 0.0D);
             }
 
-            attacker.level.playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(),
+            attacker.level().playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(),
                     SoundEvents.WARDEN_SONIC_BOOM, SoundSource.PLAYERS, 3.0F, 1.0F);
-            target.hurt(DamageSource.sonicBoom(attacker), damage);
+            target.hurt(target.damageSources().sonicBoom(attacker), damage);
 
             double d1 = 0.5 * (1.0D - target.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
             double d0 = 2.5 * (1.0D - target.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));

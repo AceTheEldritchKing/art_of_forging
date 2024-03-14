@@ -28,9 +28,9 @@ public class AoFEvents {
 
     @SubscribeEvent
     public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
-        if(event.getObject() instanceof Player) {
+        if (event.getObject() instanceof Player) {
             // Devouring
-            if(!event.getObject().getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).isPresent()) {
+            if (!event.getObject().getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).isPresent()) {
                 event.addCapability(new ResourceLocation(ArtOfForging.MOD_ID, "devouring"), new PlayerDevouringProvider());
             }
 
@@ -63,7 +63,7 @@ public class AoFEvents {
 
     @SubscribeEvent
     public static void onPlayerCloned(PlayerEvent.Clone event) {
-        if(event.isWasDeath()) {
+        if (event.isWasDeath()) {
             // Devouring
             event.getOriginal().getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).ifPresent(oldStore -> {
                 event.getOriginal().getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).ifPresent(newStore -> {
@@ -76,8 +76,7 @@ public class AoFEvents {
     }
 
     @SubscribeEvent
-    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event)
-    {
+    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
         // Devouring
         event.register(PlayerDevouring.class);
 

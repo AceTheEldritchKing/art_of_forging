@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: net.acetheeldritchking.art_of_forging
-

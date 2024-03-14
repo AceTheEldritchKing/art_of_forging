@@ -8,8 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class AoFTags {
     // Don't ever ask me to do entity tags again /hj
-    public static class Entities
-    {
+    public static class Entities {
         public static final TagKey<EntityType<?>> BOSS_ENTITIES = TagKey.create
                 (ForgeRegistries.ENTITY_TYPES.getRegistryKey(),
                         new ResourceLocation(ArtOfForging.MOD_ID, "bosses"));

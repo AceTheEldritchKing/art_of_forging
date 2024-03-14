@@ -29,8 +29,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class CurioKarmaEffect implements ICurioItem {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(karmaInfusedEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, karmaInfusedName, 0, 30, false, effectStatGetter,
@@ -42,13 +41,11 @@ public class CurioKarmaEffect implements ICurioItem {
 
     // Add or remove karma points
     @SubscribeEvent
-    public void onLivingDeathEvent(LivingDeathEvent event)
-    {
+    public void onLivingDeathEvent(LivingDeathEvent event) {
         Entity entity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (entity instanceof Player player)
-        {
+        if (entity instanceof Player player) {
             CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
                     itemStack.getItem() instanceof ModularItem).forEach
                     (slotResult -> {
@@ -60,15 +57,12 @@ public class CurioKarmaEffect implements ICurioItem {
                         // Just have the effect
                         int level = item.getEffectLevel(itemStack, karmaInfusedEffect);
 
-                        if (level > 0 && !player.level.isClientSide())
-                        {
-                            if (target instanceof Monster)
-                            {
+                        if (level > 0 && !player.level().isClientSide()) {
+                            if (target instanceof Monster) {
                                 player.getCapability(PlayerKarmaProvider.PLAYER_KARMA).ifPresent(karma -> {
                                     karma.addKarma(1);
                                 });
-                            } else
-                            {
+                            } else {
                                 player.getCapability(PlayerKarmaProvider.PLAYER_KARMA).ifPresent(karma -> {
                                     karma.subKarma(1);
                                 });
@@ -80,52 +74,48 @@ public class CurioKarmaEffect implements ICurioItem {
 
     // Karma buffs/debuffs
     @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
 
         // Finds curio and applies effect
-        CuriosApi.getCuriosHelper().findCurios(player,itemStack ->
+        CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
                 itemStack.getItem() instanceof ModularItem).forEach
                 (slotResult -> {
                     slotResult.stack();
 
-                    if (event.player.tickCount % 20 == 0)
-                    {
+                    if (event.player.tickCount % 20 == 0) {
                         ItemStack itemStack = slotResult.stack();
                         ModularItem item = (ModularItem) itemStack.getItem();
 
                         // Effect duration
                         int level = item.getEffectLevel(itemStack, karmaInfusedEffect);
 
-                        if (level > 0 && !player.level.isClientSide())
-                        {
+                        if (level > 0 && !player.level().isClientSide()) {
                             player.getCapability(PlayerKarmaProvider.PLAYER_KARMA).ifPresent(karma -> {
                                 // Do stuff here
-                                switch (karma.getKarma())
-                                {
+                                switch (karma.getKarma()) {
                                     case -5 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level * 20,
                                                 4, true, true, true));
                                         break;
                                     }
                                     case -4 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level * 20,
                                                 3, true, true, true));
                                         break;
                                     }
                                     case -3 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level * 20,
                                                 2, true, true, true));
                                         break;
                                     }
                                     case -2 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level * 20,
                                                 1, true, true, true));
                                         break;
                                     }
                                     case -1 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, level * 20,
                                                 0, true, true, true));
                                         break;
                                     }
@@ -134,27 +124,27 @@ public class CurioKarmaEffect implements ICurioItem {
                                         player.removeEffect(MobEffects.LUCK);
                                     }
                                     case 1 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level * 20,
                                                 0, true, true, true));
                                         break;
                                     }
                                     case 2 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level * 20,
                                                 1, true, true, true));
                                         break;
                                     }
                                     case 3 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level * 20,
                                                 2, true, true, true));
                                         break;
                                     }
                                     case 4 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level * 20,
                                                 3, true, true, true));
                                         break;
                                     }
                                     case 5 -> {
-                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level*20,
+                                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, level * 20,
                                                 4, true, true, true));
                                         break;
                                     }

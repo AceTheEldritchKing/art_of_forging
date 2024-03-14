@@ -14,14 +14,12 @@ import se.mickelus.tetra.gui.stats.getter.*;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
-
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
 import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class VengeanceEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(vengeanceEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, vengeanceName, 0, 30, false, effectStatGetter,
@@ -35,16 +33,13 @@ public class VengeanceEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Extra damage
                 double level = item.getEffectLevel(heldStack, vengeanceEffect);
 
@@ -54,12 +49,11 @@ public class VengeanceEffect {
                 // Base attack damage
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percent
-                float bonusDamage = baseAmount * ((float) level/ 100);
+                float bonusDamage = baseAmount * ((float) level / 100);
                 // Attacker health
                 float health = attacker.getHealth();
 
-                if (level > 0 && eff >= health)
-                {
+                if (level > 0 && eff >= health) {
                     event.setAmount(baseAmount + bonusDamage);
                 }
             }
