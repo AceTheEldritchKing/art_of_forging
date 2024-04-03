@@ -53,29 +53,33 @@ public class DisorientingEffect {
             {
                 // Level of effect
                 int level = item.getEffectLevel(heldStack, disorientingEffect);
-                // Duration of effect
+                // Chance of effect procing
                 int eff = (int) item.getEffectEfficiency(heldStack, disorientingEffect);
 
                 // Apply potion effects
                 if (level > 0 && !MobType.UNDEAD.equals(target.getMobType()))
                 {
-                    if (target instanceof Player)
+                    // Chance of effect procing through effect efficiency
+                    if (eff > (target.getRandom().nextFloat()*100))
                     {
-                        applyEffects(level, eff, target);
-                        target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, eff*20,
-                                level, true, true, true));
-                    }
-                    else if (target instanceof Creeper creeper)
-                    {
-                        applyEffects(level, eff, creeper);
-                        // Stop creeper from exploding
-                        // 5X the duration of effect to actually stop the creeper from exploding
-                        creeper.addEffect(new MobEffectInstance(PotionEffects.DEFUSE_CREEPER.get(), eff*100,
-                                2, false, false, false));
-                    }
-                    else
-                    {
-                        applyEffects(level, eff, target);
+                        if (target instanceof Player)
+                        {
+                            applyEffects(level, 5, target);
+                            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 5,
+                                    level, true, true, true));
+                        }
+                        else if (target instanceof Creeper creeper)
+                        {
+                            applyEffects(level, 5, creeper);
+                            // Stop creeper from exploding
+                            // 5X the duration of effect to actually stop the creeper from exploding
+                            creeper.addEffect(new MobEffectInstance(PotionEffects.DEFUSE_CREEPER.get(), 5,
+                                    2, false, false, false));
+                        }
+                        else
+                        {
+                            applyEffects(level, 5, target);
+                        }
                     }
                 }
             }
@@ -85,8 +89,8 @@ public class DisorientingEffect {
     private void applyEffects(int level, int duration, LivingEntity target)
     {
         target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration*20,
-                level, true, true, true));
+                level - 1, true, true, true));
         target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration*20,
-                level, true, true, true));
+                level - 1, true, true, true));
     }
 }

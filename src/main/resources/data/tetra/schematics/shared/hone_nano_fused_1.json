@@ -14,7 +14,11 @@
         "shield/plate",
         "shield/grip",
         "crossbow/stave",
-        "crossbow/stock"
+        "crossbow/stock",
+        "polearm/handle",
+        "polearm/head",
+        "greatsword/blade",
+        "greatsword/hilt"
     ],
     "keySuffixes": [
         "_double_handle",
@@ -29,7 +33,11 @@
         "_shield_plate",
         "_shield_grip",
         "_crossbow_stave",
-        "_crossbow_stock"
+        "_crossbow_stock",
+        "_polearm_handle",
+        "_polearm_head",
+        "_greatsword_blade",
+        "_greatsword_hilt"
     ],
     "hone": true,
     "rarity": "hone",

@@ -1,19 +1,22 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-	    "   ",
-        "  a",
-        " bc"
+	    " f ",
+        "c#c",
+        " w "
 	],
 	"key": {
-		"a": {
-			"item": "minecraft:blaze_powder"
+		"f": {
+			"item": "minecraft:flint_and_steel"
 		},
-		"b": {
-			"item": "minecraft:anvil"
+		"#": {
+			"tag": "tetra:swords"
 		},
 		"c": {
-			"item": "minecraft:book"
+			"item": "minecraft:coal"
+		},
+		"w": {
+			"item": "minecraft:writable_book"
 		}
 	},
 	"result": {

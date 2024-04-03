@@ -13,7 +13,7 @@
 		"key": "crucible_blade/",
 		"attributes": {
 			"generic.attack_speed": -2.9,
-			"generic.attack_damage": 0.7
+			"generic.attack_damage": 0.8
 		},
 		"effects": {
 			"armorPenetration": 10,

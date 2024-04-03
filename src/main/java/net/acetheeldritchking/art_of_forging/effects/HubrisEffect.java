@@ -62,10 +62,11 @@ public class HubrisEffect {
                 if (level > 0)
                 {
                     // Uncomment all of the loggers if you wish to test/debug
+                    // Hubris should be more punishing now
                     if (percent <= 30)
                     {
                         //System.out.println("30 or less");
-                        double totalDamage = calculateReducedDamageAmount(baseAmount, 2);
+                        double totalDamage = calculateReducedDamageAmount(baseAmount, 3.5);
                         if (Double.isInfinite(totalDamage) || Double.isNaN(totalDamage) || totalDamage <= 0)
                         {
                             //System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");
@@ -83,7 +84,7 @@ public class HubrisEffect {
                     else if (percent <= 40)
                     {
                         //System.out.println("30 or 40");
-                        double totalDamage = calculateReducedDamageAmount(baseAmount, 1.5);
+                        double totalDamage = calculateReducedDamageAmount(baseAmount, 2);
                         if (Double.isInfinite(totalDamage) || Double.isNaN(totalDamage) || totalDamage <= 0)
                         {
                             //System.out.println("Uh oh! Amount is either NaN, Infinite, or below 0");

@@ -7,11 +7,12 @@
             "truesweep": 1,
             "sweeping": 1,
             "severing": [ 10, 2 ],
-            "art_of_forging:knockback": [ 0.5, 0 ]
+            "art_of_forging:knockback": [ 0.5, 0 ],
+            "art_of_forging:judgement": [ 10, 10 ]
         },
         "attributes": {
-            "generic.attack_damage": 1.4,
-            "generic.attack_speed": 0.2
+            "generic.attack_damage": 1.5,
+            "generic.attack_speed": 0.3
         },
         "models": [
             {

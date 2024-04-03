@@ -7,7 +7,7 @@
     ],
     "key": {
         "b": {
-            "item": "minecraft:book"
+            "item": "minecraft:writable_book"
         },
         "c": {
             "item": "tetra:chthonic_extractor"

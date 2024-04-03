@@ -3,6 +3,7 @@ package net.acetheeldritchking.art_of_forging.effects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -14,6 +15,7 @@ import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
 import se.mickelus.tetra.gui.stats.getter.*;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
+import top.theillusivec4.curios.api.CuriosApi;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
 import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
@@ -55,6 +57,36 @@ public class ResolveEffect {
                 applyEffects(level, event.player);
             }
         }
+
+        // For curio effect
+        Player player = event.player;
+
+        // Finds curio and applies effect
+        CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
+                itemStack.getItem() instanceof ModularItem).forEach
+                (slotResult -> {
+                    slotResult.stack();
+
+                    if (event.player.tickCount % 20 == 0)
+                    {
+                        ItemStack itemStack = slotResult.stack();
+                        ModularItem item = (ModularItem) itemStack.getItem();
+
+                        // Duration of potion
+                        int level = item.getEffectLevel(itemStack, resolveEffect);
+
+                        // Hearts left
+                        float eff = item.getEffectEfficiency(itemStack, resolveEffect);
+
+                        // Player health
+                        float health = player.getHealth();
+
+                        if (level > 0 && eff >= health)
+                        {
+                            applyEffects(level, player);
+                        }
+                    }
+                });
     }
 
     private void applyEffects(int duration, LivingEntity user)

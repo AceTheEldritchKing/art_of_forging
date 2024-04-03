@@ -18,8 +18,8 @@
             "key": "annihilator_axe/annihilator_axe",
             "integrity": -2,
             "attributes": {
-              "generic.attack_damage": 13,
-              "generic.attack_speed": -1.5
+              "generic.attack_damage": 12,
+              "generic.attack_speed": -1.7
             },
             "aspects": {
                 "blockBreaker": 2,

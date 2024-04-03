@@ -12,7 +12,7 @@
                 "truesweep": 2,
                 "sculkTaint": [ 5, 0.05 ],
                 "intuit": 3,
-                "art_of_forging:sonic_shock": 10
+                "art_of_forging:sonic_shock": 25
             },
             "durability": 45,
             "integrity": 1,

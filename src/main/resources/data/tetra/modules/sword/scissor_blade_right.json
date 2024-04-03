@@ -21,6 +21,9 @@
                 "edgedWeapon": 2,
                 "breakable": 2
             },
+            "tools": {
+                "cut": [ 2, 1 ]
+            },
             "effects": {
                 "armorPenetration": 5,
                 "sweeping": 2,

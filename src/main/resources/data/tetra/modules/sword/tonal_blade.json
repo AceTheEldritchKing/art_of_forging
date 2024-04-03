@@ -17,7 +17,7 @@
                 "generic.attack_damage": 0.1
             },
             "effects": {
-                "art_of_forging:disorienting": [ 3, 4 ],
+                "art_of_forging:disorienting": [ 1, 10 ],
                 "armorPenetration": 1
             },
             "tools": {
@@ -41,7 +41,7 @@
                     "generic.attack_speed": 0.5
                 },
                 "primaryEffects": {
-                    "art_of_forging:disorienting": [ 0, 1 ],
+                    "art_of_forging:disorienting": [ 1, 0 ],
                     "armorPenetration": 0.25
                 },
                 "secondaryEffects": {
@@ -49,8 +49,8 @@
                     "armorPenetration": 0.25
                 },
                 "tertiaryEffects": {
-                    "art_of_forging:disorienting": [ 1, 3 ],
-                    "armorPenetration": -0.7
+                    "art_of_forging:disorienting": [ 0, 1 ],
+                    "armorPenetration": -0.75
                 },
                 "durability": 0.7,
                 "integrity": -1,

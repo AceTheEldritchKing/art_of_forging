@@ -13,7 +13,7 @@
             "key": "rending_scissor_complete/rending_scissor_complete",
             "integrity": -3,
             "attributes": {
-                "generic.attack_speed": -1.9,
+                "generic.attack_speed": -1.95,
                 "generic.attack_damage": 10
             },
             "aspects": {
@@ -21,14 +21,16 @@
                 "breakable": 2
             },
             "durability": 85,
+            "tools": {
+                "cut": [ 4, 4 ]
+            },
             "effects": {
-                "armorPenetration": 40,
+                "armorPenetration": 35,
                 "sweeping": 2,
-                "crushing": 5,
                 "abilityCombo": 10,
                 "abilityExhilaration": 2,
                 "abilityRevenge": 2,
-                "severing": [ 2, 20 ],
+                "severing": [ 1, 20 ],
                 "abilityDefensive": 1,
                 "art_of_forging:life_fiber_loss": [ 2, 25 ]
             },

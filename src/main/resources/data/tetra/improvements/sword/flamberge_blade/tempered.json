@@ -4,7 +4,7 @@
 		"level": 1,
 		"integrity": -1,
 		"effects": {
-			"armorPenetration": 10
+			"armorPenetration": 20
 		}
 	},
 	{
@@ -12,7 +12,7 @@
 		"level": 2,
 		"integrity": -1,
 		"effects": {
-			"armorPenetration": 15
+			"armorPenetration": 30
 		}
 	},
 	{
@@ -20,7 +20,7 @@
 		"level": 3,
 		"integrity": -2,
 		"effects": {
-			"armorPenetration": 20
+			"armorPenetration": 45
 		}
 	}
 ]

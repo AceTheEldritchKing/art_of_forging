@@ -14,7 +14,7 @@
             "key": "mourning_star/mourning_star",
             "integrity": -2,
             "attributes": {
-                "generic.attack_damage": 12,
+                "generic.attack_damage": 11.5,
                 "generic.attack_speed": -1.1
             },
             "aspects": {
