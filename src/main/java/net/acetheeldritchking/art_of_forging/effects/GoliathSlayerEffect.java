@@ -55,9 +55,9 @@ public class GoliathSlayerEffect {
                 // Either a boss mob or has health greater than 80 hearts
                 if (level > 0 && isBossEntity(target.getType()) || TARGET_MAX_HEALTH >= 80)
                 {
-                    System.out.println("Base: " + baseAmount);
-                    System.out.println("Bonus: " + bonusDamage);
-                    System.out.println("Total: " + getExactPercentage(baseAmount, bonusDamage));
+                    // System.out.println("Base: " + baseAmount);
+                    // System.out.println("Bonus: " + bonusDamage);
+                    // System.out.println("Total: " + getExactPercentage(baseAmount, bonusDamage));
                     event.setAmount(getExactPercentage(baseAmount, bonusDamage));
                 }
             }
