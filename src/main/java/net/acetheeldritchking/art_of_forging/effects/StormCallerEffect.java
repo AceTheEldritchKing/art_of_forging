@@ -53,8 +53,8 @@ public class StormCallerEffect {
             ItemStack heldStack = attacker.getMainHandItem();
             ItemStack offHeldStack = attacker.getOffhandItem();
 
-            // Off hand
-            if (offHeldStack.getItem() instanceof ModularItem item)
+            // Main hand
+            if (heldStack.getItem() instanceof ModularItem item)
             {
                 // How many entities to summon
                 int level = item.getEffectLevel(heldStack, stormCaller);
