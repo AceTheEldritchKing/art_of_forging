@@ -59,10 +59,10 @@ public class StormCallerEffect {
                 // Chance for effect to proc
                 float eff = item.getEffectEfficiency(heldStack, stormCaller);
 
-                if (level > 0 && !attacker.level.isClientSide()
+                if (level > 0 && !attacker.level().isClientSide()
                         && eff > (target.getRandom().nextFloat()*100))
                 {
-                    ServerLevel world = (ServerLevel) attacker.level;
+                    ServerLevel world = (ServerLevel) attacker.level();
                     ServerPlayer player = (ServerPlayer) attacker;
                     BlockPos position = target.blockPosition();
 
