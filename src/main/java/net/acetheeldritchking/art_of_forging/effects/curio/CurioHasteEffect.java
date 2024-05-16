@@ -39,9 +39,9 @@ public class CurioHasteEffect implements ICurioItem {
         Player player = event.player;
 
         // Finds curio and applies effect
-        CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                itemStack.getItem() instanceof ModularItem).forEach
-                (slotResult -> {
+        CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                slotResult -> {
                     slotResult.stack();
 
                     if (event.player.tickCount % 20 == 0) {
@@ -59,6 +59,7 @@ public class CurioHasteEffect implements ICurioItem {
                                     level - 1, true, true, true));
                         }
                     }
-                });
+                }
+        ));
     }
 }

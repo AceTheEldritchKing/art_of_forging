@@ -46,9 +46,9 @@ public class CurioKarmaEffect implements ICurioItem {
         LivingEntity target = event.getEntity();
 
         if (entity instanceof Player player) {
-            CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                    itemStack.getItem() instanceof ModularItem).forEach
-                    (slotResult -> {
+            CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                    (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                    slotResult -> {
                         slotResult.stack();
 
                         ItemStack itemStack = slotResult.stack();
@@ -68,7 +68,8 @@ public class CurioKarmaEffect implements ICurioItem {
                                 });
                             }
                         }
-                    });
+                    }
+            ));
         }
     }
 
@@ -78,9 +79,9 @@ public class CurioKarmaEffect implements ICurioItem {
         Player player = event.player;
 
         // Finds curio and applies effect
-        CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                itemStack.getItem() instanceof ModularItem).forEach
-                (slotResult -> {
+        CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                slotResult -> {
                     slotResult.stack();
 
                     if (event.player.tickCount % 20 == 0) {
@@ -152,7 +153,8 @@ public class CurioKarmaEffect implements ICurioItem {
                             });
                         }
                     }
-                });
+                }
+        ));
     }
 
 }

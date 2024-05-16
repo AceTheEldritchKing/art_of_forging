@@ -43,9 +43,9 @@ public class CurioGlowingEffect implements ICurioItem {
         LivingEntity target = event.getEntity();
 
         if (entity instanceof Player player) {
-            CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                    itemStack.getItem() instanceof ModularItem).forEach
-                    (slotResult -> {
+            CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                    (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                    slotResult -> {
                         slotResult.stack();
 
                         ItemStack itemStack = slotResult.stack();
@@ -58,8 +58,8 @@ public class CurioGlowingEffect implements ICurioItem {
                             target.addEffect(new MobEffectInstance(MobEffects.GLOWING, level * 20,
                                     0, false, false, false));
                         }
-
-                    });
+                    }
+            ));
         }
     }
 }

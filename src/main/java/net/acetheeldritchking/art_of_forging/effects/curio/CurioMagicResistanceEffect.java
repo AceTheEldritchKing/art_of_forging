@@ -1,6 +1,8 @@
 package net.acetheeldritchking.art_of_forging.effects.curio;
 
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -39,9 +41,9 @@ public class CurioMagicResistanceEffect implements ICurioItem {
         Entity entity = event.getSource().getEntity();
 
         if (entity instanceof Player player) {
-            CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                    itemStack.getItem() instanceof ModularItem).forEach
-                    (slotResult -> {
+            CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                    (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                    slotResult -> {
                         slotResult.stack();
 
                         ItemStack itemStack = slotResult.stack();
@@ -62,28 +64,8 @@ public class CurioMagicResistanceEffect implements ICurioItem {
 
                             event.setAmount(baseAmount - reductionPercentage);
                         }
-                    });
+                    }
+            ));
         }
     }
-    /*
-    ItemStack itemStack = slotResult.stack();
-                    ModularItem item = (ModularItem) itemStack.getItem();
-
-                    // Percentage to reduce damage
-                    int level = item.getEffectLevel(itemStack, arcaneProtectionEffect);
-
-                    float baseAmount = event.getAmount();
-                    // Gets bonus damage as percentage
-                    float reductionPercentage = baseAmount * ((float) level / 100);
-
-                    if (level > 0 && event.getSource().isMagic())
-                    {
-                        // System.out.println("Is magic?");
-                        // System.out.println("Base amount: " + baseAmount);
-                        // System.out.println("Reduction amount: " + reductionPercentage);
-                        // System.out.println("Total amount: " + (baseAmount - reductionPercentage));
-
-                        event.setAmount(baseAmount - reductionPercentage);
-                    }
-     */
 }

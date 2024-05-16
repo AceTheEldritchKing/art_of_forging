@@ -39,26 +39,27 @@ public class CurioFireResistanceEffect implements ICurioItem {
         Player player = event.player;
 
         // Finds curio and applies effect
-        CuriosApi.getCuriosInventory(player).map(inv ->
-                inv.getCurios() instanceof ModularItem).forEach
-                (slotResult -> {
-                    slotResult.Stack;
+        CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                        slotResult -> {
+                            slotResult.stack();
 
-                    if (event.player.tickCount % 20 == 0) {
-                        ItemStack itemStack = slotResult.stack();
-                        ModularItem item = (ModularItem) itemStack.getItem();
+                            if (event.player.tickCount % 20 == 0) {
+                                ItemStack itemStack = slotResult.stack();
+                                ModularItem item = (ModularItem) itemStack.getItem();
 
-                        // Effect potency
-                        int level = item.getEffectLevel(itemStack, flameProtectionEffect);
+                                // Effect potency
+                                int level = item.getEffectLevel(itemStack, flameProtectionEffect);
 
-                        // Effect duration
-                        int eff = (int) item.getEffectEfficiency(itemStack, flameProtectionEffect);
+                                // Effect duration
+                                int eff = (int) item.getEffectEfficiency(itemStack, flameProtectionEffect);
 
-                        if (level > 0) {
-                            event.player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, eff * 20,
-                                    level - 1, true, true, true));
+                                if (level > 0) {
+                                    event.player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, eff * 20,
+                                            level - 1, true, true, true));
+                                }
+                            }
                         }
-                    }
-                });
+        ));
     }
 }
