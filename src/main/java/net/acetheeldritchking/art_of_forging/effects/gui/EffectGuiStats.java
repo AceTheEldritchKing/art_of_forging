@@ -6,7 +6,6 @@ import net.acetheeldritchking.art_of_forging.effects.SoulChargedEffect;
 import net.acetheeldritchking.art_of_forging.effects.SubjugationEffect;
 import net.acetheeldritchking.art_of_forging.mixins.tetra.ItemModularHandheldAccessor;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.registries.ForgeRegistries;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
 import se.mickelus.tetra.effect.ItemEffect;
@@ -328,21 +327,18 @@ public class EffectGuiStats {
     // Helper methods
 
     // Bosses
-    public static boolean isBossEntity(EntityType<?> entity)
-    {
+    public static boolean isBossEntity(EntityType<?> entity) {
         return Objects.requireNonNull(ForgeRegistries.ENTITY_TYPES.tags()).getTag(BOSS_ENTITIES).contains(entity);
     }
 
     // Percentage Math
-    public static float getDecimalPercentage(float percentage, float base)
-    {
-        float totalPercentage = (base * (percentage/100));
+    public static float getDecimalPercentage(float percentage, float base) {
+        float totalPercentage = (base * (percentage / 100));
 
         return totalPercentage;
     }
 
-    public static float getExactPercentage(float base, float percentage)
-    {
+    public static float getExactPercentage(float base, float percentage) {
         float totalPercentage = base + percentage;
 
         return totalPercentage;
@@ -362,7 +358,7 @@ public class EffectGuiStats {
         // End of abilities
         list = list.stream().filter(Objects::nonNull).toList();
         ChargedAbilityEffect[] abilityEffects = list.toArray(new ChargedAbilityEffect[list.size()]);
-        for(int i = 0;i<list.size();i++){
+        for (int i = 0; i < list.size(); i++) {
             abilityEffects[i] = list.get(i);
         }
         ItemModularHandheldAccessor.setAbilities(abilityEffects);

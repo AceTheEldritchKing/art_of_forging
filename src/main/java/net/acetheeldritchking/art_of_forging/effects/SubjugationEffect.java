@@ -1,6 +1,5 @@
 package net.acetheeldritchking.art_of_forging.effects;
 
-import net.acetheeldritchking.art_of_forging.capabilities.soulCharge.PlayerSoulChargeProvider;
 import net.acetheeldritchking.art_of_forging.capabilities.subjugation.PlayerSubjugationProvider;
 import net.acetheeldritchking.art_of_forging.effects.potion.PotionEffects;
 import net.minecraft.core.particles.ParticleTypes;
@@ -9,7 +8,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -46,8 +44,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(subjugationEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, subjugationName, 0, 30, false, effectStatGetter,
@@ -59,34 +56,29 @@ public class SubjugationEffect extends ChargedAbilityEffect {
 
     // Gain points on hit
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Init effect
                 int level = item.getEffectLevel(heldStack, subjugationEffect);
 
                 // Potion effect duration
                 int eff = (int) item.getEffectEfficiency(heldStack, subjugationEffect);
 
-                if (level > 0 && !attacker.level.isClientSide() && attacker instanceof Player player)
-                {
+                if (level > 0 && !attacker.level().isClientSide() && attacker instanceof Player player) {
                     player.getCapability(PlayerSubjugationProvider.PLAYER_SUBJUGATION).ifPresent(subjugation ->
                     {
                         // System.out.println("Added subjugation, current level is: " + subjugation.getSubjugation());
 
                         subjugation.addSubjugation(1);
 
-                        if (subjugation.getSubjugation() == 10)
-                        {
-                            target.addEffect(new MobEffectInstance(PotionEffects.TARGETED.get(), eff*20, 0,
+                        if (subjugation.getSubjugation() == 10) {
+                            target.addEffect(new MobEffectInstance(PotionEffects.TARGETED.get(), eff * 20, 0,
                                     false, false, true));
                         }
                     });
@@ -98,8 +90,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
     // Charged effect
     @Override
     public void perform(Player attacker, InteractionHand hand, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, Vec3 hitVec, int chargedTicks) {
-        if (!target.level.isClientSide())
-        {
+        if (!target.level().isClientSide()) {
             attacker.getCapability(PlayerSubjugationProvider.PLAYER_SUBJUGATION).ifPresent(subjugation ->
             {
                 // Particles & Sounds
@@ -113,8 +104,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
                 // Duration of effects
                 int eff = (int) item.getEffectEfficiency(itemStack, subjugationEffect);
 
-                if (subjugation.getSubjugation() == 10 && target.hasEffect(PotionEffects.TARGETED.get()))
-                {
+                if (subjugation.getSubjugation() == 10 && target.hasEffect(PotionEffects.TARGETED.get())) {
                     // Reset
                     subjugation.resetSubjugation();
 
@@ -135,34 +125,30 @@ public class SubjugationEffect extends ChargedAbilityEffect {
     // If reached max points, apply Targeted effect
     // If entity has Targeted, deal damage & debuffs
     // Weakness, slowness, blindness.
-    private AbilityUseResult performAttack(Player attacker, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, int duration, float damage)
-    {
+    private AbilityUseResult performAttack(Player attacker, ItemModularHandheld item, ItemStack itemStack, LivingEntity target, int duration, float damage) {
         AbilityUseResult result = item.hitEntity(itemStack, attacker, target, 0, 0F, 0F);
 
-        if (result != AbilityUseResult.fail)
-        {
-            target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration*20, 1,
+        if (result != AbilityUseResult.fail) {
+            target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration * 20, 1,
                     true, true, true));
-            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration*20, 1,
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration * 20, 1,
                     true, true, true));
-            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, duration*20, 1,
+            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, duration * 20, 1,
                     true, true, true));
 
-            target.hurt(DamageSource.MAGIC, damage);
+            target.hurt(target.damageSources().magic(), damage);
             attacker.heal(5);
         }
 
-        return  result;
+        return result;
     }
 
     // Particles around player once perform is ready
     @SubscribeEvent
-    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
         ItemStack heldStack = event.player.getMainHandItem();
 
-        if (heldStack.getItem() instanceof  ModularItem item)
-        {
+        if (heldStack.getItem() instanceof ModularItem item) {
             // Ensures particle effects
             int level = item.getEffectLevel(heldStack, subjugationEffect);
 
@@ -171,12 +157,10 @@ public class SubjugationEffect extends ChargedAbilityEffect {
             double posY = event.player.getY(0.5D);
             double posZ = event.player.getZ();
 
-            if (level >= 2)
-            {
+            if (level >= 2) {
                 event.player.getCapability(PlayerSubjugationProvider.PLAYER_SUBJUGATION).ifPresent(subjugation -> {
-                    if (subjugation.getSubjugation() >= 10)
-                    {
-                        ServerLevel world = (ServerLevel) event.player.level;
+                    if (subjugation.getSubjugation() >= 10) {
+                        ServerLevel world = (ServerLevel) event.player.level();
                         world.sendParticles(ParticleTypes.CRIMSON_SPORE, posX, posY, posZ,
                                 1, 0.1D, 0.1D, 0.1D, 0.0D);
                     }
@@ -186,8 +170,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
     }
 
     // Play sounds
-    private void playSounds(double x, double y, double z, ServerPlayer player)
-    {
-        player.level.playSound(null, x, y, z, SoundEvents.WITHER_HURT, SoundSource.PLAYERS, 1.0F, 0.5F);
+    private void playSounds(double x, double y, double z, ServerPlayer player) {
+        player.level().playSound(null, x, y, z, SoundEvents.WITHER_HURT, SoundSource.PLAYERS, 1.0F, 0.5F);
     }
 }

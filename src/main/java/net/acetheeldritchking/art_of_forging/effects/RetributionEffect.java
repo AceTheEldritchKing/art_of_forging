@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class RetributionEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(retributionEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, retributionName, 0, 30, false, effectStatGetter,
@@ -37,27 +36,23 @@ public class RetributionEffect {
     }
 
     @SubscribeEvent
-    public void onLivingHurtEvent(LivingHurtEvent event)
-    {
+    public void onLivingHurtEvent(LivingHurtEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = target.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Damage attacker
                 int level = item.getEffectLevel(heldStack, retributionEffect);
 
                 // Chance to proc
                 float eff = item.getEffectEfficiency(heldStack, retributionEffect);
 
-                if (level > 0 && eff > (attacker.getRandom().nextFloat()*100))
-                {
-                    attacker.hurt(DamageSource.GENERIC, level);
-                    target.level.playSound(null, attacker.getY(), attacker.getY(), attacker.getZ(),
+                if (level > 0 && eff > (attacker.getRandom().nextFloat() * 100)) {
+                    attacker.hurt(attacker.damageSources().generic(), level);
+                    target.level().playSound(null, attacker.getY(), attacker.getY(), attacker.getZ(),
                             SoundEvents.THORNS_HIT, SoundSource.PLAYERS, 0.5F, 1.0F);
                 }
             }

@@ -4,6 +4,7 @@ package net.acetheeldritchking.art_of_forging.item;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.codecs.PrimitiveCodec;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
@@ -15,7 +16,7 @@ public class CustomHexCodec implements PrimitiveCodec<Integer> {
 
     public <T> DataResult<Integer> read(DynamicOps<T> ops, T input) {
         return ops.getStringValue(input).map((val) -> {
-            return (int)Long.parseLong(val, 16);
+            return (int) Long.parseLong(val, 16);
         });
     }
 

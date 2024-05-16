@@ -22,14 +22,12 @@ import se.mickelus.tetra.gui.stats.getter.TooltipGetterInteger;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
-
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
 import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class DevouringEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(devouringEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, devouringEffectName, 0, 30, false, effectStatGetter,
@@ -40,25 +38,21 @@ public class DevouringEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Effect
                 int level = item.getEffectLevel(heldStack, devouringEffect);
 
-                if (level > 0 && !attacker.level.isClientSide() && attacker instanceof Player player)
-                {
+                if (level > 0 && !attacker.level().isClientSide() && attacker instanceof Player player) {
                     // System.out.println("Reset!");
 
                     player.getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).ifPresent
-                    (PlayerDevouring::resetDevour);
+                            (PlayerDevouring::resetDevour);
 
                     // System.out.println("Removing effect..." + PotionEffects.DEVOURING.get());
                     player.removeEffect(PotionEffects.DEVOURING.get());
@@ -69,13 +63,11 @@ public class DevouringEffect {
 
     // For Devouring
     @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
         ItemStack heldStack = event.player.getMainHandItem();
 
         // Every 5 seconds
-        if (event.player.tickCount % 100 == 0 && heldStack.getItem() instanceof ModularItem item)
-        {
+        if (event.player.tickCount % 100 == 0 && heldStack.getItem() instanceof ModularItem item) {
             // System.out.println("adding");
 
             // Potency of effect
@@ -84,24 +76,21 @@ public class DevouringEffect {
             // Duration of effect
             int eff = (int) item.getEffectEfficiency(heldStack, devouringEffect);
 
-            if (level > 0 && !event.player.hasEffect(PotionEffects.DEVOURING.get()) && !event.player.level.isClientSide())
-            {
+            if (level > 0 && !event.player.hasEffect(PotionEffects.DEVOURING.get()) && !event.player.level().isClientSide()) {
                 event.player.getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).ifPresent(devouring
                         -> {
                     // System.out.println("current level "+ devouring.getDevour());
 
                     devouring.addDevour(1);
 
-                    if (devouring.getDevour() >= 30)
-                    {
+                    if (devouring.getDevour() >= 30) {
                         // System.out.println("Adding effect..." + PotionEffects.DEVOURING.get());
 
                         event.player.addEffect(new MobEffectInstance(PotionEffects.DEVOURING.get(),
-                                eff*20, level, true, true, true));
+                                eff * 20, level, true, true, true));
                     }
                 });
-            } else if (heldStack.getItem() != item && event.player.hasEffect(PotionEffects.DEVOURING.get()) && !event.player.level.isClientSide())
-            {
+            } else if (heldStack.getItem() != item && event.player.hasEffect(PotionEffects.DEVOURING.get()) && !event.player.level().isClientSide()) {
                 // System.out.println("Reset!");
 
                 event.player.getCapability(PlayerDevouringProvider.PLAYER_DEVOURING).ifPresent

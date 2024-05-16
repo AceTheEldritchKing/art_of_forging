@@ -1,6 +1,5 @@
 package net.acetheeldritchking.art_of_forging.effects.potion;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -14,19 +13,17 @@ public class EvokingMawPotionEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.level.isClientSide())
-        {
-            ServerLevel world = (ServerLevel) pLivingEntity.level;
+        if (!pLivingEntity.level().isClientSide()) {
+            ServerLevel world = (ServerLevel) pLivingEntity.level();
 
             double x = pLivingEntity.getX();
             double y = pLivingEntity.getY();
             double z = pLivingEntity.getZ();
             float yRot = pLivingEntity.getYRot();
 
-            for (int i = 0; i < pAmplifier; i++)
-            {
+            for (int i = 0; i < pAmplifier; i++) {
                 world.addFreshEntity(new EvokerFangs
-                        (world, x, y ,z, yRot, 0, null));
+                        (world, x, y, z, yRot, 0, null));
             }
         }
 

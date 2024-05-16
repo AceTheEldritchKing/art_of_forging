@@ -1,12 +1,11 @@
 package net.acetheeldritchking.art_of_forging.effects.potion;
 
-import com.mojang.math.Vector3f;
 import net.minecraft.core.particles.DustColorTransitionOptions;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import org.joml.Vector3f;
 
 public class DevouringPotionEffect extends MobEffect {
     public DevouringPotionEffect() {
@@ -15,11 +14,10 @@ public class DevouringPotionEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.hurt(DamageSource.MAGIC, pAmplifier);
+        pLivingEntity.hurt(pLivingEntity.damageSources().magic(), pAmplifier);
 
-        if (!pLivingEntity.level.isClientSide)
-        {
-            ServerLevel world = (ServerLevel) pLivingEntity.level;
+        if (!pLivingEntity.level().isClientSide) {
+            ServerLevel world = (ServerLevel) pLivingEntity.level();
 
             world.sendParticles(new DustColorTransitionOptions
                             (new Vector3f(0.5F, 0.18F, 0.18F), new Vector3f(0.95F, 0.1F, 0.1F), 1.5F),

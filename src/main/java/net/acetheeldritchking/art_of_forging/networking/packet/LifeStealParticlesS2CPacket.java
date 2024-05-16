@@ -10,29 +10,25 @@ public class LifeStealParticlesS2CPacket {
     private final double yPos;
     private final double zPos;
 
-    public LifeStealParticlesS2CPacket(double xPos, double yPos, double zPos)
-    {
+    public LifeStealParticlesS2CPacket(double xPos, double yPos, double zPos) {
         this.xPos = xPos;
         this.yPos = yPos;
         this.zPos = zPos;
     }
 
-    public LifeStealParticlesS2CPacket(FriendlyByteBuf buf)
-    {
+    public LifeStealParticlesS2CPacket(FriendlyByteBuf buf) {
         this.xPos = buf.readDouble();
         this.yPos = buf.readDouble();
         this.zPos = buf.readDouble();
     }
 
-    public void toBytes(FriendlyByteBuf buf)
-    {
+    public void toBytes(FriendlyByteBuf buf) {
         buf.writeDouble(xPos);
         buf.writeDouble(yPos);
         buf.writeDouble(zPos);
     }
 
-    public boolean handle(Supplier<NetworkEvent.Context> supplier)
-    {
+    public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
 
         context.enqueueWork(() -> {

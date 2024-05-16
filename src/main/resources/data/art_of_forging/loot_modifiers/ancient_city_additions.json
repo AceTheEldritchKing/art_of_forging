@@ -1,14 +1,18 @@
 {
+    "type": "art_of_forging:add_item",
     "conditions": [
         {
             "condition": "forge:loot_table_id",
             "loot_table_id": "minecraft:chests/ancient_city"
         },
         {
-            "condition": "minecraft:random_chance",
-            "chance": 0.2
+            "chance": 0.2,
+            "condition": "minecraft:random_chance"
         }
     ],
-    "type": "art_of_forging:add_to_table",
-    "loot_table": "art_of_forging:chests/demonic_items"
+    "items": [
+        "art_of_forging:ancient_axe",
+        "art_of_forging:ancient_blade",
+        "art_of_forging:ancient_flail"
+    ]
 }

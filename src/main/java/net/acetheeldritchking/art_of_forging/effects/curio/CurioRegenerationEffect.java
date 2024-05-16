@@ -24,8 +24,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class CurioRegenerationEffect implements ICurioItem {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(healingInfusedEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, healingInfusedName, 0, 30, false, effectStatGetter,
@@ -36,18 +35,16 @@ public class CurioRegenerationEffect implements ICurioItem {
     }
 
     @SubscribeEvent
-    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
 
         // Finds curio and applies effect
-        CuriosApi.getCuriosHelper().findCurios(player, itemStack ->
-                itemStack.getItem() instanceof ModularItem).forEach
-                (slotResult -> {
+        CuriosApi.getCuriosInventory(player).ifPresent(inv -> inv.findCurios
+                (itemStack -> itemStack.getItem() instanceof ModularItem).forEach(
+                slotResult -> {
                     slotResult.stack();
 
-                    if (event.player.tickCount % 20 == 0)
-                    {
+                    if (event.player.tickCount % 20 == 0) {
                         ItemStack itemStack = slotResult.stack();
                         ModularItem item = (ModularItem) itemStack.getItem();
 
@@ -57,12 +54,12 @@ public class CurioRegenerationEffect implements ICurioItem {
                         // Effect duration
                         int eff = (int) item.getEffectEfficiency(itemStack, healingInfusedEffect);
 
-                        if (level > 0)
-                        {
-                            event.player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, eff*20,
+                        if (level > 0) {
+                            event.player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, eff * 20,
                                     level - 1, true, true, true));
                         }
                     }
-                });
+                }
+        ));
     }
 }

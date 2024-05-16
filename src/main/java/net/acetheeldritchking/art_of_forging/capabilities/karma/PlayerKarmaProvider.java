@@ -20,10 +20,8 @@ public class PlayerKarmaProvider implements ICapabilityProvider, INBTSerializabl
     private PlayerKarma karma = null;
     private final LazyOptional<PlayerKarma> optional = LazyOptional.of(this::createPlayerKarma);
 
-    private PlayerKarma createPlayerKarma()
-    {
-        if (this.karma == null)
-        {
+    private PlayerKarma createPlayerKarma() {
+        if (this.karma == null) {
             this.karma = new PlayerKarma();
         }
 
@@ -32,8 +30,7 @@ public class PlayerKarmaProvider implements ICapabilityProvider, INBTSerializabl
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_KARMA)
-        {
+        if (cap == PLAYER_KARMA) {
             return optional.cast();
         }
 

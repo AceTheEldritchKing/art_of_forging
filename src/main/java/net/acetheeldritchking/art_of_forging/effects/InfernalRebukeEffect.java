@@ -45,9 +45,8 @@ public class InfernalRebukeEffect {
         if (attackingEntity instanceof LivingEntity attacker)
         {
             ItemStack heldStack = target.getMainHandItem();
-            ItemStack offHeldStack = target.getOffhandItem();
+            //ItemStack offHeldStack = target.getOffhandItem();
 
-            // Main hand
             if (heldStack.getItem() instanceof ModularItem item)
             {
                 // Seconds on fire

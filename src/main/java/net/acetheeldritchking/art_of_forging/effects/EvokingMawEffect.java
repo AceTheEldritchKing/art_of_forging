@@ -44,9 +44,7 @@ public class EvokingMawEffect {
         if (eAttacker instanceof LivingEntity attacker)
         {
             ItemStack heldStack = attacker.getMainHandItem();
-            ItemStack offHeldStack = attacker.getOffhandItem();
 
-            // Main hand
             if (heldStack.getItem() instanceof ModularItem item)
             {
                 // How many jaws spawn

@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class ResolveEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(resolveEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, resolveName, 0, 30, false, effectStatGetter,
@@ -37,12 +36,10 @@ public class ResolveEffect {
     }
 
     @SubscribeEvent
-    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
         ItemStack heldStack = event.player.getMainHandItem();
 
-        if (heldStack.getItem() instanceof ModularItem item)
-        {
+        if (heldStack.getItem() instanceof ModularItem item) {
             // Duration of potion
             int level = item.getEffectLevel(heldStack, resolveEffect);
 
@@ -52,8 +49,7 @@ public class ResolveEffect {
             // Attacker health
             float health = event.player.getHealth();
 
-            if (level > 0 && eff >= health)
-            {
+            if (level > 0 && eff >= health) {
                 applyEffects(level, event.player);
             }
         }
@@ -89,13 +85,12 @@ public class ResolveEffect {
                 });
     }
 
-    private void applyEffects(int duration, LivingEntity user)
-    {
-        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration*20,
+    private void applyEffects(int duration, LivingEntity user) {
+        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration * 20,
                 1, true, true, true));
-        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, duration*20,
+        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, duration * 20,
                 1, true, true, true));
-        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration*20,
+        user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration * 20,
                 1, true, true, true));
     }
 }

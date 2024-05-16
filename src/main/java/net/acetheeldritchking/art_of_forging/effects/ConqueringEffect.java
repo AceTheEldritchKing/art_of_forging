@@ -28,8 +28,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class ConqueringEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(conqueringEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, conqueringName, 0, 30, false, effectStatGetter,
@@ -41,21 +40,17 @@ public class ConqueringEffect {
 
     // Add conquer on death
     @SubscribeEvent
-    public void onLivingDeathEvent(LivingDeathEvent event)
-    {
+    public void onLivingDeathEvent(LivingDeathEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Just for init effect
                 int level = item.getEffectLevel(heldStack, conqueringEffect);
 
-                if (level > 0 && !attacker.level.isClientSide() && attacker instanceof Player player)
-                {
+                if (level > 0 && !attacker.level().isClientSide() && attacker instanceof Player player) {
                     player.getCapability(PlayerConquerProvider.PLAYER_CONQUER).ifPresent(conquer ->
                     {
                         // System.out.println("Added conquer, current level is: " + conquer.getConquer());
@@ -68,36 +63,30 @@ public class ConqueringEffect {
 
     // Apply debuffs to entities when full conquer
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Effect initialized
                 int level = item.getEffectLevel(heldStack, conqueringEffect);
 
                 // Duration of effect
                 int eff = (int) item.getEffectEfficiency(heldStack, conqueringEffect);
 
-                if (level > 0)
-                {
-                    target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, eff*20, 0,
+                if (level > 0) {
+                    target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, eff * 20, 0,
                             true, true, true));
 
                     // Increase weakness when full conquer
-                    if (!attacker.level.isClientSide() && attacker instanceof Player player)
-                    {
+                    if (!attacker.level().isClientSide() && attacker instanceof Player player) {
                         player.getCapability(PlayerConquerProvider.PLAYER_CONQUER).ifPresent(conquer ->
                         {
-                            if (conquer.getConquer() == 5)
-                            {
-                                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, eff*20, 1,
+                            if (conquer.getConquer() == 5) {
+                                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, eff * 20, 1,
                                         true, true, true));
                             }
                         });
@@ -109,32 +98,28 @@ public class ConqueringEffect {
 
     // Apply strength & severing to player when full conquer
     @SubscribeEvent
-    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event)
-    {
+    public void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         ItemStack heldStack = player.getMainHandItem();
 
         // Every second
-        if (player.tickCount % 20 == 0 && heldStack.getItem() instanceof ModularItem item)
-        {
+        if (player.tickCount % 20 == 0 && heldStack.getItem() instanceof ModularItem item) {
             // Potency of severing
             int level = item.getEffectLevel(heldStack, conqueringEffect);
 
             // Duration of strength
             int eff = (int) item.getEffectEfficiency(heldStack, conqueringEffect);
 
-            if (level > 0 && !player.level.isClientSide())
-            {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, eff*20, 0,
+            if (level > 0 && !player.level().isClientSide()) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, eff * 20, 0,
                         true, true, true));
 
                 player.getCapability(PlayerConquerProvider.PLAYER_CONQUER).ifPresent(conquer ->
                 {
-                    if (conquer.getConquer() == 5)
-                    {
+                    if (conquer.getConquer() == 5) {
                         player.addEffect(new MobEffectInstance(PotionEffects.MORTAL_WOUNDS.get(), 20, level,
                                 false, false, false));
-                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, eff*20, 1,
+                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, eff * 20, 1,
                                 true, true, true));
                     }
                 });

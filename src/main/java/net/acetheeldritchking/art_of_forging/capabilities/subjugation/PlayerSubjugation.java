@@ -7,44 +7,36 @@ public class PlayerSubjugation {
     private final int MAX_SUBJUGATION = 10;
     private final int MIN_SUBJUGATION = 0;
 
-    public int getSubjugation()
-    {
+    public int getSubjugation() {
         return subjugation;
     }
 
-    public int setSubjugation(int set)
-    {
+    public int setSubjugation(int set) {
         this.subjugation = set;
         return subjugation;
     }
 
-    public void resetSubjugation()
-    {
+    public void resetSubjugation() {
         this.subjugation = 0;
     }
 
-    public void addSubjugation(int add)
-    {
+    public void addSubjugation(int add) {
         this.subjugation = Math.min(subjugation + add, MAX_SUBJUGATION);
     }
 
-    public void subSubjugation(int sub)
-    {
+    public void subSubjugation(int sub) {
         this.subjugation = Math.max(subjugation - sub, MIN_SUBJUGATION);
     }
 
-    public void copyFrom(PlayerSubjugation source)
-    {
+    public void copyFrom(PlayerSubjugation source) {
         this.subjugation = source.subjugation;
     }
 
-    public void saveNBTdata(CompoundTag nbt)
-    {
+    public void saveNBTdata(CompoundTag nbt) {
         nbt.putInt("subjugation", subjugation);
     }
 
-    public void loadNBTdata(CompoundTag nbt)
-    {
+    public void loadNBTdata(CompoundTag nbt) {
         subjugation = nbt.getInt("subjugation");
     }
 }

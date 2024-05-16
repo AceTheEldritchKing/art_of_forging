@@ -1,14 +1,19 @@
 {
+    "type": "art_of_forging:add_item",
     "conditions": [
         {
             "condition": "forge:loot_table_id",
             "loot_table_id": "minecraft:chests/simple_dungeon"
         },
         {
-            "condition": "minecraft:random_chance",
-            "chance": 0.8
+            "chance": 0.8,
+            "condition": "minecraft:random_chance"
         }
     ],
-    "type": "art_of_forging:add_to_table",
-    "loot_table": "art_of_forging:chests/dungeon_scrolls"
+    "items": [
+        {
+            "item": "tetra:scroll_rolled",
+            "nbt": "{ \"function\": \"tetra:scroll\", \"key\": \"sword/key_guard\", \"intricate\": false, \"details\": \"art_of_forging\", \"material\": 1, \"ribbon\": \"fae409\", \"glyphs\": [ 0, 1, 9, 4 ], \"schematics\": [ \"tetra:sword/key_guard\" ] }"
+        }
+    ]
 }

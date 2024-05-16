@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class KnockbackEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(knockbackEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, knockbackEffectName, 0, 30, false, effectStatGetter,
@@ -34,17 +33,14 @@ public class KnockbackEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Strength of knockback
                 float level = item.getEffectLevel(heldStack, knockbackEffect);
                 // Reverse or not; makeshift Boolean!
@@ -63,8 +59,7 @@ public class KnockbackEffect {
 
                 // Does the knockback
                 // Reverses the knockback effect if the eff val equals 1
-                if (level > 0)
-                {
+                if (level > 0) {
                     target.knockback(level,
                             eff == 1 ? vec3r.x : vec3.x,
                             eff == 1 ? vec3r.z : vec3.z);

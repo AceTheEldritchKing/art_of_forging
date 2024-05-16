@@ -49,11 +49,8 @@ public class GoliathSlayerEffect {
                 float baseAmount = event.getAmount();
                 // Bonus damage as a percent
                 float bonusDamage = getDecimalPercentage((float) level, baseAmount);
-                // Base target health, constant
-                final float TARGET_MAX_HEALTH = target.getMaxHealth();
 
-                // Either a boss mob or has health greater than 80 hearts
-                if (level > 0 && isBossEntity(target.getType()) || TARGET_MAX_HEALTH >= 80)
+                if (level > 0 && isBossEntity(target.getType()))
                 {
                     System.out.println("Base: " + baseAmount);
                     System.out.println("Bonus: " + bonusDamage);

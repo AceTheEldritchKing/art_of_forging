@@ -15,13 +15,12 @@ public class AoFPackets {
     private static SimpleChannel INSTANCE;
 
     private static int packetId = 0;
-    private static int id()
-    {
+
+    private static int id() {
         return packetId++;
     }
 
-    public static void register()
-    {
+    public static void register() {
         SimpleChannel net = NetworkRegistry.ChannelBuilder
                 .named(new ResourceLocation(ArtOfForging.MOD_ID,
                         "aof_packets"))
@@ -49,18 +48,15 @@ public class AoFPackets {
                 .add();
     }
 
-    public static <MSG> void sendToClient(MSG message)
-    {
+    public static <MSG> void sendToClient(MSG message) {
         INSTANCE.sendToServer(message);
     }
 
-    public static <MSG> void sendToPlayer(MSG message, ServerPlayer player)
-    {
+    public static <MSG> void sendToPlayer(MSG message, ServerPlayer player) {
         INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
     }
 
-    public static <MGS> void sendToEntity(MGS message, LivingEntity entity)
-    {
+    public static <MGS> void sendToEntity(MGS message, LivingEntity entity) {
         INSTANCE.send(PacketDistributor.TRACKING_ENTITY.with(() -> entity), message);
     }
 }

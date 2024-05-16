@@ -22,8 +22,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class LifeStealEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(lifeSteal, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, lifeStealName, 0, 30, false, effectStatGetter,
@@ -37,24 +36,20 @@ public class LifeStealEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Flat amount of health gained
                 float level = item.getEffectLevel(heldStack, lifeSteal);
                 // Chance for effect to proc
                 float eff = item.getEffectEfficiency(heldStack, lifeSteal);
 
-                if (level > 0 && eff > (target.getRandom().nextFloat()*100))
-                {
+                if (level > 0 && eff > (target.getRandom().nextFloat() * 100)) {
                     attacker.heal(level);
                     target.playSound(SoundEvents.WITHER_HURT, 0.2F, 1.0F);
 

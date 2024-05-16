@@ -19,8 +19,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class JudgementEffect {
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(judgementEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, judgementName, 0, 30, false, effectStatGetter,
@@ -34,17 +33,14 @@ public class JudgementEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         Entity attackingEntity = event.getSource().getEntity();
         LivingEntity target = event.getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Percentage of health
                 float level = item.getEffectLevel(heldStack, judgementEffect);
 
@@ -57,10 +53,9 @@ public class JudgementEffect {
                 // Base health, not constant
                 float baseHealth = target.getHealth();
                 // health as a percentage
-                double healthPercentage = (baseHealth/BASE_HEALTH) * 100;
+                double healthPercentage = (baseHealth / BASE_HEALTH) * 100;
 
-                if (level > 0 && eff > (target.getRandom().nextFloat()*100) && level >= healthPercentage)
-                {
+                if (level > 0 && eff > (target.getRandom().nextFloat() * 100) && level >= healthPercentage) {
                     //System.out.println("Killed");
                     target.kill();
                 }

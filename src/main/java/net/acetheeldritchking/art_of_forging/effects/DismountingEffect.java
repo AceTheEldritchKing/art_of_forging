@@ -20,8 +20,7 @@ import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 public class DismountingEffect {
 
     @OnlyIn(Dist.CLIENT)
-    public static void init()
-    {
+    public static void init() {
         final IStatGetter effectStatGetter = new StatGetterEffectLevel(dismountingEffect, 1);
         final GuiStatBar effectBar = new GuiStatBar
                 (0, 0, barLength, dismountingEffectName, 0, 30, false, effectStatGetter,
@@ -35,17 +34,14 @@ public class DismountingEffect {
     }
 
     @SubscribeEvent
-    public void onLivingAttackEvent(LivingDamageEvent event)
-    {
+    public void onLivingAttackEvent(LivingDamageEvent event) {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
 
-        if (attackingEntity instanceof LivingEntity attacker)
-        {
+        if (attackingEntity instanceof LivingEntity attacker) {
             ItemStack heldStack = attacker.getMainHandItem();
 
-            if (heldStack.getItem() instanceof ModularItem item)
-            {
+            if (heldStack.getItem() instanceof ModularItem item) {
                 // Amount of extra damage to mounted entity
                 int level = item.getEffectLevel(heldStack, dismountingEffect);
 
@@ -58,24 +54,19 @@ public class DismountingEffect {
 
                 // Add bonus damage to the mounted entity
                 // Also has chance to dismount entities
-                if (level > 0)
-                {
+                if (level > 0) {
                     // If target is riding
-                    if (target.isPassenger())
-                    {
+                    if (target.isPassenger()) {
                         event.setAmount(getExactPercentage(baseAmount, bonusDamage));
 
-                        if (eff > (target.getRandom().nextFloat()*100))
-                        {
+                        if (eff > (target.getRandom().nextFloat() * 100)) {
                             target.stopRiding();
                         }
                     }
 
                     // If target has passenger
-                    if (target.isVehicle())
-                    {
-                        if (eff > (target.getRandom().nextFloat()*100))
-                        {
+                    if (target.isVehicle()) {
+                        if (eff > (target.getRandom().nextFloat() * 100)) {
                             target.ejectPassengers();
                         }
                     }

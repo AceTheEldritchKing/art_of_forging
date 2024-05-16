@@ -49,9 +49,7 @@ public class DragonMistEffect {
         if (attackingEntity instanceof LivingEntity attacker)
         {
             ItemStack heldStack = attacker.getMainHandItem();
-            ItemStack offHeldStack = attacker.getOffhandItem();
 
-            // Main hand
             if (heldStack.getItem() instanceof ModularItem item)
             {
                 // Duration of mist

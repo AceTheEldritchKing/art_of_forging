@@ -20,10 +20,8 @@ public class PlayerSoulChargeProvider implements ICapabilityProvider, INBTSerial
     private PlayerSoulCharge soul_charge = null;
     private final LazyOptional<PlayerSoulCharge> optional = LazyOptional.of(this::createPlayerSoulCharge);
 
-    private PlayerSoulCharge createPlayerSoulCharge()
-    {
-        if (this.soul_charge == null)
-        {
+    private PlayerSoulCharge createPlayerSoulCharge() {
+        if (this.soul_charge == null) {
             this.soul_charge = new PlayerSoulCharge();
         }
 
@@ -32,8 +30,7 @@ public class PlayerSoulChargeProvider implements ICapabilityProvider, INBTSerial
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_SOUL_CHARGE)
-        {
+        if (cap == PLAYER_SOUL_CHARGE) {
             return optional.cast();
         }
 
