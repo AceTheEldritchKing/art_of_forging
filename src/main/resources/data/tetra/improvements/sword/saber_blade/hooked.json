@@ -20,15 +20,7 @@
 		"level": 3,
 		"integrity": -2,
 		"effects": {
-			"backstab": 5
-		}
-	},
-	{
-		"key": "blade/hooked",
-		"level": 4,
-		"integrity": -2,
-		"effects": {
-			"backstab": 7
+			"backstab": 4
 		}
 	}
 ]
