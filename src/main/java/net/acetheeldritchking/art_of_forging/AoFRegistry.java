@@ -1,6 +1,6 @@
 package net.acetheeldritchking.art_of_forging;
 
-///import net.acetheeldritchking.art_of_forging.item.DummyItem;
+//import net.acetheeldritchking.art_of_forging.item.DummyItem;
 import net.acetheeldritchking.art_of_forging.item.custom.AncientItem;
 import net.acetheeldritchking.art_of_forging.item.custom.EnigmaticConstructItem;
 import net.acetheeldritchking.art_of_forging.item.custom.LifeFiberItem;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class AoFRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ArtOfForging.MOD_ID);
 
-  ///  public static final RegistryObject<Item> DUMMY_ITEM = ITEMS.register("dummyitem", DummyItem::new);
+    //public static final RegistryObject<Item> DUMMY_ITEM = ITEMS.register("dummyitem", DummyItem::new);
     //               //
     // Modular Items //
     //               //

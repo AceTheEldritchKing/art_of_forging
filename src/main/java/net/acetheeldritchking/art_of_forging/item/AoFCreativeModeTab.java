@@ -14,7 +14,7 @@ public class AoFCreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ArtOfForging.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("witheringboon",
+    public static final RegistryObject<CreativeModeTab> AOF_TAB = CREATIVE_MODE_TABS.register("art_of_forging",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AoFRegistry.FORGED_STEEL_INGOT.get()))
                     .title(Component.translatable("creativetab.art_of_forging"))
                     .displayItems((pParameters, pOutput) -> {
