@@ -5,10 +5,15 @@ import net.acetheeldritchking.art_of_forging.effects.*;
 import net.acetheeldritchking.art_of_forging.effects.curio.*;
 import net.acetheeldritchking.art_of_forging.effects.potion.PotionEffects;
 import net.acetheeldritchking.art_of_forging.item.AoFCreativeModeTab;
+import net.acetheeldritchking.art_of_forging.item.ScrollHelper;
 import net.acetheeldritchking.art_of_forging.loot.ModLootModifiers;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -16,10 +21,18 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+import se.mickelus.tetra.TetraMod;
+import se.mickelus.tetra.TetraRegistries;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ArtOfForging.MOD_ID)
@@ -124,6 +137,9 @@ public class ArtOfForging {
         // Third Sight
         MinecraftForge.EVENT_BUS.register(new CurioGlowingEffect());
 
+        // Fix for DummyItem
+        bus.addListener(this::buildCreativeTab);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -140,6 +156,38 @@ public class ArtOfForging {
     public void enqueueIMC(final InterModEnqueueEvent event) {
         InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE,
                 () -> SlotTypePreset.CHARM.getMessageBuilder().size(1).build());
+    }
+
+    public void buildCreativeTab(final BuildCreativeModeTabContentsEvent event) {
+        // This method is called for every registered Creative Tab added to Minecraft, so we only want to run this code
+        // whenever it's called for the Tetra creative tab (which is registered under "tetra:default"
+        if (event.getTabKey().location().equals(new ResourceLocation("tetra:default"))) {
+            LOGGER.info("Registering AoF schematics with Tetra creative tab");
+            event.accept(this.setupSchematic("tetra/flamberge_blade", "art_of_forging", new String[]{ "sword/flamberge_blade" }, false, 2, 16750098, 6, 15, 4, 7));
+            event.accept(this.setupSchematic("single/head/halberd_head/halberd_head", "art_of_forging",new String[]{"single/head/halberd_head/halberd_head"}, false, 1, 4475647, 8, 1, 4, 5));
+            event.accept(this.setupSchematic("sword/key_guard", "art_of_forging",new String[]{"sword/key_guard"}, false, 1, 16442377, 0, 1, 9, 4));
+            event.accept(this.setupSchematic("single/head/mace_head/mace_head", "art_of_forging",new String[]{"single/head/mace_head/mace_head"}, false, 1, 5636192, 9, 3, 6, 2));
+            event.accept(this.setupSchematic("tetra/crucible_blade", "art_of_forging",new String[]{"sword/crucible_blade"}, false, 2, 16719360, 8, 7, 9, 2));
+            event.accept(this.setupSchematic("bow/stave/dreadnought_stave", "art_of_forging",new String[]{"bow/stave/dreadnought_stave", "bow/stave/dreadnought_cross_stave"}, false, 1, 15971103, 8, 1, 9, 5));
+            event.accept(this.setupSchematic("sword/katana/katana_blade", "art_of_forging",new String[]{"sword/katana/katana_blade", "sword/tsuba_guard"}, false, 2, 14417680, 5, 10, 13, 2));
+            event.accept(this.setupSchematic("bow/string/compound_string", "art_of_forging",new String[]{"bow/string/compound_string", "crossbow/string/compound_cross_string"}, false, 1, 1697160, 15, 13, 12, 14));
+            event.accept(this.setupSchematic("utilize/hammer", "art_of_forging",new String[]{"utilize/hammer"}, false, 2, 16422889, 1, 15, 12, 8));
+            event.accept(this.setupSchematic("sword/katana/murasama_blade", "otherworldly",new String[]{"sword/katana/murasama_blade"}, false, 2, 12919587, 6, 7, 13, 15));
+            event.accept(this.setupSchematic("tetra/rending_scissor_complete", "otherworldly",new String[]{"sword/scissor_blade_left", "sword/scissor_blade_right", "sword/rending_scissor_complete"}, false, 2, 14885250, 1, 15, 2, 13));
+            event.accept(this.setupSchematic("sword/crucible/architects_crucible_blade", "true_crucible",new String[]{"sword/crucible_blade", "sword/crucible/architects_crucible_blade"}, true, 2, 16711746, 8, 7, 9, 2));
+            event.accept(this.setupSchematic("sword/tonal_blade", "art_of_forging",new String[]{"sword/tonal_blade"}, false, 1, 14350246, 3, 5, 6, 9));
+            event.accept(this.setupSchematic("sword/thousand_cold_nights", "otherworldly",new String[]{"sword/katana/murasama_blade", "sword/thousand_cold_nights"}, true, 2, 6061184, 7, 8, 14, 13));
+        }
+    }
+
+    // TODO: Move to it's own file?
+    private static final RegistryObject<Item> tetraScroll = RegistryObject.create(new ResourceLocation("tetra:scroll_rolled"), TetraRegistries.items.getRegistryName(), TetraMod.MOD_ID);
+    private ItemStack setupSchematic(String key, String details, String[] schematics, boolean isIntricate, int material, int tint, Integer... glyphs) {
+        ScrollHelper data = new ScrollHelper(key, Optional.ofNullable(details), isIntricate, material, tint, Arrays.asList(glyphs),
+                Arrays.stream(schematics).map((s) -> new ResourceLocation(TetraMod.MOD_ID, s)).collect(Collectors.toList()), Collections.emptyList());
+        ItemStack itemStack = new ItemStack(tetraScroll.get());
+        data.write(itemStack);
+        return itemStack;
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
