@@ -44,10 +44,10 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/double/head/shockwave_hammer/shockwave_hammer"
+                    "location": "tetra:item/module/double/head/shockwave_hammer/shockwave_hammer"
                 },
                 {
-                    "location": "tetra:items/module/double/head/shockwave_hammer/shockwave_hammer_glow",
+                    "location": "tetra:item/module/double/head/shockwave_hammer/shockwave_hammer_glow",
                     "emission": 10
                 }
             ]

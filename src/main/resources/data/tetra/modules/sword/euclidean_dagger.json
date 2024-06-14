@@ -34,7 +34,7 @@
                 "textureX": 112,
                 "textureY": 16
             },
-            "models": [{ "location": "tetra:items/module/sword/blade/euclidean_dagger/euclidean_dagger" }]
+            "models": [{ "location": "tetra:item/module/sword/blade/euclidean_dagger/euclidean_dagger" }]
         }
     ]
 }

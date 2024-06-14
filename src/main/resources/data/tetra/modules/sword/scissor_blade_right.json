@@ -64,7 +64,7 @@
                 },
                 "availableTextures": [ "metal", "shiny", "grainy", "crude" ],
                 "models": [{
-                    "location": "tetra:items/module/sword/blade/rending_scissor_purple/"
+                    "location": "tetra:item/module/sword/blade/rending_scissor_purple/"
                 }]
             }
         },
@@ -96,7 +96,7 @@
                 "textureX": 208
             },
             "models": [{
-                "location": "tetra:items/module/sword/blade/rending_scissor_purple/rending_scissor_purple"
+                "location": "tetra:item/module/sword/blade/rending_scissor_purple/rending_scissor_purple"
             }]
         }
     ]

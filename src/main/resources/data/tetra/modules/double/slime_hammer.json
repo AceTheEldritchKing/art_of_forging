@@ -38,7 +38,7 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/double/head/slime_hammer/slime_hammer"
+                    "location": "tetra:item/module/double/head/slime_hammer/slime_hammer"
                 }
             ]
         }

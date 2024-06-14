@@ -52,10 +52,10 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/double/head/annihilator_axe/annihilator_axe"
+                    "location": "tetra:item/module/double/head/annihilator_axe/annihilator_axe"
                 },
                 {
-                    "location": "tetra:items/module/double/head/annihilator_axe/annihilator_axe_glow",
+                    "location": "tetra:item/module/double/head/annihilator_axe/annihilator_axe_glow",
                     "emission": 10
                 }
             ]

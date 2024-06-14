@@ -62,7 +62,7 @@
                 },
                 "availableTextures": [ "metal", "shiny", "grainy", "crude" ],
                 "models": [{
-                    "location": "tetra:items/module/sword/blade/tonal_blade/"
+                    "location": "tetra:item/module/sword/blade/tonal_blade/"
                 }]
             }
         }

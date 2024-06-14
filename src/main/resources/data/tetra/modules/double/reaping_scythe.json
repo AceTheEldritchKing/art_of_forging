@@ -48,7 +48,7 @@
                 },
                 "availableTextures": [ "crude", "metal", "shiny" ],
                 "models": [{
-                    "location": "tetra:items/module/double/head/reaping_scythe/"
+                    "location": "tetra:item/module/double/head/reaping_scythe/"
                 }]
             }
         }

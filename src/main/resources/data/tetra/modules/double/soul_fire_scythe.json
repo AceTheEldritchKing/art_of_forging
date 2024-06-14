@@ -47,7 +47,7 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/double/head/soul_fire_scythe/soul_fire"
+                    "location": "tetra:item/module/double/head/soul_fire_scythe/soul_fire"
                 }
             ]
         }

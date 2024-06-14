@@ -33,7 +33,7 @@
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
 				"textureX": 144
 			},
-			"models": [{ "location": "tetra:items/module/sword/blade/void_worm_cleaver/void_worm_cleaver" }]
+			"models": [{ "location": "tetra:item/module/sword/blade/void_worm_cleaver/void_worm_cleaver" }]
 		}
 	]
 }

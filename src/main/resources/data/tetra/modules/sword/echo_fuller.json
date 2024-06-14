@@ -23,10 +23,10 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/sword/fuller/echo_fuller/echo_fuller"
+                    "location": "tetra:item/module/sword/fuller/echo_fuller/echo_fuller"
                 },
                 {
-                    "location": "tetra:items/module/sword/fuller/echo_fuller/echo_fuller",
+                    "location": "tetra:item/module/sword/fuller/echo_fuller/echo_fuller",
                     "emission": 8
                 }
             ]

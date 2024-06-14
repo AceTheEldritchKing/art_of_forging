@@ -55,7 +55,7 @@
                     "textureX": 240
                 },
                 "availableTextures": [ "metal", "shiny", "crude" ],
-                "models": [{ "location": "tetra:items/module/single/head/cane_head/" }]
+                "models": [{ "location": "tetra:item/module/single/head/cane_head/" }]
             }
         },
         {
@@ -107,7 +107,7 @@
                 ],
                 "models": [
                     {
-                        "location": "tetra:items/module/single/head/cane_head/"
+                        "location": "tetra:item/module/single/head/cane_head/"
                     }
                 ]
             }

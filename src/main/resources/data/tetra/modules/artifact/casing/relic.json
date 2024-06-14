@@ -17,7 +17,7 @@
                 "availableTextures": [ "metal", "shiny" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/artifact/casing/relic/"
+                        "location": "tetra:item/module/artifact/casing/relic/"
                     }
                 ]
             }

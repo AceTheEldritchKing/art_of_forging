@@ -38,7 +38,7 @@
                 "textureLocation": "tetra:textures/gui/aof_glyph.png",
                 "textureX": 208
             },
-            "models": [{ "location": "tetra:items/module/sword/blade/rending_scissor_complete/rending_scissor_complete" }]
+            "models": [{ "location": "tetra:item/module/sword/blade/rending_scissor_complete/rending_scissor_complete" }]
           }
   ]
 }

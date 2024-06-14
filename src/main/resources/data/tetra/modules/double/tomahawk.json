@@ -58,7 +58,7 @@
 				},
 				"availableTextures": [ "crude", "metal", "shiny" ],
 				"models": [{
-					"location": "tetra:items/module/double/head/tomahawk/"
+					"location": "tetra:item/module/double/head/tomahawk/"
 				}]
 			}
 		}

@@ -17,7 +17,7 @@
                 "availableTextures": [ "metal", "shiny" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/artifact/casing/bell/"
+                        "location": "tetra:item/module/artifact/casing/bell/"
                     }
                 ]
             }

@@ -40,7 +40,7 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/crossbow/stave/light_stave/",
+                        "location": "tetra:item/module/crossbow/stave/light_stave/",
                         "type": "static"
                     }
                 ]

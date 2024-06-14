@@ -40,7 +40,7 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/crossbow/stave/dreadnought_stave/",
+                        "location": "tetra:item/module/crossbow/stave/dreadnought_stave/",
                         "type": "static"
                     }
                 ]
