@@ -22,6 +22,7 @@ public class AoFCreativeModeTab {
 
 
                         pOutput.accept(AoFRegistry.RESONANT_ALLOY.get());
+                        pOutput.accept(AoFRegistry.FORGED_STEEL_INGOT.get());
                         pOutput.accept(AoFRegistry.VOBRITE_CRYSTAL.get());
                         pOutput.accept(AoFRegistry.VOBRIVIUM_INGOT.get());
                         pOutput.accept(AoFRegistry.ENDSTEEL_INGOT.get());

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.acetheeldritchking.art_of_forging.effects.*;
 import net.acetheeldritchking.art_of_forging.effects.curio.*;
 import net.acetheeldritchking.art_of_forging.effects.potion.PotionEffects;
+import net.acetheeldritchking.art_of_forging.item.AoFCreativeModeTab;
 import net.acetheeldritchking.art_of_forging.loot.ModLootModifiers;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,6 +40,9 @@ public class ArtOfForging {
 
         // Items //
         AoFRegistry.ITEMS.register(bus);
+
+        // Creative Tab //
+        AoFCreativeModeTab.register(bus);
 
         // Loot Tables //
         ModLootModifiers.register(bus);
