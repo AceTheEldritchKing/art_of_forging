@@ -57,7 +57,7 @@
                 },
                 "availableTextures": [ "metal", "shiny", "grainy", "crude" ],
                 "models": [{
-                    "location": "tetra:items/module/sword/blade/katana_blade/"
+                    "location": "tetra:item/module/sword/blade/katana_blade/"
                 }]
             }
         }

@@ -24,10 +24,10 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/sword/fuller/eerie_fuller/eerie_fuller"
+                    "location": "tetra:item/module/sword/fuller/eerie_fuller/eerie_fuller"
                 },
                 {
-                    "location": "tetra:items/module/sword/fuller/eerie_fuller/eerie_fuller_glow",
+                    "location": "tetra:item/module/sword/fuller/eerie_fuller/eerie_fuller_glow",
                     "emission": 4
                 }
             ]

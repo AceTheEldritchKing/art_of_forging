@@ -35,7 +35,7 @@
                     "textureY": 32
                 },
                 "availableTextures": [ "metal", "shiny", "crude" ],
-                "models": [{ "location": "tetra:items/module/sword/guard/tsube_guard/" }]
+                "models": [{ "location": "tetra:item/module/sword/guard/tsube_guard/" }]
             }
         }
     ]

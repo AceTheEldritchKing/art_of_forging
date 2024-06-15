@@ -54,7 +54,7 @@
 					"textureX": 96
 				},
 				"availableTextures": [ "metal", "shiny", "crude" ],
-				"models": [{ "location": "tetra:items/module/single/head/mace_head/" }]
+				"models": [{ "location": "tetra:item/module/single/head/mace_head/" }]
 			}
 		}
 	]

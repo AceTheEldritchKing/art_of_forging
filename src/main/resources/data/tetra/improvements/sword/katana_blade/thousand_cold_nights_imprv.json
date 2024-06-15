@@ -16,7 +16,7 @@
         },
         "models": [
             {
-                "location": "tetra:items/module/sword/blade/thousand_cold_nights/thousand_cold_nights"
+                "location": "tetra:item/module/sword/blade/thousand_cold_nights/thousand_cold_nights"
             }
         ]
     }

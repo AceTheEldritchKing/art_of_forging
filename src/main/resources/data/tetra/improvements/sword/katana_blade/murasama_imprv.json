@@ -13,10 +13,10 @@
         },
         "models": [
             {
-                "location": "tetra:items/module/sword/blade/murasama_blade/murasama_blade"
+                "location": "tetra:item/module/sword/blade/murasama_blade/murasama_blade"
             },
             {
-                "location": "tetra:items/module/sword/blade/murasama_blade/murasama_blade_glow",
+                "location": "tetra:item/module/sword/blade/murasama_blade/murasama_blade_glow",
                 "emission": 15
             }
         ]

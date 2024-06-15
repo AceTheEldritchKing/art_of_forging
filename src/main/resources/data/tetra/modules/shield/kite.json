@@ -45,7 +45,7 @@
                 "models": [
                     {
                         "type": "tetra:plate/kite",
-                        "location": "tetra:items/module/shield/plate/kite/"
+                        "location": "tetra:item/module/shield/plate/kite/"
                     }
                 ]
             }

@@ -53,7 +53,7 @@
                     "textureY": 16
                 },
                 "availableTextures": [ "metal", "shiny", "crude" ],
-                "models": [{ "location": "tetra:items/module/single/head/quarter_staff_head/" }]
+                "models": [{ "location": "tetra:item/module/single/head/quarter_staff_head/" }]
             }
         }
     ]

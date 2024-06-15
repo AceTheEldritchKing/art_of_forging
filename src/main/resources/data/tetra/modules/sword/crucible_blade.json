@@ -64,7 +64,7 @@
 			},
 			"availableTextures": [ "metal", "shiny", "grainy", "crude" ],
 			"models": [{
-				"location": "tetra:items/module/sword/blade/crucible_blade/"
+				"location": "tetra:item/module/sword/blade/crucible_blade/"
 			}]
 		}
 	}]

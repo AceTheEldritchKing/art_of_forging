@@ -39,7 +39,7 @@
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
 				"textureX": 128
 			},
-			"models": [{ "location": "tetra:items/module/double/head/void_worm_pickaxe/void_worm_pickaxe" }]
+			"models": [{ "location": "tetra:item/module/double/head/void_worm_pickaxe/void_worm_pickaxe" }]
 		}
 	]
 }

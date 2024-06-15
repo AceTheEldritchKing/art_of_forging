@@ -30,7 +30,7 @@
 				"models":
 				[
 					{
-						"location":"tetra:items/module/double/binding/socket/"
+						"location":"tetra:item/module/double/binding/socket/"
 					}
 				]
 			}

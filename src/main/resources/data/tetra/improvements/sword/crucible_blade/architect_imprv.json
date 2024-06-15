@@ -15,10 +15,10 @@
         },
         "models": [
             {
-                "location": "tetra:items/module/sword/blade/architects_crucible/architects_crucible"
+                "location": "tetra:item/module/sword/blade/architects_crucible/architects_crucible"
             },
             {
-                "location": "tetra:items/module/sword/blade/architects_crucible/architects_crucible_glow",
+                "location": "tetra:item/module/sword/blade/architects_crucible/architects_crucible_glow",
                 "emission": 2
             }
         ]

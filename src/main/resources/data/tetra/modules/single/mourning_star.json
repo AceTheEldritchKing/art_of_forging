@@ -40,10 +40,10 @@
             },
             "models": [
                 {
-                    "location": "tetra:items/module/single/head/mourning_star/mourning_star"
+                    "location": "tetra:item/module/single/head/mourning_star/mourning_star"
                 },
                 {
-                    "location": "tetra:items/module/single/head/mourning_star/mourning_star_glow",
+                    "location": "tetra:item/module/single/head/mourning_star/mourning_star_glow",
                     "emission": 10
                 }
             ]

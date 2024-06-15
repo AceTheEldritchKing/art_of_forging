@@ -34,7 +34,7 @@
 				"textureLocation": "tetra:textures/gui/aof_glyph.png",
 				"textureX": 160
 			},
-			"models": [{ "location": "tetra:items/module/sword/blade/shifting_blade/shifting_blade" }]
+			"models": [{ "location": "tetra:item/module/sword/blade/shifting_blade/shifting_blade" }]
 		}
 	]
 }

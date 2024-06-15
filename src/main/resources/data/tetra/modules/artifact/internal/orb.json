@@ -24,7 +24,7 @@
                 ],
                 "models": [
                     {
-                        "location": "tetra:items/module/artifact/internal/orb/"
+                        "location": "tetra:item/module/artifact/internal/orb/"
                     }
                 ]
             }

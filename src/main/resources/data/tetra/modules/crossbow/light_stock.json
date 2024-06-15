@@ -36,7 +36,7 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:items/module/crossbow/stock/light_stock/",
+                        "location": "tetra:item/module/crossbow/stock/light_stock/",
                         "type": "static"
                     }
                 ]
