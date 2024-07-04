@@ -126,7 +126,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("curse.maven:tetra-289712:4857842")
+    implementation fg.deobf("curse.maven:tetra-289712:5236744")
     implementation fg.deobf("curse.maven:mutil-351914:4824501")
     runtimeOnly fg.deobf("curse.maven:jei-238222:5101366")
 

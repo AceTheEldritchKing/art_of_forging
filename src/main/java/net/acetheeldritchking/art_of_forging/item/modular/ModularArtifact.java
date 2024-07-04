@@ -47,14 +47,14 @@ public class ModularArtifact extends ModularItem implements ICurio {
 
         requiredModules = new String[]{artifactCasing, artifactInternal};
 
-        RemoveSchematic.registerRemoveSchematics(this, identifier);
+        //RemoveSchematic.registerRemoveSchematics(this, identifier);
     }
 
     @Override
     public Collection<ItemModule> getAllModules(ItemStack stack) {
         CompoundTag stackTag = stack.getTag();
         if (stackTag != null) {
-            return Stream.concat(Arrays.stream(getMajorModuleKeys()), Arrays.stream(getMinorModuleKeys()))
+            return Stream.concat(Arrays.stream(getMajorModuleKeys(stack)), Arrays.stream(getMinorModuleKeys(stack)))
                     .map(stackTag::getString)
                     .map(ItemUpgradeRegistry.instance::getModule)
                     .filter(Objects::nonNull)
@@ -64,15 +64,13 @@ public class ModularArtifact extends ModularItem implements ICurio {
         return Collections.emptyList();
     }
 
-    @Override
     @OnlyIn(Dist.CLIENT)
-    public GuiModuleOffsets getMajorGuiOffsets() {
+    public GuiModuleOffsets getMajorGuiOffsets(ItemStack itemStack) {
         return majorOffsets;
     }
 
-    @Override
     @OnlyIn(Dist.CLIENT)
-    public GuiModuleOffsets getMinorGuiOffsets() {
+    public GuiModuleOffsets getMinorGuiOffsets(ItemStack itemStack) {
         return minorOffsets;
     }
 
