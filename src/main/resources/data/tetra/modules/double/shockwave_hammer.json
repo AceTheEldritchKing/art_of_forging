@@ -23,7 +23,7 @@
             },
             "aspects": {
                 "breakable": 2,
-                "bluntWeapon": 2
+                "blunt_weapon": 2
             },
             "effects": {
                 "shieldbreaker": 1,

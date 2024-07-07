@@ -17,10 +17,13 @@
                 "generic.attack_damage": 8.5
             },
             "aspects": {
-                "edgedWeapon": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
             "durability": 65,
+            "tags":[
+                "forge:swords"
+            ],
             "effects": {
                 "art_of_forging:life_steal": [ 3, 30 ],
                 "art_of_forging:decaying": [ 1, 2 ],

@@ -1,5 +1,5 @@
 {
-    "type": "art_of_forging:add_item",
+    "type": "art_of_forging:add_to_table",
     "conditions": [
         {
             "condition": "forge:loot_table_id",
@@ -10,9 +10,5 @@
             "condition": "minecraft:random_chance"
         }
     ],
-    "items": [
-        "art_of_forging:ancient_axe",
-        "art_of_forging:ancient_blade",
-        "art_of_forging:ancient_flail"
-    ]
+    "loot_table": "art_of_forging:chests/demonic_items"
 }

@@ -17,10 +17,13 @@
 				"generic.attack_damage": 7.0
 			},
 			"aspects": {
-				"edgedWeapon": 2,
+				"edged_weapon": 2,
 				"breakable": 2
 			},
 			"durability": 60,
+			"tags":[
+				"forge:swords"
+			],
 			"effects": {
 				"sweeping": 1,
 				"armorPenetration": 8,

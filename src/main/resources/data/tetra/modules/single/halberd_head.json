@@ -24,8 +24,8 @@
 				"art_of_forging:dismounting": [ 10, 2.5 ]
 			},
 			"aspects": {
-				"pointyWeapon": 1,
-				"edgedWeapon":  2,
+				"pointy_weapon": 1,
+				"edged_weapon":  2,
 				"breakable": 2
 			},
 			"durability": -20,

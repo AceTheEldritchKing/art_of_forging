@@ -18,7 +18,7 @@
                 "generic.attack_damage": 0.65
             },
             "aspects": {
-                "edgedWeapon": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
             "effects": {
@@ -31,6 +31,9 @@
                 "abilityDefensive": 1
             },
             "durability": -20,
+            "tags":[
+                "forge:swords"
+            ],
             "extract": {
                 "primaryAttributes": {
                     "generic.attack_damage": 0.8
@@ -76,9 +79,12 @@
                 "generic.attack_damage": 10
             },
             "aspects": {
-                "edgedWeapon": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
+            "tags":[
+                "forge:swords"
+            ],
             "effects": {
                 "armorPenetration": 35,
                 "sweeping": 2,

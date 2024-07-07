@@ -24,10 +24,13 @@
                 "cut": [ 1, 0.2 ]
             },
             "aspects": {
-                "edgedWeapon": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
             "durability": -20,
+            "tags":[
+                "forge:swords"
+            ],
             "extract": {
                 "primaryAttributes": {
                     "generic.attack_damage": 0.65

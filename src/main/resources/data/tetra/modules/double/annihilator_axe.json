@@ -22,8 +22,8 @@
               "generic.attack_speed": -1.5
             },
             "aspects": {
-                "blockBreaker": 2,
-                "edgedWeapon": 2,
+                "block_breaker": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
             "effects": {
