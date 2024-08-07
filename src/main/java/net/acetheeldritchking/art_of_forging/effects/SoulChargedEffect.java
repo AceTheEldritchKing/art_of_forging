@@ -1,5 +1,6 @@
 package net.acetheeldritchking.art_of_forging.effects;
 
+import it.crystalnest.soul_fire_d.api.FireManager;
 import net.acetheeldritchking.art_of_forging.capabilities.soulCharge.PlayerSoulChargeProvider;
 import net.acetheeldritchking.art_of_forging.networking.AoFPackets;
 import net.acetheeldritchking.art_of_forging.networking.packet.SoulChargedParticlesS2CPacket;
@@ -20,6 +21,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
@@ -36,6 +38,7 @@ import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 import java.util.List;
 
+import static it.crystalnest.soul_fire_d.api.FireManager.SOUL_FIRE_TYPE;
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
 import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
@@ -135,7 +138,8 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
 
             for (LivingEntity livingTargets : targets) {
                 // System.out.println("Loop, brother");
-                livingTargets.setSecondsOnFire(seconds);
+                //livingTargets.setSecondsOnFire(seconds);
+                FireManager.setOnFire(livingTargets, seconds, SOUL_FIRE_TYPE);
                 livingTargets.hurt(livingTargets.damageSources().magic(), damage);
             }
         }
@@ -164,6 +168,32 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
                                 1, 0.5D, 0.5D, 0.5D, 0.0D);
                     }
                 });
+            }
+        }
+    }
+
+    // Not only fire particles, BUT SET THINGS ON SOUL FIRE!!!
+    @SubscribeEvent
+    public void onLivingAttackEvent(LivingAttackEvent event)
+    {
+        Entity attackingEntity = event.getSource().getEntity();
+        LivingEntity target = event.getEntity();
+
+        if (attackingEntity instanceof LivingEntity attacker) {
+            ItemStack heldStack = attacker.getMainHandItem();
+
+            if (heldStack.getItem() instanceof ModularItem item) {
+                // To do seconds
+                float level = item.getEffectLevel(heldStack, soulChargedEffect);
+                int seconds = (int) (level * 2);
+
+                if (level >= 2 && attacker instanceof Player player) {
+                    player.getCapability(PlayerSoulChargeProvider.PLAYER_SOUL_CHARGE).ifPresent(soul_charge -> {
+                        if (soul_charge.getSoulCharge() >= 5) {
+                            FireManager.setOnFire(target, seconds, SOUL_FIRE_TYPE);
+                        }
+                    });
+                }
             }
         }
     }

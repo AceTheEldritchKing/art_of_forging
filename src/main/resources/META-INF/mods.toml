@@ -62,6 +62,24 @@ description='''${mod_description}'''
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="tetra"
+    mandatory=true
+    versionRange="[6.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="mutil"
+    mandatory=true
+    versionRange="[6.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+  modId = "soul_fire_d"
+  mandatory = true # Change this to false if Soul Fire'd is not required.
+  versionRange = "[4.0.2,)"
+  ordering = "AFTER"
+  side = "BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
