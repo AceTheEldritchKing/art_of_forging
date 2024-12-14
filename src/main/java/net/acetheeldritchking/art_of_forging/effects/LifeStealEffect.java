@@ -18,21 +18,23 @@ import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class LifeStealEffect {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(lifeSteal, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, lifeStealName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.decimalLabel, new TooltipGetterMultiValue
+        var statGetter = new StatGetterEffectLevel(lifeSteal, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                lifeStealName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterMultiValue
                         (lifeStealTooltip, StatsHelper.withStats
-                                (effectStatGetter, new StatGetterEffectEfficiency
+                                (statGetter, new StatGetterEffectEfficiency
                                         (lifeSteal, 1.0D)), StatsHelper.withFormat
-                                (StatFormat.noDecimal, StatFormat.noDecimal)));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+                                (StatFormat.noDecimal, StatFormat.noDecimal))
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     @SubscribeEvent

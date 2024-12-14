@@ -2,7 +2,6 @@ package net.acetheeldritchking.art_of_forging.effects;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -18,21 +17,23 @@ import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class RetributionEffect {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(retributionEffect, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, retributionName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.decimalLabel, new TooltipGetterMultiValue
+        var statGetter = new StatGetterEffectLevel(retributionEffect, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                retributionName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterMultiValue
                         (retributionTooltip, StatsHelper.withStats
-                                (effectStatGetter, new StatGetterEffectEfficiency
+                                (statGetter, new StatGetterEffectEfficiency
                                         (retributionEffect, 1.0D)), StatsHelper.withFormat
-                                (StatFormat.noDecimal, StatFormat.noDecimal)));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+                                (StatFormat.noDecimal, StatFormat.noDecimal))
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     @SubscribeEvent

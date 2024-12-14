@@ -16,6 +16,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -195,7 +196,7 @@ public class ArtOfForging {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            WitheringEffect.init();
+            /*WitheringEffect.init();
             StormCallerEffect.init();
             EvokingMawEffect.init();
             LifeStealEffect.init();
@@ -230,7 +231,7 @@ public class ArtOfForging {
             CurioRegenerationEffect.init();
             CurioKarmaEffect.init();
             CurioHasteEffect.init();
-            CurioGlowingEffect.init();
+            CurioGlowingEffect.init();*/
         }
     }
 }

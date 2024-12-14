@@ -14,8 +14,8 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
+import se.mickelus.tetra.gui.stats.StatsHelper;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
-import se.mickelus.tetra.gui.stats.getter.IStatGetter;
 import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
 import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
 import se.mickelus.tetra.gui.stats.getter.TooltipGetterInteger;
@@ -25,18 +25,19 @@ import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class CurioKarmaEffect implements ICurioItem {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(karmaInfusedEffect, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, karmaInfusedName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.integerLabel, new TooltipGetterInteger
-                        (karmaInfusedTooltip, effectStatGetter));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+        var statGetter = new StatGetterEffectLevel(karmaInfusedEffect, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                karmaInfusedName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(karmaInfusedTooltip, statGetter)
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     // Add or remove karma points

@@ -20,21 +20,23 @@ import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class CurioGlowingEffect implements ICurioItem {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(thirdSightEffect, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, thirdSightName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.integerLabel, new TooltipGetterMultiValue
+        var statGetter = new StatGetterEffectLevel(thirdSightEffect, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                thirdSightName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterMultiValue
                         (thirdSightTooltip, StatsHelper.withStats
-                                (effectStatGetter, new StatGetterEffectEfficiency
+                                (statGetter, new StatGetterEffectEfficiency
                                         (thirdSightEffect, 1.0D)), StatsHelper.withFormat
-                                (StatFormat.oneDecimal, StatFormat.oneDecimal)));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+                                (StatFormat.noDecimal, StatFormat.noDecimal))
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     @SubscribeEvent

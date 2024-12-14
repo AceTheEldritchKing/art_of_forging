@@ -16,21 +16,23 @@ import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class ResolveEffect {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(resolveEffect, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, resolveName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.decimalLabel, new TooltipGetterMultiValue
+        var statGetter = new StatGetterEffectLevel(resolveEffect, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                resolveName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterMultiValue
                         (resolveTooltip, StatsHelper.withStats
-                                (effectStatGetter, new StatGetterEffectEfficiency
+                                (statGetter, new StatGetterEffectEfficiency
                                         (resolveEffect, 1.0D)), StatsHelper.withFormat
-                                (StatFormat.noDecimal, StatFormat.noDecimal)));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+                                (StatFormat.noDecimal, StatFormat.noDecimal))
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     @SubscribeEvent

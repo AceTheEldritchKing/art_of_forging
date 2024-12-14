@@ -10,7 +10,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -27,8 +26,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.AbilityUseResult;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
+import se.mickelus.tetra.gui.stats.StatsHelper;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
-import se.mickelus.tetra.gui.stats.getter.IStatGetter;
 import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
 import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
 import se.mickelus.tetra.gui.stats.getter.TooltipGetterInteger;
@@ -40,7 +39,6 @@ import java.util.List;
 
 import static it.crystalnest.soul_fire_d.api.FireManager.SOUL_FIRE_TYPE;
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
-import static se.mickelus.tetra.gui.stats.StatsHelper.barLength;
 
 public class SoulChargedEffect extends ChargedAbilityEffect {
     public static final SoulChargedEffect instance = new SoulChargedEffect();
@@ -51,13 +49,15 @@ public class SoulChargedEffect extends ChargedAbilityEffect {
 
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        final IStatGetter effectStatGetter = new StatGetterEffectLevel(soulChargedEffect, 1);
-        final GuiStatBar effectBar = new GuiStatBar
-                (0, 0, barLength, soulChargedName, 0, 30, false, effectStatGetter,
-                        LabelGetterBasic.integerLabel, new TooltipGetterInteger
-                        (soulChargedTooltip, effectStatGetter));
-        WorkbenchStatsGui.addBar(effectBar);
-        HoloStatsGui.addBar(effectBar);
+        var statGetter = new StatGetterEffectLevel(soulChargedEffect, 1);
+        GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
+                soulChargedName, 0, 10, false, false, false,
+                statGetter, LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(soulChargedTooltip, statGetter)
+        );
+
+        WorkbenchStatsGui.addBar(statBar);
+        HoloStatsGui.addBar(statBar);
     }
 
     // Gain soul charge points
