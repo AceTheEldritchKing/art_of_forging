@@ -16,22 +16,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.AbilityUseResult;
 import se.mickelus.tetra.effect.ChargedAbilityEffect;
-import se.mickelus.tetra.gui.stats.StatsHelper;
-import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
-import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
-import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
-import se.mickelus.tetra.gui.stats.getter.TooltipGetterInteger;
 import se.mickelus.tetra.items.modular.ItemModularHandheld;
 import se.mickelus.tetra.items.modular.ModularItem;
-import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 import static net.acetheeldritchking.art_of_forging.effects.gui.EffectGuiStats.*;
 
@@ -42,7 +33,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
         super(20, 0.15D, 100, 1.0D, subjugationEffect, TargetRequirement.entity, UseAnim.SPEAR, "raised");
     }
 
-    @OnlyIn(Dist.CLIENT)
+    /*@OnlyIn(Dist.CLIENT)
     public static void init() {
         var statGetter = new StatGetterEffectLevel(subjugationEffect, 1);
         GuiStatBar statBar = new GuiStatBar(0, 0, StatsHelper.barLength,
@@ -53,7 +44,7 @@ public class SubjugationEffect extends ChargedAbilityEffect {
 
         WorkbenchStatsGui.addBar(statBar);
         HoloStatsGui.addBar(statBar);
-    }
+    }*/
 
     // Gain points on hit
     @SubscribeEvent
