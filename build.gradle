@@ -153,9 +153,9 @@ dependencies {
 
     // Soul Fire'd
     //implementation "it.crystalnest:soul-fire-d-common:$minecraft_version-$soul_fire_d_version"
+
+    implementation fg.deobf("curse.maven:cobweb-968456:5441209")
     implementation fg.deobf("curse.maven:soul-fire-d-662413:5454323")
-    implementation fg.deobf("it.crystalnest:cobweb-forge:$minecraft_version-$cobweb_version")
-    implementation fg.deobf("it.crystalnest:soul-fire-d-forge:$minecraft_version-$soul_fire_d_version")
 
     // Target Dummy
     implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:5594972")
