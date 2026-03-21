@@ -44,8 +44,9 @@
                 "availableTextures": [ "wooden", "metal", "bone", "vent" ],
                 "models": [
                     {
-                        "type": "tetra:plate/kite",
-                        "location": "tetra:item/module/shield/plate/kite/"
+                        "type": "tetra:shield",
+                        "model": "tetra:plate/kite",
+                        "texture": "tetra:item/module/shield/plate/kite/"
                     }
                 ]
             }

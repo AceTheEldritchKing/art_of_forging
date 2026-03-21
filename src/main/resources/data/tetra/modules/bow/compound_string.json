@@ -40,19 +40,24 @@
                 "availableTextures": [ "default" ],
                 "models": [
                     {
-                        "location": "tetra:item/module/bow/string/compound_string/"
+                        "type": "tetra:filtered_grid_texture",
+                        "location": "tetra:item/module/bow/string/compound_string/",
+                        "filter": "undrawn"
                     },
                     {
-                        "type": "draw_0",
-                        "location": "tetra:item/module/bow/string/compound_string/0_"
+                        "type": "tetra:filtered_grid_texture",
+                        "location": "tetra:item/module/bow/string/compound_string/0_",
+                        "filter": "draw_0"
                     },
                     {
-                        "type": "draw_1",
-                        "location": "tetra:item/module/bow/string/compound_string/1_"
+                        "type": "tetra:filtered_grid_texture",
+                        "location": "tetra:item/module/bow/string/compound_string/1_",
+                        "filter": "draw_1"
                     },
                     {
-                        "type": "draw_2",
-                        "location": "tetra:item/module/bow/string/compound_string/2_"
+                        "type": "tetra:filtered_grid_texture",
+                        "location": "tetra:item/module/bow/string/compound_string/2_",
+                        "filter": "draw_2"
                     }
                 ]
             }
