@@ -35,8 +35,7 @@
             },
             "models": [
                 {
-                    "location": "tetra:item/module/crossbow/stave/burst_stave/burst_stave",
-                    "type": "static"
+                    "location": "tetra:item/module/crossbow/stave/burst_stave/burst_stave"
                 }
             ]
         }

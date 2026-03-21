@@ -144,8 +144,8 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("curse.maven:tetra-289712:5957838")
-    implementation fg.deobf("curse.maven:mutil-351914:4824501")
+    implementation fg.deobf("curse.maven:tetra-289712:7769412")
+    implementation fg.deobf("curse.maven:mutil-351914:7772906")
     runtimeOnly fg.deobf("curse.maven:jei-238222:5101366")
 
     // Compile against only the API artifact

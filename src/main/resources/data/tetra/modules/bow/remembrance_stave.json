@@ -35,38 +35,48 @@
             },
             "models": [
                 {
-                    "location": "tetra:item/module/bow/stave/remembrance/remembrance_stave"
+                    "type": "tetra:filtered_grid_texture",
+                    "location": "tetra:item/module/bow/stave/remembrance/remembrance_stave",
+                    "filter": "undrawn"
                 },
                 {
-                    "type": "draw_0",
-                    "location": "tetra:item/module/bow/stave/remembrance/0_remembrance_stave"
+                    "type": "tetra:filtered_grid_texture",
+                    "location": "tetra:item/module/bow/stave/remembrance/0_remembrance_stave",
+                    "filter": "draw_0"
                 },
                 {
-                    "type": "draw_1",
-                    "location": "tetra:item/module/bow/stave/remembrance/1_remembrance_stave"
+                    "type": "tetra:filtered_grid_texture",
+                    "location": "tetra:item/module/bow/stave/remembrance/1_remembrance_stave",
+                    "filter": "draw_1"
                 },
                 {
-                    "type": "draw_2",
-                    "location": "tetra:item/module/bow/stave/remembrance/2_remembrance_stave"
+                    "type": "tetra:filtered_grid_texture",
+                    "location": "tetra:item/module/bow/stave/remembrance/2_remembrance_stave",
+                    "filter": "draw_2"
                 },
                 {
+                    "type": "tetra:filtered_grid_texture",
                     "location": "tetra:item/module/bow/stave/remembrance/remembrance_stave_glow",
-                    "emission": 8
+                    "emission": 8,
+                    "filter": "undrawn"
                 },
                 {
-                    "type": "draw_0",
+                    "type": "tetra:filtered_grid_texture",
                     "location": "tetra:item/module/bow/stave/remembrance/0_remembrance_stave_glow",
-                    "emission": 8
+                    "emission": 8,
+                    "filter": "draw_0"
                 },
                 {
-                    "type": "draw_1",
+                    "type": "tetra:filtered_grid_texture",
                     "location": "tetra:item/module/bow/stave/remembrance/1_remembrance_stave_glow",
-                    "emission": 10
+                    "emission": 10,
+                    "filter": "draw_1"
                 },
                 {
-                    "type": "draw_2",
+                    "type": "tetra:filtered_grid_texture",
                     "location": "tetra:item/module/bow/stave/remembrance/2_remembrance_stave_glow",
-                    "emission": 15
+                    "emission": 15,
+                    "filter": "draw_2"
                 }
             ]
         }
