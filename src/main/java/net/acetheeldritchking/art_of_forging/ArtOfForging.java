@@ -196,7 +196,7 @@ public class ArtOfForging {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            /*WitheringEffect.init();
+            WitheringEffect.init();
             StormCallerEffect.init();
             EvokingMawEffect.init();
             LifeStealEffect.init();
@@ -231,7 +231,7 @@ public class ArtOfForging {
             CurioRegenerationEffect.init();
             CurioKarmaEffect.init();
             CurioHasteEffect.init();
-            CurioGlowingEffect.init();*/
+            CurioGlowingEffect.init();
         }
     }
 }
